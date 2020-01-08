@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="javascript">
+    function sosanh()
+    {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = document.getElementById("c").value;
+
+        if(a>b & a>c) {
+            document.getElementById("d").innerHTML = 'a là số lớn nhất'
+        } else {
+            if(b>a & b>c){
+                document.getElementById("d").innerHTML = 'b là số lớn nhất'
+            }
+            else
+                 document.getElementById("d").innerHTML = 'c là số lớn nhất'
+        }
+
+    }
+</script>
+<input type="text" id="a" value="" />
+<input type="text" id="b" value="" />
+<input type="text" id="c" value=""/>
+<button type="button"  onclick="sosanh()"> Ket Qua</button><p id="d"></p>
+</body>
+</html>

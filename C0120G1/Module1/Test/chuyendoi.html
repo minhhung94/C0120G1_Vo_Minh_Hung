@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="javascript">
+    function chuyendoi() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = document.getElementById("c");
+        var d = document.getElementById("d").value;
+
+        if (b == "VND" && d == "USD") {
+
+            c.value = a / 23000
+
+        } else {
+            if (b == "USD" && d == "VND") {
+
+                c.value = a * 23000
+
+            } else c.value = 'vui lòng chọn mệnh giá'
+        }
+    }
+</script>
+<input type="text" id="a" value=""/>
+    <select id="b">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+</select>
+<select id="d">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+</select>
+<button type="button"  onclick="chuyendoi()"> Quy Doi</button>
+<input type="text" id="c" value=""/>
+
+</body>
+</html>
