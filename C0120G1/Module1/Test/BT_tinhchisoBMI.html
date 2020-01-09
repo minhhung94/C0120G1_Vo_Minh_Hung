@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <p>Nhập vào chiều cao</p>
+    <input id="chieucao" type="text">
+    <br>
+    <p>Nhập vào cân nặng</p>
+    <input id="cannang" type="text">
+    <br>
+    <br>
+    <button type="button" onclick="tinhBMI()">Kết quả</button>
+   <h3>Tình trạng:</h3> <p id="kq"></p>
+    <h3>Chỉ số BMI:</h3><p id="bmi"></p>
+</form>
+<script>
+
+
+    function tinhBMI() {
+        var a,b,BMI;
+         a=parseFloat(document.getElementById("chieucao").value);
+         b=parseFloat(document.getElementById("cannang").value);
+        BMI=b/(a*a);
+        if(BMI<18.5){
+            document.getElementById("kq").innerHTML="unđerweight";
+            document.getElementById("bmi").innerHTML=BMI;
+        }else if(BMI<25.0){
+            document.getElementById("kq").innerHTML="normal";
+            document.getElementById("bmi").innerHTML=BMI;
+        }else if(BMI<30.0){
+            document.getElementById("kq").innerHTML="overweight";
+            document.getElementById("bmi").innerHTML=BMI;
+        }else{
+            document.getElementById("kq").innerHTML="obese";
+            document.getElementById("bmi").innerHTML=BMI;
+        }
+    }
+</script>
+</body>
+</html>
