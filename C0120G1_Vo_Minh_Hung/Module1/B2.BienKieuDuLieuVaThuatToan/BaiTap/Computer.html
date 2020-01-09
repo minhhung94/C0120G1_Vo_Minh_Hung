@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Computer</title>
+        <style>
+            .bt1{
+                background: #01d9e0;
+                border-color: black;
+                height: 40px;
+                width: 80px;
+                color: red;
+            }
+            .bt2{
+                background: #01d9e0;
+                border-color: black;
+                height: 40px;
+                width: 80px;
+                color: white;
+            }
+            .bt {
+                background: #01d9e0;
+                border-color: black;
+                height: 40px;
+                width: 80px;
+            }
+            .bt:hover{
+                background: #95b72d;
+            }
+
+        </style>
+
+</head>
+<body>
+<!--<form style=" margin:50px; height: 500px; background: lightcyan; border-width: 1px; border-color: black; border-style: solid;">-->
+
+<div style="height: 285px; width:600px; background: white;border-width: 1px; border-top-color: black; border-style: solid; margin-left: 350px; ">
+    <div style="height: 50px; text-align: right; background: white;border-width: 1px; border-top-color: black; border-style: solid;">
+        <span  id="ketquatruoc" ;style="text-align: right;"></span> <br>
+        <span id="ketqua"; style="text-align: right; font-size: 200%" ></span>
+
+    </div>
+    <div>
+        <table style=" height: 235px; width: 255px; background: white; border-width: 1px; border-style: solid; float: left; ">
+            <tbody>
+            <tr>
+                <td><button class="bt1"> Rad </button></td>
+                <td><button class="bt1"> Deg </button></td>
+                <td><button class="bt1"> x! </button></td>
+            </tr>
+            <tr>
+                <td><button class="bt1"> lnv </button></td>
+                <td><button class="bt1"> sin </button></td>
+                <td><button class="bt1"> ln </button></td>
+            </tr>
+            <tr>
+                <td><button class="bt1"> π </button></td>
+                <td><button class="bt1"> cos </button></td>
+                <td><button class="bt1"> log </button></td>
+            </tr>
+            <tr>
+                <td><button class="bt1"> e </button></td>
+                <td><button class="bt1"> tan </button></td>
+                <td><button class="bt1"> √ </button></td>
+            </tr>
+            <tr>
+                <td><button class="bt1"> Ans </button></td>
+                <td><button class="bt1">  EXP </button></td>
+                <td><button class="bt1"> Xy</button></td>
+            </tr>
+            </tbody>
+        </table>
+        <table style=" height: 235px; width: 344px; background: white; border-width: 1px;  border-style: solid; float: right; ">
+            <tbody>
+            <tr>
+                <td><button onclick="daungoacmo();" class="bt"> ( </button></td>
+                <td><button onclick="daungoacdong();" class="bt"> ) </button></td>
+                <td><button onclick="dauphantram();" class="bt"> % </button></td>
+                <td><button onclick="dauce();" class="bt2"> CE </button></td>
+            </tr>
+            <tr>
+                <td><button onclick="so7();" class="bt"> 7 </button></td>
+                <td><button onclick="so8();" class="bt"> 8 </button></td>
+                <td><button onclick="so9();" class="bt"> 9 </button></td>
+                <td><button onclick="dauchia();" class="bt"> / </button></td>
+            </tr>
+            <tr>
+                <td><button onclick="so4();" class="bt"> 4 </button></td>
+                <td><button onclick="so5();" class="bt"> 5 </button></td>
+                <td><button onclick="so6();"class="bt"> 6 </button></td>
+                <td><button onclick="daunhan();" class="bt"> x </button></td>
+            </tr>
+            <tr>
+                <td><button onclick="so1();" class="bt"> 1 </button></td>
+                <td><button onclick="so2();" class="bt"> 2 </button></td>
+                <td><button onclick="so3();" class="bt"> 3 </button></td>
+                <td><button onclick="dautru();" class="bt"> - </button></td>
+            </tr>
+            <tr>
+                <td><button onclick="so0();" class="bt"> 0 </button></td>
+                <td><button onclick="daucham();" class="bt"> . </button></td>
+                <td><button onclick="daubang();" class="bt2"> = </button></td>
+                <td><button onclick="daucong();" class="bt"> + </button></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+<script>
+    var i=0;
+    var chuoihientai="";
+    var sotam=0;
+    var kytutruocdo="";
+    function kt2ptlt() {i = document.getElementById("ketqua").innerHTML.length;
+        let kytutruocdo1=document.getElementById("ketqua").innerHTML.slice(i-1, i);
+        if(kytutruocdo1=="-"||kytutruocdo1=="*"||kytutruocdo1=="/"||kytutruocdo1=="+") {
+            document.getElementById("ketqua").innerHTML = document.getElementById("ketqua").innerHTML.slice(0, i - 1);
+        }
+    }
+    function daungoacmo() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"(";
+    }
+    function daungoacdong() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+")";
+    }
+    function daucong() {
+        kt2ptlt();
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"+";
+    }
+    function dautru() {
+        kt2ptlt();
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"-";
+    }
+    function daunhan() {
+        kt2ptlt();
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"*";
+    }
+    function dauchia() {
+        kt2ptlt();
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"/";
+    }
+    function dauphantram() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"%";
+    }
+    function dauce() {
+        i=document.getElementById("ketqua").innerHTML.length;
+        document.getElementById("ketqua").innerHTML=document.getElementById("ketqua").innerHTML.slice(0,i-1);
+    }
+    function daucham() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+".";
+    }
+    function so0() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"0";
+    }function so1() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"1";
+    }
+    function so2() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"2";
+    }
+    function so3() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"3";
+    }
+    function so4() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"4";
+    }
+    function so5() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"5";
+    }
+    function so6() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"6";
+    }
+    function so7() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"7";
+    }
+    function so8() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"8";
+    }
+    function so9() {
+        document.getElementById("ketqua").innerHTML =document.getElementById("ketqua").innerHTML+"9";
+    }
+    function daubang() {
+        chuoihientai=document.getElementById("ketqua").innerHTML;
+        document.getElementById("ketquatruoc").innerHTML=chuoihientai;
+        document.getElementById("ketqua").innerHTML=eval(chuoihientai);
+    }
+</script>
+
+<!--</form>-->
+</body>
+</html>
