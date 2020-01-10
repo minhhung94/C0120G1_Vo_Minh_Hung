@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="javascript">
+    // Hàm tính kết quả
+    function tinh()
+    {
+        // Nhập độ C vào ô input
+        var a = document.getElementById("a");
+        var result = document.getElementById("result");
+        var cd =( (parseFloat(a.value)*9 ) / 5 ) +32;
+
+        // Gán giá trị vào ô thứ ba
+        // Phải kiểm tra tổng hai số này có bị lỗi hay không
+        if (!Number.isNaN(cd) ){
+            result.value = cd;
+        }
+        else {
+            result.value = 'Vui lòng nhập số';
+        }
+    }
+</script>
+Do C: <input type="text" id="a" value="" placeholder='nhập độ C' onkeyup="tinh() "/>
+Kết quả: <input type="text" id="result" value=""/>
+</body>
+</html>
