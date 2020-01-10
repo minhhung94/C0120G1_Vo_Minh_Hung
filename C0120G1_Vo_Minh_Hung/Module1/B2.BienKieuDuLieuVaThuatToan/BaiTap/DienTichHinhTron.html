@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a>Nhập bán kính hình tròn : </a><input type="text" id="r"/>
+<button onclick="tinhchuvi()"> Tính diện tích </button>
+Diện tích hình tròn là: <input type="text" id="c" value="">
+<script>
+    function tinhchuvi() {
+        const PI=3.14;
+        var r = parseFloat(document.getElementById("r").value);
+        var c = document.getElementById("c");
+        c.value= parseFloat(r*r*PI) ;
+    }
+</script>
+</body>
+</html>
