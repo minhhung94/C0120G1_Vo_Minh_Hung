@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chu vi hình tròn là</title>
+</head>
+<body>
+<span> nhập vào bán kính hình tròn: </span> <input id="bankinh"><br>
+<button onclick="tinhchuvi();"> tính chu vi </button>
+<h4> chu vi hình tròn là: <span id="hienthichuvi";></span>
+</h4>
+<script>
+    const PI=3.14;
+    function tinhchuvi() {
+        var bankinh= parseFloat(document.getElementById("bankinh").value);
+        document.getElementById("hienthichuvi").innerHTML =(bankinh*2*PI);
+    }
+</script>
+</body>
+</html>
