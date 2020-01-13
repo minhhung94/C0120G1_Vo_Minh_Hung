@@ -17,14 +17,7 @@
     var rentDay=prompt("Ngày thuê : ");
     var serviceType=prompt("Loại dịch vụ : ");
     var roomtype=prompt("Loại phòng : ");
-    var moneypay;
-    switch (roomtype) {
-        case "Villa" : moneypay = 500; break;
-        case "House": moneypay = 300; break;
-        case "Room": moneypay = 100; break;
-        default : moneypay = 250;
-    }
-    var totalpays = parseFloat(moneypay) * parseFloat(rentDay) * (1- Number.parseFloat(discount)/100);
+    var totalpays = 500 * parseFloat(rentDay) * (1- Number.parseFloat(discount)/100);
     //hiển thị thông tin
     alert("Information of Customer: \n"+
         "\nName: " + name + "\nId card: " + idCard + "\nBirthday: " + birthday +
