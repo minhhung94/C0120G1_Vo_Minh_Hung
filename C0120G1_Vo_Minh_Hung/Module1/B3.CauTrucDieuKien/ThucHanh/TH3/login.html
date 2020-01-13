@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let username = prompt("nhập tên tài khoản", '');
+    if (username=='admin') {
+        let pass = prompt('nhập mật khẩu', '');
+        if (pass == 'admin') {
+            alert('đúng mật khẩu');
+        } else {
+            alert('sai mật khẩu');
+        }
+    }else if(username== null) {
+        alert('chào mừng người mới');
+    }else{
+        alert('vui lòng nhập lại TK');
+    }
+</script>
+</body>
+</html>
