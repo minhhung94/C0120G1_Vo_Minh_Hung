@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var name=prompt("Nhập tên :");
+    var idCard=prompt("Nhập số điện thoại :");
+    var birthday=prompt("Nhập ngày sinh (dd//MM/YY) :");
+    var email=prompt("Điền Email :");
+    var address=prompt("Nhập địa chỉ : ");
+    var typeCustomer=prompt("Enter Type (Diamond, Platinum, Gold, Silver, Member):" );
+    var discount=prompt("Giảm giá :");
+    var accompanying=prompt("Đi kèm : ");
+    var rentDay=prompt("Ngày thuê : ");
+    var serviceType=prompt("Loại dịch vụ (Vip, Business,  Normal) : ");
+    var roomtype=prompt("Loại phòng (Villa, House, Room) : ");
+    var moneypay;
+    switch (roomtype) {
+        case "Villa" : moneypay = 500; break;
+        case "House": moneypay = 300; break;
+        case "Room": moneypay = 100; break;
+    }
+    var totalpays = parseFloat(moneypay) * parseFloat(rentDay) * (1- Number.parseFloat(discount)/100);
+    //hiển thị thông tin
+    alert("Information of Customer: \n"+
+        "\nName: " + name + "\nId card: " + idCard + "\nBirthday: " + birthday +
+        "\nEmail: " + email + "\nAddress: " + address + "\nTypeCustomer: " + typeCustomer
+        + "\nDiscount: " + discount + "\nAccompanying: " + accompanying + "\nRentDay: " + rentDay
+        + "\nServiceType: " + serviceType +"\nroomtype: "+ roomtype + "\ntotalpays: " + totalpays)
+</script>
+</body>
+</html>
