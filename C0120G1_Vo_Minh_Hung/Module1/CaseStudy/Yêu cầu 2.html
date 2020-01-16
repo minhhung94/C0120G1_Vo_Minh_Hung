@@ -188,12 +188,12 @@
             case "Member" : discountTypeCustomer=0; break;
         }
 
-        let current=new Date().getFullYear();
+        let currentYear=new Date().getFullYear();
         let yearOfBirth= birthday;
         yearOfBirth=new Date(yearOfBirth).getFullYear();
-        if(new Date().getMonth()>new Date(birthDay).getMonth())
+        if(new Date().getMonth()>new Date(birthday).getMonth())
             ageCustomer=currentYear-yearOfBirth;
-        else if((new Date().getMonth()===new Date(birthDay).getMonth()) && new Date().getDate()>new Date(birthDay).getDate())
+        else if((new Date().getMonth()===new Date(birthday).getMonth()) && new Date().getDate()>new Date(birthday).getDate())
             ageCustomer=currentYear-yearOfBirth;
         else ageCustomer=(currentYear-yearOfBirth-1);
 
