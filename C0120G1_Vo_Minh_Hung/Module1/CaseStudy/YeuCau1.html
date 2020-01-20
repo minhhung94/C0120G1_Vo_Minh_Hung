@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let name=prompt("Nhập tên :");
+    let idCard=prompt("Nhập số CMND :");
+    let phone=prompt("Nhập số điện thoại :");
+    let birthday=prompt("Nhập ngày sinh (dd//MM/YY) :");
+    let email=prompt("Điền Email :");
+    let address=prompt("Nhập địa chỉ : ");
+    let typeCustomer=prompt("Enter Type (Diamond, Platinum, Gold, Silver, Member):" );
+    let discount=prompt("Giảm giá :");
+    let accompanying=prompt("Đi kèm : ");
+    let rentDay=prompt("Ngày thuê : ");
+    let serviceType=prompt("Loại dịch vụ (Vip, Business,  Normal) : ");
+    let roomtype=prompt("Loại phòng (Villa, House, Room) : ");
+    let totalpays = 500 * parseFloat(rentDay) * (1- Number.parseFloat(discount)/100);
+    //hiển thị thông tin
+    alert("Information of Customer: \n"+
+        "\nName: " + name + "\nId card: " + idCard + "\nPhone: "+phone +"\nBirthday: " + birthday +
+        "\nEmail: " + email + "\nAddress: " + address + "\nTypeCustomer: " + typeCustomer
+        + "\nDiscount: " + discount + "\nAccompanying: " + accompanying + "\nRentDay: " + rentDay
+        + "\nServiceType: " + serviceType +"\nroomtype: "+ roomtype + "\ntotalpays: " + totalpays)
+</script>
+</body>
+</html>
