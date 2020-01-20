@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let checkValidate = false;
+    let emailCustomer;
+    let birthdayCustomer;
+    let idCard;
+    let discount;
+    let numberOfAccompanying;
+    let rentDay;
+    // let name=prompt("Nhập tên :");
+    do{
+        checkValidate=false;
+        idCard=prompt("Nhập số CMND :");
+        if(isNaN(idCard)){
+            alert("Id Card Is Invalid!!! Please Try Again");
+            continue;
+        }
+        idCard= Number.parseFloat(idCard)
+        if(!Number.isInteger(idCard)){
+            alert("Id Card Is Invalid!!! Please Try Again");
+            continue;
+        }
+        if(idCard >= 100000000 && idCard < 999999999){
+            checkValidate=true;
+        }else {
+            alert("Id Card Is Invalid!!! Please Try Again");
+        }
+    }while (!checkValidate);
+
+    // let phone=prompt("Nhập số điện thoại :");
+    do{
+        checkValidate=false;
+        birthdayCustomer = prompt("Nhập ngày sinh (dd//MM/YY) :");
+        if(birthdayCustomer.charAt(2) !== "/" ||birthdayCustomer.charAt(5) !== "/") {
+            alert("Birday Is Invalid!!! Please Try Again");
+            continue;
+        }
+        let day = birthdayCustomer.substring(0,2);
+        let month = birthdayCustomer.substring(3,5);
+        let year = birthdayCustomer.substring(6,10);
+        if(!isNaN(day) && !isNaN(month) && !isNaN(year)) {
+            day = Number.parseFloat(day);
+            month = Number.parseFloat(month);
+            year = Number.parseFloat(year);
+            if (Number.isInteger(day) && Number.isInteger(month) &&Number.isInteger(year)){
+                if (day >0 && day <32 && month>0 && month<13 && year>=1960 && year<=2019){
+                    checkValidate=true;
+                }
+            }
+        }
+        if(!checkValidate){
+            alert("Birday Is Invalid!!! Please Try Again");
+        }
+    }while (!checkValidate);
+    do{
+        checkValidate=true;
+        emailCustomer=prompt("Điền Email :");
+        let countDoc = 0;
+        let countAt=0;
+        for (let i=0;i < emailCustomer.length; i++)
+        {
+            if(emailCustomer.charAt(i) === "@"){
+                countAt++;
+            }
+            if(emailCustomer.charAt(i) === "."){
+                countDoc++;
+            }
+        }
+        if(countAt !==1 || countDoc<1)
+        {
+            checkValidate = false;
+            alert("Email Is Invalid!!! Please Try Again");
+        }
+
+    } while(!checkValidate);
+    // let address=prompt("Nhập địa chỉ : ");
+    // let typeCustomer=prompt("Enter Type (Diamond, Platinum, Gold, Silver, Member):" );
+    do{
+         checkValidate = false;
+         discount=prompt("Giảm giá :");
+         if(!isNaN(discount)){
+             discount = Number.parseFloat(discount);
+             if (discount >= 0){
+                checkValidate = true;
+            }
+         }
+         if (!checkValidate){
+             alert("Discount Is Invalid!!! Please Try Again");
+         }
+     } while (!checkValidate)
+    do{
+        checkValidate = false;
+        numberOfAccompanying=prompt("Số người đi kèm : ");
+        if(!isNaN(numberOfAccompanying)){
+            numberOfAccompanying = Number.parseFloat(numberOfAccompanying);
+            if (numberOfAccompanying >= 0 && Number.isInteger(numberOfAccompanying)){
+                checkValidate = true;
+            }
+        }
+        if (!checkValidate){
+            alert("Accompanying Is Invalid!!! Please Try Again");
+        }
+    } while (!checkValidate)
+
+    do{
+        checkValidate = false;
+        rentDay=prompt("Số ngày thuê : ");
+        if(!isNaN(rentDay)){
+            rentDay = Number.parseFloat(rentDay);
+            if (rentDay >= 0 && Number.isInteger(rentDay)){
+                checkValidate = true;
+            }
+        }
+        if (!checkValidate){
+            alert("RentDay Is Invalid!!! Please Try Again");
+        }
+    } while (!checkValidate)
+    // let rentDay=prompt("Ngày thuê : ");
+    // let serviceType=prompt("Loại dịch vụ (Vip, Business,  Normal) : ");
+    // let roomtype=prompt("Loại phòng (Villa, House, Room) : ");
+    // let totalpays = 500 * parseFloat(rentDay) * (1- Number.parseFloat(discount)/100);
+    //hiển thị thông tin
+     alert("Information of Customer: \n"+
+    //     "\nName: " + name +
+     "\nId card: " + idCard +
+         //     "\nPhone: "+phone +
+     "\nBirthday: " + birthdayCustomer +
+     "\nEmail: " + emailCustomer +
+         //+ "\nAddress: " + address + "\nTypeCustomer: " + typeCustomer
+     "\nDiscount: " + discount +
+     "\nAccompanying: " + numberOfAccompanying +
+     "\nRentDay: " + rentDay)
+    //     + "\nServiceType: " + serviceType +"\nroomtype: "+ roomtype + "\ntotalpays: " + totalpays)
+</script>
+</body>
+</html>
