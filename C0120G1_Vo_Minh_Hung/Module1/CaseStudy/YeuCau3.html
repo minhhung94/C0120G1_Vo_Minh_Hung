@@ -13,7 +13,30 @@
     let discount;
     let numberOfAccompanying;
     let rentDay;
-    // let name=prompt("Nhập tên :");
+    let nameCustomer=prompt("Nhập tên :");
+    let nameStandardized = "";
+    let addressCustomer;
+    let addressStandardized = "";
+    let typeCustomer;
+    let typeCustomerStandardized = "";
+    let typeService;
+    let typeServiceStandardized = "";
+    let typeRoom;
+    let typeRoomStandardized = "";
+
+    nameCustomer = nameCustomer.trim().toLocaleLowerCase();
+    for (let i=0; i<nameCustomer.length;i++){
+        if(nameCustomer.charAt(i) === " " && nameCustomer.charAt(i+1) === " "){
+            continue;
+        }
+        if(i==0 || nameCustomer.charAt(i-1) == " "){
+            nameStandardized += nameCustomer.charAt(i).toLocaleUpperCase();
+            continue;
+        }
+        nameStandardized += nameCustomer.charAt(i);
+    }
+    nameCustomer = nameStandardized;
+    //Vòng lặp Id card
     do{
         checkValidate=false;
         idCard=prompt("Nhập số CMND :");
@@ -33,7 +56,8 @@
         }
     }while (!checkValidate);
 
-    // let phone=prompt("Nhập số điện thoại :");
+    let phone=prompt("Nhập số điện thoại :");
+    // vòng lặp birthday
     do{
         checkValidate=false;
         birthdayCustomer = prompt("Nhập ngày sinh (dd//MM/YY) :");
@@ -58,6 +82,7 @@
             alert("Birday Is Invalid!!! Please Try Again");
         }
     }while (!checkValidate);
+    // vòng lặp email
     do{
         checkValidate=true;
         emailCustomer=prompt("Điền Email :");
@@ -79,8 +104,35 @@
         }
 
     } while(!checkValidate);
-    // let address=prompt("Nhập địa chỉ : ");
-    // let typeCustomer=prompt("Enter Type (Diamond, Platinum, Gold, Silver, Member):" );
+    //Địa chỉ
+    addressCustomer=prompt("Nhập địa chỉ : ");
+    addressCustomer = addressCustomer.trim().toLocaleLowerCase();
+    for (let i=0; i<addressCustomer.length;i++){
+        if(addressCustomer.charAt(i) === " " && addressCustomer.charAt(i+1) === " "){
+            continue;
+        }
+        if(i==0 || addressCustomer.charAt(i-1) == " "){
+            addressStandardized += addressCustomer.charAt(i).toLocaleUpperCase();
+            continue;
+        }
+        addressStandardized += addressCustomer.charAt(i);
+    }
+    addressCustomer = addressStandardized;
+    //Thành viên
+    typeCustomer=prompt("Enter Type (Diamond, Platinum, Gold, Silver, Member):" );
+    typeCustomer = typeCustomer.trim().toLocaleLowerCase();
+    for (let i=0; i<typeCustomer.length;i++){
+        if(typeCustomer.charAt(i) === " " && typeCustomer.charAt(i+1) === " "){
+            continue;
+        }
+        if(i==0 || typeCustomer.charAt(i-1) == " "){
+            typeCustomerStandardized += typeCustomer.charAt(i).toLocaleUpperCase();
+            continue;
+        }
+        typeCustomerStandardized += typeCustomer.charAt(i);
+    }
+    typeCustomer = typeCustomerStandardized;
+    // Vòng lặp Discount
     do{
          checkValidate = false;
          discount=prompt("Giảm giá :");
@@ -94,6 +146,7 @@
              alert("Discount Is Invalid!!! Please Try Again");
          }
      } while (!checkValidate)
+    // Vòng lặp Accompanying
     do{
         checkValidate = false;
         numberOfAccompanying=prompt("Số người đi kèm : ");
@@ -107,7 +160,7 @@
             alert("Accompanying Is Invalid!!! Please Try Again");
         }
     } while (!checkValidate)
-
+    // Vòng lặp rentDay
     do{
         checkValidate = false;
         rentDay=prompt("Số ngày thuê : ");
@@ -121,22 +174,51 @@
             alert("RentDay Is Invalid!!! Please Try Again");
         }
     } while (!checkValidate)
-    // let rentDay=prompt("Ngày thuê : ");
-    // let serviceType=prompt("Loại dịch vụ (Vip, Business,  Normal) : ");
-    // let roomtype=prompt("Loại phòng (Villa, House, Room) : ");
-    // let totalpays = 500 * parseFloat(rentDay) * (1- Number.parseFloat(discount)/100);
+    //Loại dịch vụ
+    typeService=prompt("Loại dịch vụ (Vip, Business,  Normal) : ");
+    typeService= typeService.trim().toLocaleLowerCase();
+    for (let i=0; i<typeService.length;i++){
+        if(typeService.charAt(i) === " " && typeService.charAt(i+1) === " "){
+            continue;
+        }
+        if(i==0 ||typeService.charAt(i-1) == " "){
+            typeServiceStandardized += typeService.charAt(i).toLocaleUpperCase();
+            continue;
+        }
+        typeServiceStandardized += typeService.charAt(i);
+    }
+    typeService = addressStandardized;
+    // Loại phòng
+    typeRoom = prompt("Loại phòng (Villa, House, Room) : ");
+    typeRoom = typeRoom.trim().toLocaleLowerCase();
+    for (let i=0; i<typeRoom.length;i++){
+        if(typeRoom.charAt(i) === " " && typeRoom.charAt(i+1) === " "){
+            continue;
+        }
+        if(i==0 ||typeRoom.charAt(i-1) == " "){
+            typeRoomStandardized += typeRoom.charAt(i).toLocaleUpperCase();
+            continue;
+        }
+        typeRoomStandardized += typeRoom.charAt(i);
+    }
+    typeRoomCustomer = typeRoomStandardized;
+    //Thành tiền
+    //let totalpays = 500 * parseFloat(rentDay) * (1- Number.parseFloat(discount)/100);
     //hiển thị thông tin
      alert("Information of Customer: \n"+
-    //     "\nName: " + name +
+    "\nName: " + nameCustomer +
      "\nId card: " + idCard +
-         //     "\nPhone: "+phone +
+    "\nPhone: "+phone +
      "\nBirthday: " + birthdayCustomer +
      "\nEmail: " + emailCustomer +
-         //+ "\nAddress: " + address + "\nTypeCustomer: " + typeCustomer
+     "\nAddress: " + addressCustomer +
+     "\nTypeCustomer: " + typeCustomer +
      "\nDiscount: " + discount +
      "\nAccompanying: " + numberOfAccompanying +
-     "\nRentDay: " + rentDay)
-    //     + "\nServiceType: " + serviceType +"\nroomtype: "+ roomtype + "\ntotalpays: " + totalpays)
+     "\nRentDay: " + rentDay +
+     "\nTypeService: " + typeService +
+     "\nTypeRoom: "+ typeRoom )
+     //"\ntotalpays: " + totalpays
 </script>
 </body>
 </html>
