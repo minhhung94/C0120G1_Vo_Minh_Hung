@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+    Nhập vào số thứ 1: <input id="numbermin1"> </br>
+    Nhập vào số thứ 2: <input id="numbermin2"> </br>
+    Nhập vào số thứ 3: <input id="numbermin3"> </br>
+    <button onclick="min(); return false;">MinMax</button>
+    <input id="outputMin">
+</p>
+<script>
+    function min() {
+        let a = parseFloat(document.getElementById("numbermin1").value);
+        let b = parseFloat(document.getElementById("numbermin2").value);
+        let c = parseFloat(document.getElementById("numbermin3").value);
+        if(a <b && a<c){
+            document.getElementById("outputMin").value = a +" là số nhỏ nhất";
+        }else if(b<a && b<c){
+            document.getElementById("outputMin").value = b + " là số nhỏ nhất";
+        }else {
+            document.getElementById("outputMin").value = c + " là số nhỏ nhất";
+        }
+
+    }
+</script>
+</body>
+</html>

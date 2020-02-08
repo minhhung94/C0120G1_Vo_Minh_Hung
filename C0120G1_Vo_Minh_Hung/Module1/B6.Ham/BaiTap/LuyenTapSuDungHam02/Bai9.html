@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<br>
+    Thêm từ vào mảng : <input id="addword">
+    <button onclick="add()">Add</button></br>
+</br>
+    Nhập từ cần tìm trong mảng :
+    <input id="wordcheck">
+    <button onclick="check()">check</button>
+</p>
+
+<script>
+    let arr=[];
+    function add() {
+        let word = document.getElementById("addword").value;
+        arr.push(word)
+        document.getElementById("addword").value = "";
+    }
+    function check() {
+        let wordKT = document.getElementById("wordcheck").value;
+        let dem=0;
+        for (let i=0;i<arr.length;i++){
+            alert(wordKT);
+            tem = a[i]
+            if (wordKT == tem){
+                dem += 1;
+            }else {
+                dem += 0 ;
+            }
+        }
+        if(dem !== 0){
+            alert(word+" xuất hiện : " + dem + " trong mảng");
+        }else {
+            alert(word+" không xuất hiện trong mảng");
+        }
+    }
+</script>
+</body>
+</html>

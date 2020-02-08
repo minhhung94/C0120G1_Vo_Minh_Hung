@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Nhập vào số : <input id="numberFactorial">
+    <button onclick="square()">Factorial</button>
+    <input id="outputFactorial">
+</p>
+<script>
+    function square() {
+        let number = parseFloat(document.getElementById("numberFactorial").value);
+        let temp = 1;
+        for(let i=1; i<=number; i++){
+            temp = temp * i;
+        }
+        document.getElementById("outputFactorial").value = temp;
+    }
+</script>
+</body>
+</html>

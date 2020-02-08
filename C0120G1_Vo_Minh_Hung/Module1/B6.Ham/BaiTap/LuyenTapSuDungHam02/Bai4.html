@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<p>
+    Nhập vào số : <input id="checknumber">
+    <button onclick="check(); return false;">Check</button>
+    <input id="outputcheck">
+</p></form>
+<script>
+    function check() {
+        let number = parseFloat(document.getElementById("checknumber").value);
+        if(!Number.isNaN(number)){
+            document.getElementById("outputcheck").value = "true";
+        }else {
+        document.getElementById("outputcheck").value = "false";}
+    }
+</script>
+</body>
+</html>

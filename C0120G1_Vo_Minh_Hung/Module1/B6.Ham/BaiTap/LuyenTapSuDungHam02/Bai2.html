@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Nhập vào bán kính hình tròn : <input id="number">
+    <button onclick="acreage(parseFloat(document.getElementById('number').value))">Acreage</button>
+    <button onclick="perimeter(parseFloat(document.getElementById('number').value))">Perimeter</button>
+    <input id="output">
+</p>
+<script>
+    function acreage(r) {
+        let tem = r*r*314/100;
+        document.getElementById("output").value= "S = " + tem;
+    }
+    function perimeter(t) {
+        let temp = 2*t*314/100;
+        document.getElementById("output").value = "C = "+temp;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        button {
+            background:#50af50 ;
+            color: white;
+        }
+        body {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container"></div>
+<form>
+    <h3>Add New Product :</h3>
+    <input type="text" id="tenSP"/>
+    <button id="myBtn" onclick="addProduct() ; return false;">Add</button>
+</form>
+<h4 style="padding-top: 20px;">Display All Product</h4>
+<table id="display" class="table table-striped">
+    <tr>
+        <td>STT</td>
+        <td>Product</td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<script>
+    let listProduct = [];
+    let dem;
+    function addProduct() {
+        let nhap = document.getElementById("tenSP").value;
+        listProduct.push(nhap);
+        document.getElementById("tenSP").value = "";
+        dem = listProduct.length-1;
+        alert("Bạn vừa nhận sản phẩm : "+listProduct[dem]);
+        displayListProduct();
+    }
+
+    function displayListProduct() {
+        let temp=" <tr>" + "<td>STT</td>" + "<td>Product</td>" + "<td></td>" +"<td>"+listProduct.length + " Product" +"</td>"+"</tr>";
+            for (let i =0; i<listProduct.length;i++)
+            {
+                temp += "<tr><td>" + (i+1) +"</td>" + "<td>" + listProduct[i]+"</td>"+ "<td>" +"<button onclick='editProduct(this.value)' value="+i+" >Edit</button>"+ "</td>"+"<td>"+"<button onclick='deleteProduct(this.value)' value="+i+" >Delete</button>"+ "</td>" + "</tr>";
+                //"<tr><td> i </td> <td> listProduct[i] </td> <td><button>Xoá</button></td> </tr>"
+            }
+        document.getElementById("display").innerHTML = temp;
+    }
+    function editProduct(t) {
+        index = prompt("Sản phầm :" + listProduct[t] + "bạn muốn sửa thành :");
+        listProduct[t]=index;
+        displayListProduct();
+    }
+    function deleteProduct(e) {
+        listProduct.splice(e,1);
+        displayListProduct();
+    }
+</script>
+</body>
+</html>

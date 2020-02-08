@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Nhập vào số : <input id="numbersquare">
+    <button onclick="square()">Square</button>
+    <input id="outputsquare">
+</p>
+<script>
+    function square() {
+        let number = parseFloat(document.getElementById("numbersquare").value);
+        let tem = number * number;
+        document.getElementById("outputsquare").value = tem;
+    }
+</script>
+</body>
+</html>

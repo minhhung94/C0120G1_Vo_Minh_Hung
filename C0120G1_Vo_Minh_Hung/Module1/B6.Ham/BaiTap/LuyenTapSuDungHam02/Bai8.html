@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<p>
+    Nhập vào số : <input id="numbercheck">
+    <button onclick="add(); return false;">Add</button>
+    <input id="outputcheck">
+</p></form>
+<script>
+    let arr=[];
+    function add() {
+        let number = parseFloat(document.getElementById("numbercheck").value);
+        arr.push(number)
+        alert(arr.reverse());
+        document.getElementById("numbercheck").value = "";
+        arr.reverse();
+    }
+</script>
+</body>
+</html>

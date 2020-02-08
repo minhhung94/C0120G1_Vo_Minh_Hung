@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+Nhập vào từ : <input id="check">
+<button onclick="checkword(); return false;">Check</button></form>
+<p id="outputCheck"></p>
+<script>
+    function checkword() {
+        let arr = [];
+        let checkKT= document.getElementById("check").value;
+            for(let i=0;i<checkKT.length;i++){
+                // checkKT.slice(i,i+1) , cắt chuỗi checkKT từ vị trí thứ i đến i+1
+                arr.push(checkKT.slice(i,i+1));
+            }
+            arr.reverse();
+            if(checkKT===arr.join("")){
+                document.getElementById("outputCheck").innerHTML="Chuỗi vừa nhập là chuỗi đối xứng"
+            }else {
+                document.getElementById("outputCheck").innerHTML="Chuỗi vừa nhập không phải chuỗi đối xứng"
+            }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <select id="chon1" onchange="kiemtra1(this.value)">
+        <option>Meters</option>
+        <option>Feet</option>
+    </select>
+    To
+    <select id="chon2" onchange="kiemtra2(this.value)">
+        <option>Feet</option>
+        <option>Meters</option>
+    </select>
+    <input id="inputnumber" type="text" placeholder="Please enter Feet or Meters"
+           oninput="temperatureConverter(this.value)">
+</p>
+<p>Ket qua: <span id="outputnumber"></span></p>
+<script>
+    function kiemtra1(t) {
+           if(t == "Meters"){
+               document.getElementById("chon2").value = "Feet";
+           }else {document.getElementById("chon2").value= "Meters";}
+            document.getElementById("inputnumber").value = "";
+    }
+    function kiemtra2(t) {
+        if(t == "Meters"){
+            document.getElementById("chon1").value = "Feet";
+        }else {document.getElementById("chon1").value= "Meters";}
+        document.getElementById("inputnumber").value = "";
+    }
+
+    function temperatureConverter(valNum) {
+        valNum = parseFloat(valNum);
+        if(!isNaN(valNum)){
+            let temp = document.getElementById("chon1").value;
+            if (temp == "Meters"){
+                document.getElementById("outputnumber").innerHTML = parseFloat(valNum * 3.279).toFixed(3);
+            }
+            if(temp == "Feet") { document.getElementById("outputnumber").innerHTML = parseFloat(valNum * 0.305).toFixed(3);}
+        } else {
+            document.getElementById("outputnumber").innerHTML = "Bạn chưa nhập vào số";
+        }
+    }
+</script>
+</body>
+</html>

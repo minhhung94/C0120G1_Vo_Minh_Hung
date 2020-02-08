@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+Nhập vào số thứ 1: <input id="numbermin1"> </br>
+Nhập vào số thứ 2: <input id="numbermin2"> </br>
+<button onclick="convert((document.getElementById('numbermin1').value),(document.getElementById('numbermin2').value))">convert</button>
+</p>
+<script>
+    function convert(a,b) {
+        document.getElementById("numbermin1").value=b;
+        document.getElementById("numbermin2").value=a;
+    }
+</script>
+</body>
+</html>

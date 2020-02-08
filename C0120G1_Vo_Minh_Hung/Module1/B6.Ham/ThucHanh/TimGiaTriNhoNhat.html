@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1= [3, 5, 1, 8, -3, 7, 8];
+    let arr2= [7, 12, 6, 9, 20, 56, 89];
+    let arr3= [];
+    let arr4= [0, 0, 0, 0, 0, 0];
+    let minArray1 = minArray(arr1);
+    let minArray2 = minArray(arr2);
+    let minArray3 = minArray(arr3);
+    let minArray4 = minArray(arr4);
+
+    function minArray(arr) {
+        let min = arr[0];
+        if (arr.toString() == ""){
+            min = -1;
+        }else {
+            for(var i = 1; i < arr.length; i++){
+                if(arr[i] < min){
+                    min = arr[i];
+                }
+            }
+        }
+        return min;
+    }
+    alert("Mảng 1 có giá trị nhỏ nhất là : " + minArray1 + "\nMảng 2 có giá trị nhỏ nhất là : " +
+        minArray2+ "\nMảng 3 có giá trị nhỏ nhất là : " + minArray3 + "\nMảng 4 có giá trị nhỏ nhất là : " + minArray4);
+</script>
+</body>
+</html>
