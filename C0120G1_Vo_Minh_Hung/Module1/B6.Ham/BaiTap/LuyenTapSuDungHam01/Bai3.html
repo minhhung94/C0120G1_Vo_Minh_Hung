@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="numbera">
+<input id="numberb">
+<button onclick="sosanh()">Tong</button>
+<script>
+    function sosanh() {
+        let a = parseFloat(document.getElementById("numbera").value);
+        let b = parseFloat(document.getElementById("numberb").value);
+        if(b<a){
+            alert("Nhap lai");
+        }else {
+            var tong= a+b;
+            alert(tong);
+        }
+    }
+</script>
+</body>
+</html>

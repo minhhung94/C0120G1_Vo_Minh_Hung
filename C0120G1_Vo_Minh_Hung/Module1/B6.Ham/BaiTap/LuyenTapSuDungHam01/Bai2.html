@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form >
+    <input type="text" id = "number">
+    <button onclick="Doiso(parseFloat(document.getElementById('number').value)); return false;">Check</button>
+</form>
+<script>
+    function Doiso(x){
+        x++;
+        document.getElementById("number").value=x;
+    }
+</script>
+</body>
+</html>

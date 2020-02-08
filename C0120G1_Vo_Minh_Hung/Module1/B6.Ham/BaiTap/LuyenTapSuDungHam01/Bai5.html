@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập vào một chòm sao sau : Ursa Minor , Tarurus , Cygnus, Lyra , Aquila , Ursa Major , Leo</p>
+<input id="seach"> <button onclick="check()">Seach</button></br>
+<script>
+    let star= ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus"];
+    let constellation= ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"] ;
+    let timkiem;
+    function check() {
+        timkiem = document.getElementById("seach").value;
+        if( constellation.indexOf(timkiem) !== -1){
+            alert("Ngôi sao trong chòm sao "+timkiem +" là : "+star[constellation.indexOf(timkiem)]);
+        }else alert("Bạn đã nhập sai. Vui lòng nhập lại");
+    }
+
+</script>
+</body>
+</html>

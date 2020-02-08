@@ -12,7 +12,7 @@
 </br>
     Nhập từ cần tìm trong mảng :
     <input id="wordcheck">
-    <button onclick="check()">check</button>
+    <button onclick="check(document.getElementById('wordcheck').value)">Check</button>
 </p>
 
 <script>
@@ -22,22 +22,19 @@
         arr.push(word)
         document.getElementById("addword").value = "";
     }
-    function check() {
-        let wordKT = document.getElementById("wordcheck").value;
+    function check(wordKT) {
         let dem=0;
         for (let i=0;i<arr.length;i++){
-            alert(wordKT);
-            tem = a[i]
-            if (wordKT == tem){
+            if (wordKT === arr[i]){
                 dem += 1;
             }else {
                 dem += 0 ;
             }
         }
         if(dem !== 0){
-            alert(word+" xuất hiện : " + dem + " trong mảng");
+            alert(wordKT+" xuất hiện " + dem + " lần trong mảng");
         }else {
-            alert(word+" không xuất hiện trong mảng");
+            alert(wordKT+" không xuất hiện trong mảng");
         }
     }
 </script>
