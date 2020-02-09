@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrListCustomer = [];
+    let nameCustomer,idCard, birthdayCustomer, emailCustomer;
+    let addressCustomer, typeCustomer, discount, accompanying;
+    let rentDays, typeService;
+    let typeRoom;
+    let checkEditCustomer = false;
+    let checkDeleteCustomer = false;
+    displayMainMenu();
+
+    function displayMainMenu() {
+        choose = prompt(
+            "1. Add new Customer\n" +
+            "2. Display Information Customer\n" +
+            "3. Edit information customer\n" +
+            "4. Delete Customer.\n" +
+            "0. Exit\n" +
+            "Chọn menu:"
+        );
+        switch (choose) {
+            case "1":
+                addCustomer();
+                break;
+            case "2":
+                alert(displayCustomer());
+                displayMainMenu();
+                break;
+            case "3":
+                chooseCustomerEdit();
+                break;
+            case "4":
+                chooseDeleteCustomer();
+                break;
+            case "0":
+                break;
+            default:
+                alert("Chon lai");
+                displayMainMenu();
+                break;
+        }
+    }
+
+    //Hàm Thêm Customer
+    function addCustomer() {
+        let arrInfo = [];
+        nameCustomer = prompt("Nhập tên :");
+        idCard= prompt("Nhập số CMND:");
+        birthdayCustomer=prompt("Nhập ngày sinh (MM/dd/yyyy): ");
+        emailCustomer=prompt("Điền Email :");
+        addressCustomer=prompt("Nhập địa chỉ : ");
+        typeCustomer=prompt("Enter Type (Diamond, Platinum, Gold, Silver, Member): " );
+        discount=prompt("Giảm giá: ");
+        accompanying=prompt("Đi kèm: ");
+        rentDays=prompt("Ngày thuê: ");
+        typeService=prompt("Loại dịch vụ (Vip, Business, Normal): ");
+        typeRoom=prompt("Loại phòng (Villa, House, Room): ");
+        arrInfo.push(nameCustomer);
+        arrInfo.push(idCard);
+        arrInfo.push(birthdayCustomer);
+        arrInfo.push(emailCustomer);
+        arrInfo.push(addressCustomer);
+        arrInfo.push(typeCustomer);
+        arrInfo.push(discount);
+        arrInfo.push(accompanying);
+        arrInfo.push(rentDays);
+        arrInfo.push(typeService);
+        arrInfo.push(typeRoom);
+        arrListCustomer.push(arrInfo);
+        displayMainMenu();
+    }
+
+    function displayCustomer(){
+        let result = "";
+        for (var i = 0; i < arrListCustomer.length; i++) {
+            result += "\n" + (i + 1) + ". Name: " + arrListCustomer[i][0] + " , Id : " + arrListCustomer[i][1];
+        }
+        result += "\n" + (arrListCustomer.length + 1) + ". Back to menu.";
+        let chooseDisplayInfo = prompt(result);
+        if(chooseDisplayInfo.toString() !== (arrListCustomer.length + 1).toString()){
+            if(!checkDeleteCustomer){
+                displayInformationCustomer(Number.parseInt(chooseDisplayInfo)-1);
+            }else {
+                deleteCustomer(Number.parseInt(chooseDisplayInfo)-1)
+            }
+        }else {
+            checkDeleteCustomer = false;
+            checkEditCustomer = false;
+            displayMainMenu();
+        }
+    }
+    //hàm hiển thị thông tin Customer
+    function displayInformationCustomer(index) {
+        if(checkEditCustomer){
+            let chooseInfoEdit = prompt(
+                "1.Name: " + arrListCustomer[index][0]+
+                "\n2.IdCard: " + arrListCustomer[index][1]+
+                "\n3.Birthday: " + arrListCustomer[index][2]+
+                "\n4.Email: " + arrListCustomer[index][3]+
+                "\n5.Address: " + arrListCustomer[index][4]+
+                "\n6.TypeCustomer: " + arrListCustomer[index][5]+
+                "\n7.Discount: " + arrListCustomer[index][6]+
+                "\n8.Accompanying: " + arrListCustomer[index][7]+
+                "\n9.RentDay: " + arrListCustomer[index][8]+
+                "\n10.TypeService: " + arrListCustomer[index][9]+
+                "\n11.TypeRoom: " + arrListCustomer[index][10]+
+                "\n12.Back. "
+            );
+            if(chooseInfoEdit.toString() !== "12"){
+                editCustomer(Number.parseInt(chooseInfoEdit)-1);
+            }else {
+                displayMainMenu();
+            }
+        }else {
+        alert("InformationCustomer: \n" +
+            "Name: " + arrListCustomer[index][0]+
+            "\nIdCard: " + arrListCustomer[index][1]+
+            "\nBirthday: " + arrListCustomer[index][2]+
+            "\nEmail: " + arrListCustomer[index][3]+
+            "\nAddress: " + arrListCustomer[index][4]+
+            "\nTypeCustomer: " + arrListCustomer[index][5]+
+            "\nDiscount: " + arrListCustomer[index][6]+
+            "\nAccompanying: " + arrListCustomer[index][7]+
+            "\nRentDay: " + arrListCustomer[index][8]+
+            "\nTypeService: " + arrListCustomer[index][9]+
+            "\nTypeRoom: " + arrListCustomer[index][10]
+            );
+        displayMainMenu(); }
+    }
+    //Hàm sửa thông tin Customer
+    function chooseCustomerEdit() {
+            checkEditCustomer = true;
+            displayCustomer();
+    }
+    function editCustomer(index) {
+        let indexEdit = prompt("Enter Info You Want Change: ");
+        switch (index) {
+            case 0:
+                arrListCustomer[index][0] = indexEdit;
+                break;
+            case 1:
+                arrListCustomer[index][1] = indexEdit;
+                break;
+            case 2:
+                arrListCustomer[index][2] = indexEdit;
+                break;
+            case 3:
+                arrListCustomer[index][3] = indexEdit;
+                break;
+            case 4:
+                arrListCustomer[index][4] = indexEdit;
+                break;
+            case 5:
+                arrListCustomer[index][5] = indexEdit;
+                break;
+            case 6:
+                arrListCustomer[index][6] = indexEdit;
+                break;
+            case 7:
+                arrListCustomer[index][7] = indexEdit;
+                break;
+            case 8:
+                arrListCustomer[index][8] = indexEdit;
+                break;
+            case 9:
+                arrListCustomer[index][9] = indexEdit;
+                break;
+            case 10:
+                arrListCustomer[index][10] = indexEdit;
+                break;
+            default:
+                alert("Faild!!!!!!!!");
+                break;
+        }
+        checkEditCustomer = false;
+        displayMainMenu();
+    }
+
+    function chooseDeleteCustomer() {
+        checkDeleteCustomer = true;
+        displayCustomer();
+    }
+
+    //Hàm Xoá Customer
+    function deleteCustomer(index) {
+        let chooseConfirm = prompt(
+            "Are you sure delete Customer: Name: " + arrListCustomer[index][0] +
+            "; IdCard: " + arrListCustomer[index][1]+
+            "\n1.Yes\n2.No" );
+        if(chooseConfirm === "1"){
+            arrListCustomer.splice(index,1);
+            alert("Delete Complete!!!")
+        }
+        checkDeleteCustomer = false;
+        displayMainMenu();
+    }
+
+    displayMainMenu();
+</script>
+</body>
+</html>
