@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    function Apple() {
+
+        this.setWeight = function (weight) {
+            this.weight = weight;
+        };
+        this.getWeight = function () {
+            return this.weight;
+        };
+        this.decrease = function () {
+            if (this.weight > 0) {
+                this.weight--;
+            }
+        };
+        this.isEmpty = function () {
+            if (this.weight === 0) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        };
+    }
+
+    function Human(name, gender, weight) {
+        //name
+
+        this.setGender = function (gender) {
+            this.gender = gender;
+        };
+        this.isMale = function () {
+            if (this.gender === "male") {
+                return true;
+            } else {
+                return false;
+            }
+        };
+        this.getWeight = function () { // tra ve gia tri can nang
+            return this.weight;
+        };
+        this.setWeight = function () { // dat gia tri can nang
+            this.weight = weight;
+        };
+        this.checkApple = function (apple) { // kiem tra can nang qua tao
+            this.apple = apple; // doi tuong this.apple = class apple
+        };
+        this.eat = function () {
+            if (this.apple.isEmpty()) {
+                this.apple.decrease();
+                this.weight++;
+                alert(this.apple.weight);
+            }
+            else {
+                this.say();
+            }
+        };
+        this.say = function () {
+            alert("Out of apple to eat !!!!");
+        };
+    }
+
+
+    let apple1 = new Apple();
+    let adam = new Human();
+    apple1.setWeight(10);
+    adam.checkApple(apple1);
+    adam.eat(apple1);
+
+</script>
+</body>
+</html>
