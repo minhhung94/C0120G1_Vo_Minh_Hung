@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkClass(str) {
+       let regexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
+        if (regexp.test(str)) {
+            return true;
+        }
+        return false;
+    }
+    let classcheck = "03201 - 2150";
+    console.log(checkClass(classcheck));
+
+</script>
+</body>
+</html>
