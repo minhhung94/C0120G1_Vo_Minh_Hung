@@ -2,6 +2,8 @@ let listCustomer = [];
 
 let validateBirthday = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4})$/;
 let validateEmail = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
+let validateIdCard = /^[0-9]{6,}$/;
+let validateNumber = /^[0-9]*$/;
 let checkEditCustomer = false;
 let checkDeleteCustomer = false;
 let checkDisplayTotalPay = false;
@@ -45,9 +47,19 @@ function displayMainMenu() {
 function addNewCustomer() {
     let checkBirthday = false;
     let checkEmail = false;
+    let checkIdCard = false;
+    let checkNumber = false;
     let cus = new Customer();
     cus.setNameCustomer(prompt("Enter name customer: "));
-    cus.setIdCard(prompt("Enter id card customer: "));
+    do {
+        cus.setIdCard(prompt("Enter id card customer: "));
+        if (validateIdCard.test(cus.getIdCard())){
+            checkIdCard = true;
+        }else {
+            alert("Id Card is invalid. Please try again");
+        }
+    }while (!checkIdCard);
+
     do{
         cus.setBirthdayCustomer(prompt("Enter birthday customer (dd/mm/yyyy): "));
         if (validateBirthday.test(cus.getBirthdayCustomer())){
@@ -68,10 +80,33 @@ function addNewCustomer() {
     while (!checkEmail);
     cus.setAddressCustomer(prompt("Enter Address customer: "));
     cus.setTypeCustomer(prompt("Enter Type customer: "));
-    cus.setDiscount(prompt("Enter Discount customer: "));
-    cus.setNumberOfAccompanying(prompt("Enter Number of Accompanying: "));
+    do {
+        cus.setDiscount(prompt("Enter Discount customer: "));
+        if (validateNumber.test(cus.getDiscount())){
+            checkNumber = true;
+        }else {
+            alert("Please enter number!");
+        }
+    }while (!checkNumber);
+    do {
+        cus.setNumberOfAccompanying(prompt("Enter Number of Accompanying: "));
+        if (validateNumber.test(cus.getNumberOfAccompanying())){
+            checkNumber = false;
+        }else {
+            alert("Please enter number!");
+        }
+    }while (checkNumber);
+
     cus.setTypeRoom(prompt("Enter TypeRoom customer: "));
-    cus.setRentDays(prompt("Enter RentDays customer: "));
+    do {
+        cus.setRentDays(prompt("Enter RentDays customer: "));
+        if (validateNumber.test(cus.getRentDays())){
+            checkNumber = true;
+        }else {
+            alert("Please enter number!");
+        }
+    }while (!checkNumber);
+
     cus.setTypeService(prompt("Enter TypeService customer: "));
     listCustomer.push(cus);
     displayMainMenu();
