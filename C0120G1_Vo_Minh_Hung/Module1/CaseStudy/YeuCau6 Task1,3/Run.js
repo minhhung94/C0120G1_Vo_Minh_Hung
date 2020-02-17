@@ -1,7 +1,7 @@
 let listCustomer = [];
 
 let validateBirthday = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4})$/;
-let validateEmail = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
+let validateEmail = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/; /^w+([]$/;
 let validateIdCard = /^[0-9]{6,}$/;
 let validateNumber = /^[0-9]*$/;
 let checkEditCustomer = false;
@@ -151,7 +151,8 @@ function displayInformationCustomer(index) {
             "\n12.Back. "
         );
         if(chooseInfoEdit.toString() !== "12"){
-            editCustomer(Number.parseInt(chooseInfoEdit)-1);
+            let numberEdit = parseInt(chooseInfoEdit)-1;
+            editCustomer(index,numberEdit);
         }else {
             checkEditCustomer = false;
             displayMainMenu();
@@ -186,41 +187,40 @@ function chooseCustomerEdit() {
     checkEditCustomer = true;
     displayCustomer();
 }
-function editCustomer(index) {
-    let indexEdit = prompt("Enter Info You Want Change: ");
-    switch (index) {
+function editCustomer(index,numberEdit) {
+    switch (numberEdit) {
         case 0:
-            listCustomer[index].setNameCustomer(indexEdit);
+            listCustomer[index].setNameCustomer(prompt("Enter Info You Want Change: "));
             break;
         case 1:
-            listCustomer[index].setIdCard(indexEdit);
+            listCustomer[index].setIdCard(prompt("Enter Info You Want Change: "));
             break;
         case 2:
-            listCustomer[index].setBirthdayCustomer(indexEdit);
+            listCustomer[index].setBirthdayCustomer(prompt("Enter Info You Want Change: "));
             break;
         case 3:
-            listCustomer[index].setEmailCustomer(indexEdit);
+            listCustomer[index].setEmailCustomer(prompt("Enter Info You Want Change: "));
             break;
         case 4:
-            listCustomer[index].setAddressCustomer(indexEdit);
+            listCustomer[index].setAddressCustomer(prompt("Enter Info You Want Change: "));
             break;
         case 5:
-            listCustomer[index].setTypeCustomer(indexEdit);
+            listCustomer[index].setTypeCustomer(prompt("Enter Info You Want Change: "));
             break;
         case 6:
-            listCustomer[index].setDiscount(indexEdit);
+            listCustomer[index].setDiscount(prompt("Enter Info You Want Change: "));
             break;
         case 7:
-            listCustomer[index].setNumberOfAccompanying(indexEdit);
+            listCustomer[index].setNumberOfAccompanying(prompt("Enter Info You Want Change: "));
             break;
         case 8:
-            listCustomer[index].setTypeRoom(indexEdit);
+            listCustomer[index].setTypeRoom(prompt("Enter Info You Want Change: "));
             break;
         case 9:
-            listCustomer[index].setRentDays(indexEdit);
+            listCustomer[index].setRentDays(prompt("Enter Info You Want Change: "));
             break;
         case 10:
-            listCustomer[index].setTypeService(indexEdit);
+            listCustomer[index].setTypeService(prompt("Enter Info You Want Change: "));
             break;
         default:
             alert("Faild!!!!!!!!");

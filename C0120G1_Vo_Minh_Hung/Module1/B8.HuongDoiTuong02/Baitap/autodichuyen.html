@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="game"></div>
+<script>
+    let Hero = function (image, top, left, size, sleep) {
+        this.image = image;
+        this.top = top;
+        this.left = left;
+        this.size = size;
+        this.sleep = sleep;
+        this.getImage = function () {
+            return this.image;
+        };
+        this.getTop = function () {
+            return this.top;
+        };
+        this.getLeft = function () {
+            return this.left;
+        };
+        this.getSize = function () {
+            return this.size;
+        };
+        this.getSleep = function () {
+            return this.sleep;
+        };
+        this.getHeroElement = function () {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        };//position:absolute ảnh được so với cả khung hình, cách đường trên khung hình 1 khoảng top
+        //cách dường bên phải khung hình 1 khoảng left
+        this.moveRight = function () {
+            this.left += 1;
+            console.log('ok: ' + this.left);
+        };
+        this.moveTop = function () {
+            this.top -= 1;
+            console.log('ok: ' + this.top);
+        };
+        this.moveLeft = function () {
+            this.left -= 1;
+        };
+        this.moveBot = function () {
+            this.top += 1;
+        }
+    };
+    let hero = new Hero('images/naruto.png', 35, 0, 200, 10);
+    let check = true;
+    let check1 = true;
+    function start1() {
+        if (hero.getLeft() < window.innerWidth - hero.size - 50 && check) {
+            hero.moveRight();
+        } else {
+            if (hero.getTop() < window.innerHeight - hero.size - 50 &&check1) {
+                hero.moveBot();
+                check = false;
+            } else {
+                if (hero.getLeft() > 10) {
+                    hero.moveLeft();
+                    check1 = false;
+                } else {if (hero.getTop() > 10) {
+                    hero.moveTop();
+                     }
+                }
+            }
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start1, 10);
+    }
+    start1();
+</script>
+</body>
+</html>
