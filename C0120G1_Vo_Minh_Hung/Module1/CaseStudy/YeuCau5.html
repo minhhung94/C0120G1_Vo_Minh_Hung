@@ -21,7 +21,7 @@
             "2. Display Information Customer\n" +
             "3. Edit information customer\n" +
             "4. Delete Customer.\n" +
-            "0. Exit\n" +
+            "5. Exit\n" +
             "Chọn menu:"
         );
         switch (choose) {
@@ -38,10 +38,10 @@
             case "4":
                 chooseDeleteCustomer();
                 break;
-            case "0":
-                break;
+            case "5":
+                return;
             default:
-                alert("Chon lai");
+                alert("Chọn lại");
                 displayMainMenu();
                 break;
         }
@@ -113,7 +113,8 @@
                 "\n12.Back. "
             );
             if(chooseInfoEdit.toString() !== "12"){
-                editCustomer(Number.parseInt(chooseInfoEdit)-1);
+                let numberEdit = parseInt(chooseInfoEdit)-1;
+                editCustomer(index,numberEdit);
             }else {
                 displayMainMenu();
             }
@@ -138,9 +139,9 @@
             checkEditCustomer = true;
             displayCustomer();
     }
-    function editCustomer(index) {
+    function editCustomer(index,numberEdit) {
         let indexEdit = prompt("Enter Info You Want Change: ");
-        switch (index) {
+        switch (numberEdit) {
             case 0:
                 arrListCustomer[index][0] = indexEdit;
                 break;
