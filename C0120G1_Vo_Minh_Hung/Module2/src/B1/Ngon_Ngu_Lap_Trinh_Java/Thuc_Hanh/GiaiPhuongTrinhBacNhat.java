@@ -2,11 +2,10 @@ package B1.Ngon_Ngu_Lap_Trinh_Java.Thuc_Hanh;
 
 import java.util.Scanner;
 
-public class GiaiPhuongTrinhBatNhat {
+public class GiaiPhuongTrinhBacNhat {
     public static void main(String[] args) {
         double a,b;
         Scanner reader = new Scanner(System.in);
-
         System.out.print("a = ");
         a = reader.nextDouble();
         System.out.print("b = ");
