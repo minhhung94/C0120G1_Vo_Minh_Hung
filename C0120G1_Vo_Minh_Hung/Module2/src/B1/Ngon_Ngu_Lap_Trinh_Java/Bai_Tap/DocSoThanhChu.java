@@ -2,6 +2,8 @@ package B1.Ngon_Ngu_Lap_Trinh_Java.Bai_Tap;
 
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
+
 public class DocSoThanhChu {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
@@ -91,7 +93,13 @@ public class DocSoThanhChu {
             case "0":
                 break;
             case "1":
-                System.out.print("một");
+                if (chuc ==""){
+                    System.out.print("một");
+                    break;
+                }
+                if (parseInt(chuc)>1){
+                    System.out.print("mốt");
+                }else {System.out.print("một");}
                 break;
             case "2":
                 System.out.print("hai");
@@ -103,7 +111,11 @@ public class DocSoThanhChu {
                 System.out.print("bốn");
                 break;
             case "5":
-                System.out.print("năm");
+                if (parseInt(chuc)>0){
+                    System.out.print("lăm");
+                }else {
+                    System.out.print("năm");
+                }
                 break;
             case "6":
                 System.out.print("sáu");

@@ -5,7 +5,7 @@ import java.text.ParseException;
 import java.util.*;
 
 
-public class DocSoThanhChu {
+public class SuperDocSoThanhChu {
     public static void main(String[] args) throws ParseException {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
