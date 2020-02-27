@@ -1,10 +1,15 @@
 package nhap;
 import java.util.Scanner;
 public class test {
+    void method(int[] x) {
+        x[0] = 5;
+        x[1] = 5;
+    }
+
     public static void main(String[] args) {
-        for(int i=1; i<=5; i++){
-            if(i==1) break;
-            System.out.println("Hello");
-        }
+        test o = new test();
+        int[] x = {1, 1};
+        o.method(x);
+        System.out.printf("x=%d, y=%d", x[0], x[1]);
     }
 }
