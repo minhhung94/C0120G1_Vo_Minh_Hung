@@ -29,4 +29,5 @@ public class XoaPhanTuTrongArrayList {
             System.out.print(data+"\t");
         }
     }
+
 }

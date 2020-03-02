@@ -1,15 +1,11 @@
 package nhap;
 import java.util.Scanner;
 public class test {
-    void method(int[] x) {
-        x[0] = 5;
-        x[1] = 5;
-    }
 
     public static void main(String[] args) {
-        test o = new test();
-        int[] x = {1, 1};
-        o.method(x);
-        System.out.printf("x=%d, y=%d", x[0], x[1]);
+       int a=5;
+       int b=3;
+        System.out.println("a="+ (a-(a-b)));
+        System.out.println("b="+(b+(a-b)));
     }
 }
