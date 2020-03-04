@@ -74,14 +74,14 @@ public class TestKhachHang {
     }
 
     private static void xuLyDoc() {
-        dsKH=SerializeFileFactory.docfile("d:\\dulieukhachhang.db");
+        dsKH=SerializeFileFactory.docfile("d:\\dulieukhachhang.csv");
         System.out.println("Đã đọc 1"
                 + " file thành công");
     }
 
     private static void xuLyLuu() {
-        boolean kt= SerializeFileFactory.luuFile(dsKH, "d:\\dulieukhachhang.db");
-        if(kt==true)
+        boolean kt= SerializeFileFactory.luuFile(dsKH, "d:\\dulieukhachhang.csv");
+        if(kt)
         {
             System.out.println("Đã lưu file thành công");
         }
@@ -113,7 +113,7 @@ public class TestKhachHang {
 
     private static void xuLyXuat() {
         System.out.println("=========================================");
-        System.out.println("Mã\tTên\tPhone");
+        System.out.println("Mã\tTên\t\tNgày Sinh\t\tPhone");
         for(KhachHang kh:dsKH)
         {
             System.out.println(kh);

@@ -51,12 +51,8 @@ public class KhachHang implements Serializable,Comparable<KhachHang> {
         this.phone = phone;
     }
 
-    @Override
     public String toString() {
-        return  "ma=" + ma +
-                ", ten='" + ten + '\'' +
-                ", namSinh='" + namSinh + '\'' +
-                ", phone='" + phone;
+        return  this.ma+"\t"+this.ten+"\t"+this.namSinh+"\t"+this.phone;
     }
 
     public int compareTo(KhachHang o){
