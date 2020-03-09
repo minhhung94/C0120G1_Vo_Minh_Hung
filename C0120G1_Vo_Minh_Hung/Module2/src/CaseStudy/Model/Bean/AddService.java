@@ -26,10 +26,10 @@ public class AddService {
             regex = "^SVRO[0-9]{4}$";
         }
         service.setServiceName(checkString(regex,"Name Service Failed"));
-        System.out.println("Mời bạn nhập Area User: ");
-        regex="^[1-4][0-9]{2}$";
+        System.out.println("Mời bạn nhập Area User (form 100 to 500): ");
+        regex="^[1-4][0-9]{2}|500$";
         service.setAreaUser(checkInterger(regex,"Area User Faill"));
-        System.out.println("Mời bạn nhập Rental Costs:");
+        System.out.println("Mời bạn nhập Rental Costs (>=100000):");
         regex="^[1-9][0-9]{5,10}$";
         service.setRentalCosts(checkDouble(regex,"Rental Costs Faill"));
         System.out.println("Mời bạn nhập Number Of People:");

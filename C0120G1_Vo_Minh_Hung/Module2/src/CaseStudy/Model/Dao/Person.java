@@ -10,6 +10,14 @@ public abstract class Person {
     public Person() {
     }
 
+    public Person(String fullName, String birthday, String idCard, String phoneNumber, String email) {
+        this.fullName = fullName;
+        this.birthday = birthday;
+        this.idCard = idCard;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+
     public String getFullName() {
         return fullName;
     }
@@ -51,8 +59,8 @@ public abstract class Person {
     }
 
     public String showInfor(){
-        return "Full Name: "+this.getFullName()+"Birthday: "+
-                this.getBirthday()+"Id Card: "+this.getIdCard()+
-                "Phone Number: "+this.getPhoneNumber()+"Email: "+this.getEmail();
+        return "Full Name: "+this.getFullName()+"\tBirthday: "+
+                this.getBirthday()+"\tId Card: "+this.getIdCard()+
+                "\tPhone Number: "+this.getPhoneNumber()+"\tEmail: "+this.getEmail();
     };
 }

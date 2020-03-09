@@ -8,6 +8,9 @@ public class Villa extends Service implements Serializable {
     private double areaPool;
     private int numberOffFloors;
 
+    public Villa() {
+    }
+
     public String getAccompanyService() {
         return accompanyService;
     }

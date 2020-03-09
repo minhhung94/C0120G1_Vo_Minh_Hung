@@ -1,15 +1,22 @@
 package CaseStudy.Model.Dao;
 
-import TestCaseStudy.Test.Model.Services;
-
-import java.util.ArrayList;
-
 public class Customer extends Person {
     private String gender;
+    private String typeCustomer;
     private String idService;
     private String address;
-    public ArrayList<Services> services = new ArrayList<>();
+    public Service userService;
+
     public Customer() {
+    }
+
+    public Customer(String fullName, String birthday, String idCard, String phoneNumber, String email, String gender, String typeCustomer, String idService, String address, Service userService) {
+        super(fullName, birthday, idCard, phoneNumber, email);
+        this.gender = gender;
+        this.typeCustomer = typeCustomer;
+        this.idService = idService;
+        this.address = address;
+        this.userService = userService;
     }
 
     public String getGender() {
@@ -18,6 +25,14 @@ public class Customer extends Person {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getTypeCustomer() {
+        return typeCustomer;
+    }
+
+    public void setTypeCustomer(String typeCustomer) {
+        this.typeCustomer = typeCustomer;
     }
 
     public String getIdService() {
@@ -34,6 +49,14 @@ public class Customer extends Person {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public Service getUserService() {
+        return userService;
+    }
+
+    public void setUserService(Service userService) {
+        this.userService = userService;
     }
 
     @Override
@@ -88,7 +111,8 @@ public class Customer extends Person {
 
     @Override
     public String showInfor() {
-        return super.showInfor()+"Giới tính: "+this.getGender()+
-                "Địa chỉ: "+this.getAddress()+"Id Service: "+this.getIdService();
+        return super.showInfor()+"\tGiới tính: "+this.getGender()+
+                "\tĐịa chỉ: "+this.getAddress()+"\tType Customer: "+ this.getTypeCustomer()+
+                "\tId Service: "+this.getIdService();
     }
 }

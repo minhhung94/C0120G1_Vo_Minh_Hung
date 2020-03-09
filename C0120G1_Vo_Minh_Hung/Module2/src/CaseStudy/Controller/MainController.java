@@ -1,15 +1,14 @@
 package CaseStudy.Controller;
 
 
-import CaseStudy.Model.Dao.House;
-import CaseStudy.Model.Dao.Room;
-import CaseStudy.Model.Dao.Villa;
+import CaseStudy.Model.Dao.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import static CaseStudy.Common.XuLyFile.xuLyDoc;
 import static CaseStudy.Common.XuLyFile.xuLyLuu;
+import static CaseStudy.Model.Bean.AddCustomer.addCustomer;
 import static CaseStudy.Model.Bean.AddHouse.addHouse;
 import static CaseStudy.Model.Bean.AddRoom.addRoom;
 import static CaseStudy.Model.Bean.AddVilla.addVilla;
@@ -19,6 +18,8 @@ public class MainController {
     public static ArrayList<Villa> listVilla= new ArrayList<>();
     public static ArrayList<House> listHouse= new ArrayList<>();
     public static ArrayList<Room> listRoom= new ArrayList<>();
+    public static ArrayList<Customer> listCustomer = new ArrayList<>();
+    public static ArrayList<Employee> listEmployee = new ArrayList<>();
 
     public static void displayMainMenu()
     {
@@ -43,7 +44,7 @@ public class MainController {
                 showServices();
                 break;
             case 3:
-                addNewCustomer();
+                addCustomer();
                 displayMainMenu();
                 break;
             case 4:
@@ -78,8 +79,6 @@ public class MainController {
     public static void showInformationEmployee() {
     }
 
-    public static void addNewCustomer() {
-    }
 
     public static void showServices() {
         String showOptions = "1.Display Service\n" +
@@ -101,7 +100,6 @@ public class MainController {
                 displayMainMenu();
                 break;
             case 2:
-
                 for (Villa vi:listVilla){
                     System.out.println(vi.showInfor());
                 }
@@ -168,7 +166,9 @@ public class MainController {
 
     public static void showInformationCustomer()
     {
-
+        for (Customer cus:listCustomer){
+            System.out.println(cus.showInfor());
+        }
     }
 
     public static void addNewServices()

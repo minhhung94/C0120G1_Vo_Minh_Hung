@@ -1,9 +1,5 @@
 package CaseStudy.Common;
 
-import CaseStudy.Model.Dao.House;
-import CaseStudy.Model.Dao.Room;
-import CaseStudy.Model.Dao.Villa;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -27,7 +23,7 @@ public class FileFactory {
         }
         return false;
     }
-    public static <T>ArrayList<T>docFile(String path){
+    public static <T> ArrayList<T>docFile(String path){
         ArrayList<T> listT=new ArrayList<>();
         try
         {
