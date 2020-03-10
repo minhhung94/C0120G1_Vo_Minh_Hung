@@ -10,8 +10,8 @@ public class FileFactory {
     public static <T>boolean luuFile(ArrayList<T> listT, String path){
         try
         {
-            FileOutputStream fos=new FileOutputStream(path);
-            ObjectOutputStream oos=new ObjectOutputStream(fos);
+            FileOutputStream fos = new FileOutputStream(path);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(listT);
             oos.close();
             fos.close();
@@ -23,16 +23,17 @@ public class FileFactory {
         }
         return false;
     }
-    public static <T> ArrayList<T>docFile(String path){
+    public static <T> ArrayList<T> docFile(String path){
         ArrayList<T> listT=new ArrayList<>();
         try
         {
-            FileInputStream fis=new FileInputStream(path);
-            ObjectInputStream ois=new ObjectInputStream(fis);
-            Object data=ois.readObject();
-            listT=(ArrayList<T>) data;
+            FileInputStream fis = new FileInputStream(path);
+            ObjectInputStream ois = new ObjectInputStream (fis);
+            Object data = ois.readObject();
+            listT= (ArrayList<T>) data;
             ois.close();
             fis.close();
+
         }
         catch(Exception ex)
         {

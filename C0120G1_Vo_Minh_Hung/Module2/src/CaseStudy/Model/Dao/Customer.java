@@ -1,21 +1,21 @@
 package CaseStudy.Model.Dao;
 
-public class Customer extends Person {
+import java.io.Serializable;
+
+public class Customer extends Person implements Serializable,Comparable<Customer> {
     private String gender;
     private String typeCustomer;
-    private String idService;
     private String address;
     public Service userService;
 
     public Customer() {
     }
 
-    public Customer(String fullName, String birthday, String idCard, String phoneNumber, String email, String gender, String typeCustomer, String idService, String address, Service userService) {
-        super(fullName, birthday, idCard, phoneNumber, email);
+    public Customer(String fullName, String birthday, String idCard, String phoneNumber, String email, String address, String gender, String typeCustomer, String address1, Service userService) {
+        super(fullName, birthday, idCard, phoneNumber, email, address);
         this.gender = gender;
         this.typeCustomer = typeCustomer;
-        this.idService = idService;
-        this.address = address;
+        this.address = address1;
         this.userService = userService;
     }
 
@@ -33,14 +33,6 @@ public class Customer extends Person {
 
     public void setTypeCustomer(String typeCustomer) {
         this.typeCustomer = typeCustomer;
-    }
-
-    public String getIdService() {
-        return idService;
-    }
-
-    public void setIdService(String idService) {
-        this.idService = idService;
     }
 
     public String getAddress() {
@@ -109,10 +101,26 @@ public class Customer extends Person {
         super.setEmail(email);
     }
 
+    public Customer(String fullName, String birthday, String idCard, String phoneNumber, String email, String address) {
+        super(fullName, birthday, idCard, phoneNumber, email, address);
+    }
+
     @Override
     public String showInfor() {
         return super.showInfor()+"\tGiới tính: "+this.getGender()+
-                "\tĐịa chỉ: "+this.getAddress()+"\tType Customer: "+ this.getTypeCustomer()+
-                "\tId Service: "+this.getIdService();
+                "\tĐịa chỉ: "+this.getAddress()+"\tType Customer: "+ this.getTypeCustomer();
+    }
+
+    @Override
+    public int compareTo(Customer o) {
+        int ssTen = this.fullName.compareToIgnoreCase(o.getFullName());
+        if(ssTen==0){
+            if (this.birthday==o.birthday)
+                return 0;
+            if (Integer.parseInt(this.birthday) >Integer.parseInt(o.birthday))
+                return -1;
+            return 1;
+        }
+        return ssTen;
     }
 }

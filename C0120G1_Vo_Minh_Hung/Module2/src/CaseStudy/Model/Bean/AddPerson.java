@@ -7,6 +7,7 @@ import static CaseStudy.Controller.MainController.sc;
 
 public class AddPerson {
     public static Person addPerson(Person person){
+        sc.nextLine();
         String regex="^([A-ZẠÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚÝĂĐĨŨƯƠ]?[a-zàáâãèéêìíòóôõùúýăđĩũơư-ỹ][ ]?)+$";
         System.out.println("Vui lòng nhập họ và tên: ");
         person.setFullName(checkString(regex,"Enter Full Name Failed!"));

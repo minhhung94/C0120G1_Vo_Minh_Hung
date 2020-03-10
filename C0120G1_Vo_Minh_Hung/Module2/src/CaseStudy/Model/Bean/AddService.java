@@ -14,7 +14,7 @@ public class AddService {
     public static Service addService(Service service){
         String regex = "";
         service.setId(UUID.randomUUID().toString().replace("-", ""));
-
+        sc.nextLine();
         if (service instanceof Villa){
             System.out.println("Mời bạn nhập tên Villa: SVVL-XXXX (X: number) ");
             regex = "^SVVL[0-9]{4}$";

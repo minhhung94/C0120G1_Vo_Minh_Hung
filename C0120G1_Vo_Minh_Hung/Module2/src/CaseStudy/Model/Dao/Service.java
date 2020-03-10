@@ -1,6 +1,8 @@
 package CaseStudy.Model.Dao;
 
-public abstract class Service {
+import java.io.Serializable;
+
+public abstract class Service implements Serializable {
     protected String id;
     protected String serviceName;
     protected double areaUser;
@@ -64,4 +66,5 @@ public abstract class Service {
                 "\tNumber Of People: "+ this.getMaxNumberOfPeople() +
                 "\tType Rent: "+this.getTypeRent();
     }
+
 }

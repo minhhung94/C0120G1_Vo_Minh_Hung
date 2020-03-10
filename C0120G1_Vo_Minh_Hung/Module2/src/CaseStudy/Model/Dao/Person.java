@@ -1,21 +1,25 @@
 package CaseStudy.Model.Dao;
 
-public abstract class Person {
-    private String fullName;
-    private String birthday;
-    private String idCard;
-    private String phoneNumber;
-    private String email;
+import java.io.Serializable;
+
+public abstract class Person implements Serializable {
+    protected String fullName;
+    protected String birthday;
+    protected String idCard;
+    protected String phoneNumber;
+    protected String email;
+    protected String address;
 
     public Person() {
     }
 
-    public Person(String fullName, String birthday, String idCard, String phoneNumber, String email) {
+    public Person(String fullName, String birthday, String idCard, String phoneNumber, String email, String address) {
         this.fullName = fullName;
         this.birthday = birthday;
         this.idCard = idCard;
         this.phoneNumber = phoneNumber;
         this.email = email;
+        this.address = address;
     }
 
     public String getFullName() {
@@ -58,9 +62,18 @@ public abstract class Person {
         this.email = email;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public String showInfor(){
         return "Full Name: "+this.getFullName()+"\tBirthday: "+
                 this.getBirthday()+"\tId Card: "+this.getIdCard()+
-                "\tPhone Number: "+this.getPhoneNumber()+"\tEmail: "+this.getEmail();
+                "\tPhone Number: "+this.getPhoneNumber()+
+                "\tEmail: "+this.getEmail()+"\tAddress: "+this.getAddress();
     };
 }

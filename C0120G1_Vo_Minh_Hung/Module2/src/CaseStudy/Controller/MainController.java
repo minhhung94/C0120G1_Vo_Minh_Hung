@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import static CaseStudy.Common.XuLyFile.xuLyDoc;
-import static CaseStudy.Common.XuLyFile.xuLyLuu;
 import static CaseStudy.Model.Bean.AddCustomer.addCustomer;
 import static CaseStudy.Model.Bean.AddHouse.addHouse;
+import static CaseStudy.Model.Bean.AddNewBooking.addBooking;
 import static CaseStudy.Model.Bean.AddRoom.addRoom;
 import static CaseStudy.Model.Bean.AddVilla.addVilla;
 
@@ -19,19 +19,22 @@ public class MainController {
     public static ArrayList<House> listHouse= new ArrayList<>();
     public static ArrayList<Room> listRoom= new ArrayList<>();
     public static ArrayList<Customer> listCustomer = new ArrayList<>();
+    public static ArrayList<Customer> listBooking= new ArrayList<>();
     public static ArrayList<Employee> listEmployee = new ArrayList<>();
 
     public static void displayMainMenu()
     {
+        System.out.println("------------MINH HÙNG-------------\n");
         String showOptions = "1.Add new services\n" +
                 "2.Show services\n" +
                 "3.Add new customer\n" +
                 "4.Show information customer\n" +
                 "5.Add new booking resort\n" +
-                "6.Show Information of Employee\n"+
-                "7.Save File\n"+
-                "8.Load File\n"+
-                "9.Exit";
+                "6.Show Booking Customer\n"+
+                "7.Add New Employee\n"+
+                "8.Find Employee By ID\n"+
+                "9.Show Information of Employee\n"+
+                "10.Exit";
         short option;
         System.out.println(showOptions);
         option = sc.nextShort();
@@ -60,7 +63,7 @@ public class MainController {
                 displayMainMenu();
                 break;
             case 7:
-                xuLyLuu();
+                addBooking();
                 displayMainMenu();
                 break;
             case 8:
@@ -81,6 +84,7 @@ public class MainController {
 
 
     public static void showServices() {
+        System.out.println("------------MINH HÙNG-------------\n");
         String showOptions = "1.Display Service\n" +
                 "2.Display villa\n" +
                 "3.Display house\n" +
@@ -159,8 +163,10 @@ public class MainController {
         }
     }
 
+
     public static void addNewBookingResort()
     {
+        addBooking();
 
     }
 

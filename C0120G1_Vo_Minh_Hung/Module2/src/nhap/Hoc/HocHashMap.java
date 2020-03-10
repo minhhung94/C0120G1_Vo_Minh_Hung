@@ -18,12 +18,12 @@ public class HocHashMap {
         {
             System.out.println(ten);
         }
-        ds.remove(115);
-        System.out.println("===============================");
-        System.out.println("Toàn bộ học sinh của Codegym sau khi xoá là: ");
-        for (String ten: ds.values())
-        {
-            System.out.println(ten);
-        }
+//        ds.remove(115);
+//        System.out.println("===============================");
+//        System.out.println("Toàn bộ học sinh của Codegym sau khi xoá là: ");
+//        for (String ten: ds.values())
+//        {
+//            System.out.println(ten);
+//        }
     }
 }

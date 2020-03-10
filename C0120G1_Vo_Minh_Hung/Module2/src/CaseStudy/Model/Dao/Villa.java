@@ -2,7 +2,7 @@ package CaseStudy.Model.Dao;
 
 import java.io.Serializable;
 
-public class Villa extends Service implements Serializable {
+public class Villa extends Service implements Serializable,Comparable<Villa> {
     private String roomStandard;
     private String accompanyService;
     private double areaPool;
@@ -108,5 +108,18 @@ public class Villa extends Service implements Serializable {
         return super.showInfor()+"\tRoom Standard: "+this.getRoomStandard()+
                 "\tArea Pool: "+this.getAreaPool()+"\tAccompany Service: "+this.getAccompanyService()+
                 "\tNumber Off Floors: "+this.getNumberOffFloors();
+    }
+
+    @Override
+    public int compareTo(Villa o) {
+        int ssTen = this.serviceName.compareToIgnoreCase(o.getServiceName());
+        if(ssTen==0){
+            if (this.id==o.id)
+                return 0;
+            if (Integer.parseInt(this.id) >Integer.parseInt(o.id))
+                return -1;
+            return 1;
+        }
+        return ssTen;
     }
 }

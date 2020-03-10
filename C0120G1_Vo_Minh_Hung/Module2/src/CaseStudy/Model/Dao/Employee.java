@@ -1,6 +1,8 @@
 package CaseStudy.Model.Dao;
 
 public class Employee extends Person {
+    private int idEmployee;
+    private int ageEmployee;
     private String literacy;
     private String position;
     private String salary;
@@ -8,11 +10,29 @@ public class Employee extends Person {
     public Employee() {
     }
 
-    public Employee(String fullName, String birthday, String idCard, String phoneNumber, String email, String literacy, String position, String salary) {
-        super(fullName, birthday, idCard, phoneNumber, email);
+    public Employee(String fullName, String birthday, String idCard, String phoneNumber, String email, String address, int idEmployee, int ageEmployee, String literacy, String position, String salary) {
+        super(fullName, birthday, idCard, phoneNumber, email, address);
+        this.idEmployee = idEmployee;
+        this.ageEmployee = ageEmployee;
         this.literacy = literacy;
         this.position = position;
         this.salary = salary;
+    }
+
+    public int getIdEmployee() {
+        return idEmployee;
+    }
+
+    public void setIdEmployee(int idEmployee) {
+        this.idEmployee = idEmployee;
+    }
+
+    public int getAgeEmployee() {
+        return ageEmployee;
+    }
+
+    public void setAgeEmployee(int ageEmployee) {
+        this.ageEmployee = ageEmployee;
     }
 
     public String getLiteracy() {
@@ -97,7 +117,8 @@ public class Employee extends Person {
 
     @Override
     public String toString() {
-        return super.showInfor()+"\tLiteracy: "+ this.getLiteracy()+
+        return super.showInfor()+"\tId Employee: "+ this.getIdEmployee()+
+                "\tAge Employee : "+ this.getAgeEmployee()+ "\tLiteracy: "+ this.getLiteracy()+
                 "\tPosition: "+this.getPosition()+"\tSalary: "+this.getSalary();
     }
 }
