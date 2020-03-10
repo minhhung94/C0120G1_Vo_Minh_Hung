@@ -5,9 +5,9 @@ import java.util.HashMap;
 public class HocHashMap {
     public static void main(String[] args) {
         HashMap<Integer, String> ds=new HashMap<Integer, String>();
-        ds.put(113, "Nguyễn Đức Thông, quê ở Trường Sa");
-        ds.put(114, "Lê Đình Quốc, quê ở Hoàng Sa , nên bị si đa");
-        ds.put(115, "Phạm Thái Cường, quê ở Cà Mau");
+        ds.put(118, "Nguyễn Đức Thông, quê ở Trường Sa");
+        ds.put(014, "Lê Đình Quốc, quê ở Hoàng Sa , nên bị si đa");
+        ds.put(005, "Phạm Thái Cường, quê ở Cà Mau");
 
         String nv=ds.get(114);
 

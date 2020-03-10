@@ -1,7 +1,7 @@
 package CaseStudy.Model.Dao;
 
 public class Employee extends Person {
-    private int idEmployee;
+    private String idEmployee;
     private int ageEmployee;
     private String literacy;
     private String position;
@@ -10,7 +10,7 @@ public class Employee extends Person {
     public Employee() {
     }
 
-    public Employee(String fullName, String birthday, String idCard, String phoneNumber, String email, String address, int idEmployee, int ageEmployee, String literacy, String position, String salary) {
+    public Employee(String fullName, String birthday, String idCard, String phoneNumber, String email, String address, String idEmployee, int ageEmployee, String literacy, String position, String salary) {
         super(fullName, birthday, idCard, phoneNumber, email, address);
         this.idEmployee = idEmployee;
         this.ageEmployee = ageEmployee;
@@ -19,11 +19,11 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
-    public int getIdEmployee() {
+    public String getIdEmployee() {
         return idEmployee;
     }
 
-    public void setIdEmployee(int idEmployee) {
+    public void setIdEmployee(String idEmployee) {
         this.idEmployee = idEmployee;
     }
 

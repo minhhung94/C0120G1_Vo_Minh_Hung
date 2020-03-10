@@ -3,11 +3,12 @@ package CaseStudy.Controller;
 
 import CaseStudy.Model.Dao.*;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
-import static CaseStudy.Common.XuLyFile.xuLyDoc;
+import static CaseStudy.Common.DocVaLuuFile.loadFileCustomer;
+import static CaseStudy.Common.DocVaLuuFile.loadFileEmployee;
 import static CaseStudy.Model.Bean.AddCustomer.addCustomer;
+import static CaseStudy.Model.Bean.AddEmployee.addEmployee;
 import static CaseStudy.Model.Bean.AddHouse.addHouse;
 import static CaseStudy.Model.Bean.AddNewBooking.addBooking;
 import static CaseStudy.Model.Bean.AddRoom.addRoom;
@@ -32,8 +33,8 @@ public class MainController {
                 "5.Add new booking resort\n" +
                 "6.Show Booking Customer\n"+
                 "7.Add New Employee\n"+
-                "8.Find Employee By ID\n"+
-                "9.Show Information of Employee\n"+
+                "8.Show Information Employee\n"+
+                "9.Add Cinema 4D\n"+
                 "10.Exit";
         short option;
         System.out.println(showOptions);
@@ -55,22 +56,26 @@ public class MainController {
                 displayMainMenu();
                 break;
             case 5:
-                addNewBookingResort();
-                displayMainMenu();
-                break;
-            case 6:
-                showInformationEmployee();
-                displayMainMenu();
-                break;
-            case 7:
                 addBooking();
                 displayMainMenu();
                 break;
+            case 6:
+
+                displayMainMenu();
+                break;
+            case 7:
+                addEmployee();
+                displayMainMenu();
+                break;
             case 8:
-                xuLyDoc();
+                showInformationEmployee();
                 displayMainMenu();
                 break;
             case 9:
+                addCinema4D();
+                displayMainMenu();
+                break;
+            case 10:
                 System.out.println("Cảm ơn bạn đã dùng phần mềm! bye bye!");
                 System.exit(0);
             default:
@@ -79,7 +84,60 @@ public class MainController {
         }
     }
 
+    private static void addCinema4D() {
+        loadFileCustomer();
+        int i = 1;
+        for (Customer cus : listCustomer) {
+            System.out.println("No: " + i);
+            System.out.println(cus.showInfor());
+            System.out.println("\n----------------------------------");
+            i++;
+        }
+        Queue<Customer> queue = new LinkedList<>();
+        int choose;
+        int soLuongVe = 5;
+        do {
+            System.out.println("Con "+soLuongVe +" ve.");
+            System.out.println("Choose Customer Booking, 0 to stop");
+            choose = sc.nextInt();
+            if (choose == 0) {
+                break;
+            }
+
+            soLuongVe--;
+            queue.add(listCustomer.get(choose - 1));
+
+            if (soLuongVe == 0) {
+                System.out.println("Het ve!!!!");
+                break;
+            }
+        } while (true);
+        System.out.println("-------------------------------------");
+        System.out.println("Enter to Show information of Customer bought ticket");
+        sc.nextLine();
+        sc.nextLine();
+        for (Customer item : queue) {
+            System.out.println(item.showInfor());
+        }
+        System.out.println("Enter to back to menu...");
+        sc.nextLine();
+        displayMainMenu();
+
+    }
+
     public static void showInformationEmployee() {
+        loadFileEmployee();
+        Map mapEmployee = new HashMap();
+        for (Employee employee : listEmployee) {
+            mapEmployee.put(employee.getIdEmployee(), employee.getFullName());
+        }
+        Set set = mapEmployee.keySet();
+        for (Object key : set) {
+            System.out.println(key + " " + mapEmployee.get(key));
+        }
+        System.out.println("Enter to back to menu...");
+        sc.nextLine();
+        displayMainMenu();
     }
 
 

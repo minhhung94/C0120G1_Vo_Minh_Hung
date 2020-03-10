@@ -28,13 +28,13 @@ public class AddService {
         service.setServiceName(checkString(regex,"Name Service Failed"));
         System.out.println("Mời bạn nhập Area User (form 100 to 500): ");
         regex="^[1-4][0-9]{2}|500$";
-        service.setAreaUser(checkInterger(regex,"Area User Faill"));
+        service.setAreaUser(checkInteger(regex,"Area User Faill"));
         System.out.println("Mời bạn nhập Rental Costs (>=100000):");
         regex="^[1-9][0-9]{5,10}$";
         service.setRentalCosts(checkDouble(regex,"Rental Costs Faill"));
         System.out.println("Mời bạn nhập Number Of People:");
         regex="^([1-9]|[1][0-9])$";
-        service.setMaxNumberOfPeople(checkInterger(regex,"Number of people Faill"));
+        service.setMaxNumberOfPeople(checkInteger(regex,"Number of people Faill"));
         sc.nextLine();
         System.out.println("Mời bạn nhập Type Rent: (byYear, byMonth, byDay) ");
         regex="^byYear|byMonth|byDay$";

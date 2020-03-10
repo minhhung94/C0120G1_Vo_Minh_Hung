@@ -21,7 +21,7 @@ public class AddHouse {
         ((House) house).setAccompanyService(checkStringLowerCase(regex,"Enter Accompany Service Failed!"));
         regex="^[1-9]|[1][0-9]|20$";
         System.out.println("Mời bạn nhập Number Off Floors (from 1 to 20): ");
-        ((House) house).setNumberOffFloors(checkInterger(regex,"Enter Number Off Floors Failed!"));
+        ((House) house).setNumberOffFloors(checkInteger(regex,"Enter Number Off Floors Failed!"));
 
         loadFileHouse();
         listHouse.add( ((House) house));

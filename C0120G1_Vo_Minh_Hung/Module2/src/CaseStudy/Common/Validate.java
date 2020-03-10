@@ -13,7 +13,7 @@ public class Validate {
             }
         }
     }
-    public static int checkInterger(String regex,String errorMess){
+    public static int checkInteger(String regex,String errorMess){
         while (true) {
             int input= sc.nextInt();
             if ((input+"").matches(regex)) {

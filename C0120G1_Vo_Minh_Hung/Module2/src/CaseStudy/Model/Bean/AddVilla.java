@@ -25,7 +25,7 @@ public class AddVilla {
         ((Villa) villa).setAreaPool(checkDouble(regex,"Area Pool Faill"));
         regex="^[1-9]|[1][0-9]|20$";
         System.out.println("Mời bạn nhập Number Off Floors: (from 1 to 20)");
-        ((Villa) villa).setNumberOffFloors(checkInterger(regex,"Number Off Floors Faill"));
+        ((Villa) villa).setNumberOffFloors(checkInteger(regex,"Number Off Floors Faill"));
 
         loadFileVilla();
         listVilla.add((Villa) villa);
