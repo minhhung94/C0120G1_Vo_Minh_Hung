@@ -1,12 +1,11 @@
 package CaseStudy.Controller;
 
 
+import CaseStudy.Common.CustomerComparator;
 import CaseStudy.Model.Dao.*;
 
 import java.util.*;
 
-import static CaseStudy.Common.DocVaLuuFile.loadFileCustomer;
-import static CaseStudy.Common.DocVaLuuFile.loadFileEmployee;
 import static CaseStudy.Model.Bean.AddCustomer.addCustomer;
 import static CaseStudy.Model.Bean.AddEmployee.addEmployee;
 import static CaseStudy.Model.Bean.AddHouse.addHouse;
@@ -25,7 +24,7 @@ public class MainController {
 
     public static void displayMainMenu()
     {
-        System.out.println("------------MINH HÙNG-------------\n");
+        System.out.println("\n------------MAIN MENU------------");
         String showOptions = "1.Add new services\n" +
                 "2.Show services\n" +
                 "3.Add new customer\n" +
@@ -60,7 +59,7 @@ public class MainController {
                 displayMainMenu();
                 break;
             case 6:
-
+                showBookingResort();
                 displayMainMenu();
                 break;
             case 7:
@@ -84,8 +83,20 @@ public class MainController {
         }
     }
 
+    private static void showBookingResort() {
+        System.out.println("\n************** List Booking **************");
+        CustomerComparator comparator = new CustomerComparator();
+        Collections.sort(listBooking,comparator);
+        int i=1;
+        for (Customer customer : listBooking) {
+            System.out.println("Số thứ tự: "+i+"\n"+customer.showInfor()+"\n"+
+                    "************Register Service**************\n"
+                    +customer.getUserService().showInfor()+"\n");
+            i++;
+        }
+    }
+
     private static void addCinema4D() {
-        loadFileCustomer();
         int i = 1;
         for (Customer cus : listCustomer) {
             System.out.println("No: " + i);
@@ -95,7 +106,7 @@ public class MainController {
         }
         Queue<Customer> queue = new LinkedList<>();
         int choose;
-        int soLuongVe = 5;
+        int soLuongVe = 10;
         do {
             System.out.println("Con "+soLuongVe +" ve.");
             System.out.println("Choose Customer Booking, 0 to stop");
@@ -126,7 +137,7 @@ public class MainController {
     }
 
     public static void showInformationEmployee() {
-        loadFileEmployee();
+        sc.nextLine();
         Map mapEmployee = new HashMap();
         for (Employee employee : listEmployee) {
             mapEmployee.put(employee.getIdEmployee(), employee.getFullName());
@@ -135,14 +146,12 @@ public class MainController {
         for (Object key : set) {
             System.out.println(key + " " + mapEmployee.get(key));
         }
-        System.out.println("Enter to back to menu...");
-        sc.nextLine();
         displayMainMenu();
     }
 
 
     public static void showServices() {
-        System.out.println("------------MINH HÙNG-------------\n");
+        System.out.println("------------MENU DISPLAY------------\n");
         String showOptions = "1.Display Service\n" +
                 "2.Display villa\n" +
                 "3.Display house\n" +
@@ -158,7 +167,7 @@ public class MainController {
         switch (addOption)
         {
             case 1:
-                deplayService();
+                displayService();
                 displayMainMenu();
                 break;
             case 2:
@@ -206,7 +215,7 @@ public class MainController {
         }
     }
 
-    public static void deplayService() {
+    public static void displayService() {
         System.out.println("Villa: ");
         for (Villa vi:listVilla){
             System.out.println(vi.showInfor());
@@ -222,12 +231,6 @@ public class MainController {
     }
 
 
-    public static void addNewBookingResort()
-    {
-        addBooking();
-
-    }
-
     public static void showInformationCustomer()
     {
         for (Customer cus:listCustomer){
@@ -237,6 +240,7 @@ public class MainController {
 
     public static void addNewServices()
     {
+        System.out.println("----------MENU ADD SERVICE----------\n");
         String showOptions = "1.Add new villa\n" +
                 "2.Add new house\n" +
                 "3.Add new room\n" +

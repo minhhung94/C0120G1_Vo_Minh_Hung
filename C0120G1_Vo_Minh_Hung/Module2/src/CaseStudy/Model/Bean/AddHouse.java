@@ -3,9 +3,9 @@ package CaseStudy.Model.Bean;
 import CaseStudy.Model.Dao.House;
 import CaseStudy.Model.Dao.Service;
 
-import static CaseStudy.Common.DocVaLuuFile.loadFileHouse;
 import static CaseStudy.Common.DocVaLuuFile.saveFileHouse;
-import static CaseStudy.Common.Validate.*;
+import static CaseStudy.Common.Validate.checkInteger;
+import static CaseStudy.Common.Validate.checkStringLowerCase;
 import static CaseStudy.Controller.MainController.listHouse;
 
 public class AddHouse {
@@ -23,7 +23,6 @@ public class AddHouse {
         System.out.println("Mời bạn nhập Number Off Floors (from 1 to 20): ");
         ((House) house).setNumberOffFloors(checkInteger(regex,"Enter Number Off Floors Failed!"));
 
-        loadFileHouse();
         listHouse.add( ((House) house));
         saveFileHouse();
     }

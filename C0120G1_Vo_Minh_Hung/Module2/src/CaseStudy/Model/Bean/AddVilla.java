@@ -3,10 +3,9 @@ package CaseStudy.Model.Bean;
 import CaseStudy.Model.Dao.Service;
 import CaseStudy.Model.Dao.Villa;
 
-import static CaseStudy.Common.DocVaLuuFile.loadFileVilla;
 import static CaseStudy.Common.DocVaLuuFile.saveFileVilla;
-import static CaseStudy.Controller.MainController.listVilla;
 import static CaseStudy.Common.Validate.*;
+import static CaseStudy.Controller.MainController.listVilla;
 import static CaseStudy.Model.Bean.AddService.addService;
 
 public class AddVilla {
@@ -27,7 +26,6 @@ public class AddVilla {
         System.out.println("Mời bạn nhập Number Off Floors: (from 1 to 20)");
         ((Villa) villa).setNumberOffFloors(checkInteger(regex,"Number Off Floors Faill"));
 
-        loadFileVilla();
         listVilla.add((Villa) villa);
         saveFileVilla();
 

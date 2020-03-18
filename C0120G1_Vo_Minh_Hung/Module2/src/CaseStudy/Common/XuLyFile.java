@@ -19,6 +19,7 @@ public class XuLyFile {
         listHouse=FileFactory.docFile("D:\\Codegym\\C0120G1_Vo_Minh_Hung\\Module2\\src\\CaseStudy\\data\\House.csv");
         listRoom=FileFactory.docFile("D:\\Codegym\\C0120G1_Vo_Minh_Hung\\Module2\\src\\CaseStudy\\data\\Room.csv");
         listCustomer=FileFactory.docFile("D:\\Codegym\\C0120G1_Vo_Minh_Hung\\Module2\\src\\CaseStudy\\data\\Customer.csv");
+
         System.out.println("Đã đọc 4" + " file thành công");
     }
 }

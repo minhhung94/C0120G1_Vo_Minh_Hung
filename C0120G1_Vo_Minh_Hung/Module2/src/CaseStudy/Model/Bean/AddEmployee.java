@@ -3,9 +3,9 @@ package CaseStudy.Model.Bean;
 import CaseStudy.Model.Dao.Employee;
 import CaseStudy.Model.Dao.Person;
 
-import static CaseStudy.Common.DocVaLuuFile.loadFileEmployee;
 import static CaseStudy.Common.DocVaLuuFile.saveFileEmployee;
-import static CaseStudy.Common.Validate.*;
+import static CaseStudy.Common.Validate.checkInteger;
+import static CaseStudy.Common.Validate.checkString;
 import static CaseStudy.Controller.MainController.listEmployee;
 import static CaseStudy.Controller.MainController.sc;
 
@@ -28,7 +28,6 @@ public class AddEmployee {
         System.out.println("Vui lòng nhập lương: ");
         ((Employee)employee).setSalary(sc.nextLine());
 
-        loadFileEmployee();
         listEmployee.add((Employee)employee);
         saveFileEmployee();
     }

@@ -3,7 +3,6 @@ package CaseStudy.Model.Bean;
 import CaseStudy.Model.Dao.Room;
 import CaseStudy.Model.Dao.Service;
 
-import static CaseStudy.Common.DocVaLuuFile.loadFileRoom;
 import static CaseStudy.Common.DocVaLuuFile.saveFileRoom;
 import static CaseStudy.Controller.MainController.listRoom;
 import static CaseStudy.Controller.MainController.sc;
@@ -15,7 +14,6 @@ public class AddRoom {
         System.out.println("Mời bạn nhập Free Service: ");
         ((Room) room).setFreeService(sc.nextLine());
 
-        loadFileRoom();
         listRoom.add((Room) room);
         saveFileRoom();
     }

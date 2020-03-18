@@ -1,5 +1,6 @@
 package CaseStudy.View;
 
+import static CaseStudy.Common.DocVaLuuFile.*;
 import static CaseStudy.Controller.MainController.displayMainMenu;
 
 public class Run {
@@ -10,6 +11,12 @@ public class Run {
     static public String pathBooking="D:\\Codegym\\C0120G1_Vo_Minh_Hung\\Module2\\src\\CaseStudy\\data\\Booking.csv";
     static public String pathEmployee="D:\\Codegym\\C0120G1_Vo_Minh_Hung\\Module2\\src\\CaseStudy\\data\\Employee.csv";
     public static void main(String[] args) {
+        loadFileVilla();
+        loadFileHouse();
+        loadFileRoom();
+        loadFileEmployee();
+        loadFileCustomer();
+        loadBooking();
         displayMainMenu();
     }
 }
