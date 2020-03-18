@@ -1,4 +1,4 @@
--- Võ Minh Hùng --
+		-- Võ Minh Hùng
 drop database if exists furama_resort;
 create database furama_resort;
 use furama_resort;

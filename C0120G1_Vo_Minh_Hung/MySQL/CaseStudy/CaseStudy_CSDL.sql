@@ -95,3 +95,127 @@ select HDCT.id_Dich_Vu_Di_Kem from hop_dong_chi_tiet HDCT,hop_dong HD,khach_hang
 where (LKH.ten_Loai_Khach = 'Diamond'
 and (KH.dia_Chi like '%Vinh%' 
 or KH.dia_Chi like '%Quảng Nam%')));
+
+
+-- task 12 
+
+SELECT 
+    ct.id_hop_dong, ct.ngay_lam_hop_dong, sv.id_dich_vu, em.ho_ten_nhan_vien, cm.ho_ten, cm.sdt, sv.ten_dich_vu, ct.tien_dat_coc
+FROM `furama_resort`.dich_vu_di_kem acs
+        INNER JOIN `furama_resort`.hop_dong_chi_tiet cd ON cd.id_dich_vu_di_kem = acs.id_dich_vu_di_kem
+        INNER JOIN `furama_resort`.hop_dong ct ON ct.id_hop_dong = cd.id_hop_dong
+        INNER JOIN `furama_resort`.khach_hang cm ON cm.id_khach_hang = ct.id_khach_hang
+        INNER JOIN `furama_resort`.dich_vu sv ON ct.id_dich_vu = sv.id_dich_vu
+        INNER JOIN `furama_resort`.nhan_vien em ON em.id_nhan_vien = ct.id_nhan_vien
+WHERE
+    EXISTS( SELECT ct.ngay_lam_hop_dong FROM `furama_resort`.hop_dong
+        WHERE ct.id_dich_vu = sv.id_dich_vu AND ct.ngay_lam_hop_dong BETWEEN '2019-01-01' AND '2019-12-31')
+        AND NOT EXISTS( SELECT ct.ngay_lam_hop_dong
+        FROM
+            `furama_resort`.hop_dong
+        WHERE
+            ct.id_dich_vu = sv.id_dich_vu
+                AND ct.ngay_lam_hop_dong BETWEEN '2019-01-01' AND '2019-06-30')
+GROUP BY cd.id_hop_dong;
+
+-- task 13
+select * from dich_vu_di_kem
+ where id_dich_vu_di_kem in(
+     select id_dich_vu_di_kem
+     from
+   (select id_dich_vu_di_kem,count(id_dich_vu_di_kem) as SL
+   from hop_dong_chi_tiet
+   group by id_dich_vu_di_kem
+   having SL= (select max(so_luong)
+			from
+                      (select id_dich_vu_di_kem,count(*) as so_luong
+                       from hop_dong_chi_tiet
+                    group by id_dich_vu_di_kem) as S)) as B);
+ 
+ -- c2:
+SELECT 
+    dv.id_Dich_Vu_Di_Kem,
+    dv.ten_Dich_Vu_Di_Kem,
+    dv.gia,
+    dv.don_vi,
+    COUNT(hd.id_Dich_Vu_Di_Kem) AS So_lan
+FROM
+    dich_vu_di_kem dv
+        JOIN
+    hop_dong_chi_tiet hd ON dv.id_Dich_Vu_Di_Kem = hd.id_Dich_Vu_Di_Kem
+GROUP BY dv.id_Dich_Vu_Di_Kem
+HAVING So_lan = (SELECT 
+        COUNT(hd.id_Dich_Vu_Di_Kem) AS So_lan
+    FROM
+        dich_vu_di_kem dv
+            JOIN
+        hop_dong_chi_tiet hd ON dv.id_Dich_Vu_Di_Kem = hd.id_Dich_Vu_Di_Kem
+    GROUP BY dv.id_Dich_Vu_Di_Kem
+    ORDER BY So_lan DESC
+    LIMIT 1);
+
+-- task 14
+select hd.id_hop_dong, ldv.ten_loai_dich_vu,ten_dich_vu_di_kem
+from (((hop_dong hd join dich_vu dv on hd.id_dich_vu=dv.id_dich_vu) join loai_dich_vu ldv on ldv.id_loai_dich_vu=dv.id_loai_dich_vu) 
+      join hop_dong_chi_tiet hdct on hdct.id_hop_dong=hd.id_hop_dong)join dich_vu_di_kem dvdk on dvdk.id_dich_vu_di_kem=hdct.id_dich_vu_di_kem
+where
+   hdct.id_dich_vu_di_kem in(select id_dich_vu_di_kem
+                    from hop_dong_chi_tiet
+                    group by id_dich_vu_di_kem
+                    having count(id_dich_vu_di_kem)=1);
+
+-- task 15
+
+SELECT 
+    nv.id_nhan_vien,
+    nv.ho_ten_nhan_vien,
+    td.trinh_do,
+    bp.ten_bo_phan,
+    nv.sdt,
+    nv.dia_chi,
+    hd.ngay_lam_hop_dong,
+    COUNT(hd.id_nhan_vien) AS `So lan`
+FROM
+    `nhan_vien` nv
+        INNER JOIN
+    `bo_phan` bp USING (id_bo_phan)
+        INNER JOIN
+    `trinh_do` td USING (id_trinh_do)
+        INNER JOIN
+    `hop_dong` hd USING (id_nhan_vien)
+WHERE
+    YEAR(hd.ngay_lam_hop_dong) IN ('2018' , '2019')
+GROUP BY hd.id_nhan_vien
+HAVING `So lan` <= 3;
+
+-- task 16
+
+
+
+-- task 17
+
+
+
+-- task 18
+
+
+-- task 19
+
+SET SQL_SAFE_UPDATES=0; 
+ update dich_vu_di_kem set gia=gia*2
+ where
+ id_dich_vu_di_kem in
+ (select id_dich_vu_di_kem
+ from (hop_dong hd join hop_dong_chi_tiet hdct on hd.id_hop_dong=hdct.id_hop_dong)
+ where year(hd.ngay_lam_hop_dong)=2019 
+ group by id_dich_vu_di_kem
+ having count(hdct.id_dich_vu_di_kem)>3);
+ SET SQL_SAFE_UPDATES=1;  
+
+-- task 20 
+
+select  id_nhan_vien ID, ho_ten_nhan_vien, email, sdt, ngay_sinh, dia_chi
+from `furama_resort`.nhan_vien as NV
+UNION all
+select id_khach_hang, ho_ten, email, sdt, ngay_sinh, dia_chi
+from `furama_resort`.khach_hang as KH;
