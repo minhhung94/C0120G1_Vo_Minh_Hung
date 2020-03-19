@@ -320,21 +320,14 @@ where hop_dong.id_hop_dong=hop_dong_chi_tiet.id_hop_dong group by hop_dong.id_ho
 -- Hiển thị thông tin các Dịch vụ đi kèm đã được sử dụng bởi những Khách hàng có TenLoaiKhachHang là “Diamond” và 
 -- có địa chỉ là “Vinh” hoặc “Quảng Ngãi”.
 
-select * from dich_vu_di_kem DVDK
-where DVDK.id_Dich_Vu_Di_Kem in(
-select HDCT.id_Dich_Vu_Di_Kem from hop_dong_chi_tiet HDCT,hop_dong HD,khach_hang KH ,loai_khach LKH
-where (LKH.ten_Loai_Khach = 'Diamond'
-and (KH.dia_Chi like '%Vinh%' 
-or KH.dia_Chi like '%Quảng Ngãi%')));
-
--- select acs.id_dich_vu_di_kem ,acs.ten_dich_vu_di_kem, acs.gia,
---  acs.don_vi, acs.trang_thai_khach_dung, tc.ten_loai_khach,cm.dia_chi
--- from `furama_resort`.dich_vu_di_kem acs 
--- join `furama_resort`.hop_dong_chi_tiet cd on acs.id_dich_vu_di_kem = cd.id_dich_vu_di_kem
--- join `furama_resort`.hop_dong ct on cd.id_hop_dong = ct.id_hop_dong
--- join `furama_resort`.khach_hang cm on ct.id_khach_hang = cm.id_khach_hang
--- join `furama_resort`.loai_khach tc on cm.id_loai_khach = tc.id_loai_khach
--- where tc.ten_loai_khach = 'Diamond' and cm.dia_chi in ('Vinh','Quảng Ngãi');
+select dvdk.id_dich_vu_di_kem ,dvdk.ten_dich_vu_di_kem, dvdk.gia,
+ dvdk.don_vi, dvdk.trang_thai_kha_dung, lk.ten_loai_khach,kh.dia_chi
+from dich_vu_di_kem dvdk 
+join hop_dong_chi_tiet hdct on dvdk.id_dich_vu_di_kem = hdct.id_dich_vu_di_kem
+join hop_dong hd on hdct.id_hop_dong = hd.id_hop_dong
+join khach_hang kh on hd.id_khach_hang = kh.id_khach_hang
+join loai_khach lk on kh.id_loai_khach = lk.id_loai_khach
+where lk.ten_loai_khach = 'Diamond' and kh.dia_chi in ('Vinh','Quảng Ngãi');
 
 -- task 12 
 -- Hiển thị thông tin IDHopDong, TenNhanVien, TenKhachHang, SoDienThoaiKhachHang, TenDichVu, SoLuongDichVuDikem 
