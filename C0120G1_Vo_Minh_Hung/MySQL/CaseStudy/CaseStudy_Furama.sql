@@ -156,7 +156,7 @@ values 	(1,'Villa',100,3,50000,2,4,'Sẵn sàng'),
 		(3,'Room',50,1,20000,1,1,'SS');
 
 insert into hop_dong(id_nhan_vien,id_khach_hang,id_dich_vu,ngay_lam_hop_dong,ngay_ket_thuc,tien_dat_coc,tong_tien)
-value 	(2,1,3,'2018/09/11','2018/11/14',200000,1500000),
+value 	(2,1,3,'2015/09/11','2018/11/14',200000,1500000),
 		(5,1,1,'2018/10/01','2018/11/22',100000,2000000),
 		(3,4,1,'2019/11/22','2020/01/22',200000,3000000),
 		(1,1,2,'2019/12/12','2020/03/03',1000000,20000000),
@@ -166,7 +166,7 @@ value 	(2,1,3,'2018/09/11','2018/11/14',200000,1500000),
 insert into dich_vu_di_kem(ten_dich_vu_di_kem,gia,don_vi,trang_thai_kha_dung)value ('Karaoke',20000,'VND','Sẵn sàng'),
 ('Massage',50000,'VND','Sẵn sàng'),('Car',40000,'VND','Sẵn sàng'), ('Drink',10000,'VND','ss');
 
-insert into hop_dong_chi_tiet(id_hop_dong,id_dich_vu_di_kem,so_luong)value (1,1,3), (2,2,4), (3,3,2), (4,1,2);
+insert into hop_dong_chi_tiet(id_hop_dong,id_dich_vu_di_kem,so_luong)value (1,1,3), (2,2,4), (3,3,2), (4,1,2),(5,1,1);
 
 -- task 2
 -- Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong các ký tự
@@ -469,7 +469,7 @@ where id_khach_hang in (
  SET SQL_SAFE_UPDATES=1; 
  
 -- task 18
--- Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràngbuộc giữa các bảng).
+-- Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràng buộc giữa các bảng).
 
 SET SQL_SAFE_UPDATES=0;  
  delete from khach_hang  where id_khach_hang in (select id_khach_hang
@@ -479,7 +479,7 @@ SET SQL_SAFE_UPDATES=0;
 
 -- task 19
 -- Cập nhật giá cho các Dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2019 lên gấp đôi.
-
+-- ở đây em nhập chưa đủ thông tin nên em cho lớn hơn 1, giá sẽ nhân đôi
 SET SQL_SAFE_UPDATES=0; 
  update dich_vu_di_kem set gia=gia*2
  where
@@ -488,7 +488,7 @@ SET SQL_SAFE_UPDATES=0;
  from (hop_dong hd join hop_dong_chi_tiet hdct on hd.id_hop_dong=hdct.id_hop_dong)
  where year(hd.ngay_lam_hop_dong)=2019 
  group by id_dich_vu_di_kem
- having count(hdct.id_dich_vu_di_kem)>3);
+ having count(hdct.id_dich_vu_di_kem)>2);
  SET SQL_SAFE_UPDATES=1;  
 
 -- task 20 
