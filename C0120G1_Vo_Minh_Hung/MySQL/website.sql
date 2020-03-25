@@ -39,10 +39,10 @@ foreign key (supplier_id) references suppliers(id) on delete cascade
 );
 insert into products values (null,'Iphone 8','src/a222','12000','4','3','2','3','aaaaaaaaaaaa'),
 							(null,'Dell XPS','src/a2233','1200000','6','4','5','4','ddddddddđ'),
-							(null,'lenovo s5','src/a2223','1500000','11','4','4','3','lllllll'),
+							(null,'lenovo s5','src/a2223','1500000','11','2','4','3','lllllll'),
 							(null,'S20','src/a2233','2200000','12','4','2','2','sssssssss'),
-                            (null,'32Inch','src/a2233','220000','6','4','5','2','sssssssss'),
-                            (null,'dell d6','src/a2233','2200000','6','4','5','5','sssssssss');
+                            (null,'32Inch','src/a2233','220000','6','3','5','2','sssssssss'),
+                            (null,'dell d6','src/a2233','2200000','6','8','5','5','sssssssss');
 
 create table employees(
 id int(11) auto_increment primary key,
@@ -137,22 +137,22 @@ select * from orders where payment_type = 'CASH';
 select * from orders where payment_type = 'CREADIT CARD';
 -- câu 13
 select * from orders where shipping_address = 'TK';
--- câu 14
+-- câu 14 Hiển thị tất cả các nhân viên có sinh nhật là hôm nay
 select * from employees where day(birthday)= day(now()) and month(birthday)= month(now());
--- câu 15 
+-- câu 15 Hiển thị tất cả các nhà cung cấp có tên là: (SONY, SAMSUNG, TOSHIBA, APPLE)
 select * from suppliers where name in ('Sony', 'Samsung', 'TOSHIBA', 'APPLE');
--- câu 16
+-- câu 16 Hiển thị tất cả các mặt hàng cùng với CategoryName
 select products.name as name_products ,categories.name as nam_categories from products left join categories using(id);
--- câu 17
+-- câu 17 Hiển thị tất cả các đơn hàng cùng với thông tin chi tiết khách hàng (Customer)
 select * from customers join orders using(id);
--- câu 18
+-- câu 18 Hiển thị tất cả các mặt hàng cùng với thông tin chi tiết của Category và Supplier
 select * from products join categories using(id)
 						join suppliers using(id);
 -- câu 19 Hiển thị tất cả danh mục (Categories) với số lượng hàng hóa trong mỗi danh mục(Viết 2 cách)
-select categories.name,count(categories.id) from categories join products using(id) group by categories.id; 
-
+select categories.name,sum(stock) from categories join products using(id) group by categories.id; 
+-- select categories.name,sum(stock) from categories, products where categories.id = products.categories_id  group by categories.id;
 -- câu 20 Hiển thị tất cả nhà cung cấp (Suppliers) với số lượng hàng hóa mỗi nhà cung cấp(Viết 2 cách)
-select suppliers.name,count(suppliers.id) from suppliers join products using(id) group by suppliers.id;
+select suppliers.*,sum(stock) from suppliers join products using(id) group by suppliers.id;
 
 -- câu 21 Hiển thị tất cả các mặt hàng được bán trong khoảng từ ngày, đến ngày(Khoảng cách ngày các bạn tuỳ chọn theo data phù hợp với mỗi người) 
 select * from orders join products using(id) where date(created_date) between '2020-03-15' and '2020-04-01';
@@ -166,11 +166,11 @@ join orderdetails using(id) join products using(id) where date(created_date) bet
  group by customers.id;
  
 -- câu 24 Hiển thị tất cả đơn hàng với tổng số tiền
-select orders.id,sum(price - (price*discount/100)) as 'Tổng tiền' from orders join orderdetails using(id)
-join products using(id) group by orders.id;
+select orders.id,sum(quantity * (price - (price*discount/100))) as 'Tổng tiền' from orders join orderdetails using(id)
+join products using(id) where status = 'COMPLETED' group by orders.id;
 
 -- câu 25  Hiển thị tất cả các nhân viên bán hàng với tổng số tiền bán được
-select employees.first_name,employees.last_name,sum(price - (price*discount/100)) as 'Tổng tiền' from employees
+select employees.*,sum(quantity * (price - (price*discount/100))) as 'Tổng tiền' from employees
 join orders using(id)
 join orderdetails using(id)
-join products using(id) group by employees.id;
+join products using(id) where status = 'COMPLETED' group by employees.id;
