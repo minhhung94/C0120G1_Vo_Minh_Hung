@@ -22,7 +22,7 @@ description varchar(500)
 );
 insert into categories value (null,'Tivi','là 1 loại tivi'), 
 (null,'Điện Thoại','là loại điện thoại'), (null,'Tai Nghe','là 1 loại tai nghe'), 
-(null,'Laptop','là 1 loại tai nghe'), (null,'Màn hình','là 1 loại tai nghe');
+(null,'Laptop','là 1 loại laptop'), (null,'Màn hình','là 1 loại màn hình');
 
 create table products(
 id int(11) auto_increment primary key,
@@ -111,43 +111,61 @@ update products set discount = discount+5 where discount <= 10;
 select * from products where discount <=10;
 -- câu 4
 select * from products where stock <=5;
+
 -- Câu 5
 select * from customers where address = 'Đà nẵng';
+
 -- câu 6
 select * from customers where year(birthday)=1990;
+
 -- câu 7
 select * from customers where day(birthday)= day(now()) and month(birthday)= month(now());
+
 -- câu 8
 select * from orders where status= 'COMPLETED';
+
 -- Câu 9
 select * from orders where status= 'COMPLETED' and date(created_date) = date(now());
+
 -- câu 10 
 select * from orders where status= 'CANCELED';
+
 -- Câu 11 
 select * from orders where payment_type = 'CASH';
+
 -- câu 12
 select * from orders where payment_type = 'CREADIT CARD';
+
 -- câu 13
 select * from orders where shipping_address = 'TK';
+
 -- câu 14 Hiển thị tất cả các nhân viên có sinh nhật là hôm nay
 select * from employees where day(birthday)= day(now()) and month(birthday)= month(now());
+
 -- câu 15 Hiển thị tất cả các nhà cung cấp có tên là: (SONY, SAMSUNG, TOSHIBA, APPLE)
 select * from suppliers where name in ('Sony', 'Samsung', 'TOSHIBA', 'APPLE');
+
 -- câu 16 Hiển thị tất cả các mặt hàng cùng với CategoryName
 select products.name as name_products ,categories.name as nam_categories from products left join categories on products.category_id=categories.id;
+
 -- câu 17 Hiển thị tất cả các đơn hàng cùng với thông tin chi tiết khách hàng (Customer)
 select * from customers join orders on customers.id=orders.customer_id;
+
 -- câu 18 Hiển thị tất cả các mặt hàng cùng với thông tin chi tiết của Category và Supplier
 select * from products join categories on products.category_id=categories.id 
 						join suppliers on suppliers.id=products.supplier_id;
+                        
 -- câu 19 Hiển thị tất cả danh mục (Categories) với số lượng hàng hóa trong mỗi danh mục(Viết 2 cách)
 -- c1:
-select categories.name,sum(stock) from categories join products on products.category_id=categories.id group by categories.id; 
+select categories.*,sum(stock) from categories join products on products.category_id=categories.id group by categories.id; 
 -- c2:
 select categories.*,sum(stock) from products, categories where products.category_id=categories.id group by categories.id;
 
 -- câu 20 Hiển thị tất cả nhà cung cấp (Suppliers) với số lượng hàng hóa mỗi nhà cung cấp(Viết 2 cách)
+-- c1:
 select suppliers.*,sum(stock) from suppliers join products on suppliers.id=products.supplier_id group by suppliers.id;
+-- c2:
+select suppliers.*,sum(stock) from suppliers, products where suppliers.id=products.supplier_id group by suppliers.id;
 
 -- câu 21 Hiển thị tất cả các mặt hàng được bán trong khoảng từ ngày, đến ngày(Khoảng cách ngày các bạn tuỳ chọn theo data phù hợp với mỗi người) 
 select * from orders join products using(id) where date(created_date) between '2020-03-15' and '2020-04-01';
@@ -156,16 +174,39 @@ select * from orders join products using(id) where date(created_date) between '2
 select * from customers join orders using(id) where date(created_date) between '2020-03-15' and '2020-04-01';
 
 -- câu 23 Hiển thị tất cả các khách hàng mua hàng (với tổng số tiền) trong khoảng từ ngày, đến ngày(viêt bằng 2 cách, ngày tuỳ chọn )
-select customers.first_name,customers.last_name,sum(price - (price*discount/100)) as TongTien from customers join orders using(id) 
-join orderdetails using(id) join products using(id) where date(created_date) between '2020-03-15' and '2020-04-01'
- group by customers.id;
- 
+-- c1:
+SELECT 
+    customers.*,
+    SUM(quantity *(price - (price*discount/100))) AS 'tổng số tiền'
+FROM
+    customers
+        JOIN
+    orders ON customers.id = customer_id
+        JOIN
+    orderdetails ON orders.id = order_id
+        JOIN
+    products ON products.id = product_id
+WHERE
+    date(created_date) between '2020-03-15' and '2020-04-01'
+GROUP BY customer_id;
+-- c2: 
+select customers.*,sum(quantity *(price - (price*discount/100)))  as TongTien 
+from customers,orders,orderdetails,products where customers.id = orders.customer_id 
+and orders.id = orderdetails.order_id and orderdetails.product_id=products.id  
+and date(created_date) between '2020-03-15' and '2020-04-01' group by customer_id;
+
 -- câu 24 Hiển thị tất cả đơn hàng với tổng số tiền
-select orders.id,sum(quantity * (price - (price*discount/100))) as 'Tổng tiền' from orders join orderdetails using(id)
-join products using(id) where status = 'COMPLETED' group by orders.id;
+select orders.id,sum(quantity * (price - (price*discount/100))) as 'Tổng tiền' from orders join orderdetails ON orders.id = order_id
+join products on products.id = product_id where status = 'COMPLETED' group by orders.id;
 
 -- câu 25  Hiển thị tất cả các nhân viên bán hàng với tổng số tiền bán được
-select employees.*,sum(quantity * (price - (price*discount/100))) as 'Tổng tiền' from employees
-join orders using(id)
-join orderdetails using(id)
-join products using(id) where status = 'COMPLETED' group by employees.id;
+
+select
+employees.*,SUM(quantity * (price - (price*discount/100))) 'tổng tiền'
+from
+employees
+join orders on employees.id = employee_id
+join orderdetails on orders.id = order_id
+join products ON products.id = product_id
+where status = 'COMPLETED'
+group by employees.id
