@@ -13,7 +13,7 @@ insert into suppliers values (null,'Sony','sony@gmail.com','098711231','Núi Th�
                             (null,'APPLE','Apple@gmail.com','088711231','Lê Duẩn - ĐN'),
                             (null,'Lennovo','Lennovo@gmail.com','088711231','Đống Đa - ĐN'),
                             (null,'Dell','Dell@gmail.com','018711231','Nguyễn văn Linh - ĐN'),
-                            (null,'TOSHIBA','Dell@gmail.com','018711231','Nguyễn văn Linh - ĐN');
+                            (null,'TOSHIBA','Toshiba@gmail.com','018711231','Nguyễn Hoàng - ĐN');
 
 create table categories(
 id int(11) auto_increment primary key,
@@ -159,11 +159,12 @@ select * from products join categories on products.category_id=categories.id
 -- c1:
 select categories.*,sum(stock) from categories join products on products.category_id=categories.id group by categories.id; 
 -- c2:
-select categories.*,sum(stock) from products, categories where products.category_id=categories.id group by categories.id;
+select categories.*,sum(stock) from products, categories where 
+products.category_id=categories.id group by categories.id;
 
 -- câu 20 Hiển thị tất cả nhà cung cấp (Suppliers) với số lượng hàng hóa mỗi nhà cung cấp(Viết 2 cách)
 -- c1:
-select suppliers.*,sum(stock) from suppliers join products on suppliers.id=products.supplier_id group by suppliers.id;
+select suppliers.*,sum(stock) from suppliers join products on suppliers.id=products.supplier_id group by suppliers.id order by id ;
 -- c2:
 select suppliers.*,sum(stock) from suppliers, products where suppliers.id=products.supplier_id group by suppliers.id;
 
@@ -209,4 +210,78 @@ join orders on employees.id = employee_id
 join orderdetails on orders.id = order_id
 join products ON products.id = product_id
 where status = 'COMPLETED'
-group by employees.id
+group by employees.id;
+
+-- câu 26 Hiển thị tất cả các mặt hàng không bán được
+select products.*,orderdetails.product_id from products left join orderdetails on product_id=products.id 
+left join orders on orders.id = order_id where product_id is null ;
+
+
+-- câu 27 Hiển thị tất cả các nhà cung cấp không bán được trong khoảng từ ngày, đến ngày
+
+select suppliers.* from suppliers 
+where suppliers.id not in (select products.supplier_id from products 
+join orderdetails on orderdetails.product_id=products.id join orders on orders.id = order_id 
+where status = 'COMPLETED' and date(created_date) between '2020-03-15' and '2020-04-01' );
+
+
+-- Câu 28 Hiển thị top 3 các nhân viên bán hàng với tổng số tiền bán được từ cao đến thấp trong khoảng từ ngày, đến ngày
+
+select
+employees.*,SUM(quantity * (price - (price*discount/100))) 'tổng tiền'
+from
+employees
+join orders on employees.id = employee_id
+join orderdetails on orders.id = order_id
+join products ON products.id = product_id
+where status = 'COMPLETED' and (date(created_date) between '2020-03-15' and '2020-04-01' )
+group by employees.id limit 3;
+
+-- câu 29 Hiển thị top 5 các khách hàng mua hàng với tổng số tiền mua được từ cao đến thấp trong khoảng từ ngày, đến ngày
+
+select orders.id,orders.customer_id,sum(quantity * (price - (price*discount/100))) as 'Tổng tiền' from orders 
+join orderdetails ON orders.id = order_id join products on products.id = product_id where status = 'COMPLETED' 
+and (date(created_date) between '2020-03-15' and '2020-04-01' ) group by orders.id limit 5;
+
+
+-- câu 30 Hiển thị danh sách các mức giảm giá của cửa hàng
+select products.discount as 'Giảm giá' from products ;
+
+-- câu 31 Hiển thị tất cả danh mục (Categories) với tổng số tiền bán được trong mỗi danh mục
+-- c1: Dùng INNER JOIN + GROUP BY với lệnh SUM
+select categories.name as categories_name ,orders.id as  order_id,sum(quantity * (price - (price*discount/100))) as 'Tổng tiền' 
+from orders join orderdetails ON orders.id = order_id
+join products on products.id = product_id join categories on products.category_id=categories.id 
+where status = 'COMPLETED' group by category_id;
+
+-- c2: Dùng SubQuery với lệnh SUM
+
+
+
+-- Câu 32: Hiển thị tất cả đơn hàng với tổng số tiền mà đã được giao hàng thành công trong khoảng từ ngày, đến ngày
+select orders.*,sum(quantity * (price - (price*discount/100))) as 'Tổng tiền' 
+from orders join orderdetails ON orders.id = order_id
+join products on products.id = product_id join categories on products.category_id=categories.id 
+where status = 'COMPLETED' and (date(created_date) between '2020-03-15' and '2020-04-01' ) group by order_id;
+
+-- Câu 33: Hiển thị tất cả đơn hàng có tổng số tiền bán hàng nhiều nhất trong khoảng từ ngày, đến ngày
+select orders.*,sum(quantity * (price - (price*discount/100))) as 'Tổng tiền' 
+from orders join orderdetails ON orders.id = order_id
+join products on products.id = product_id join categories on products.category_id=categories.id 
+where status = 'COMPLETED' and (date(created_date) between '2020-03-15' and '2020-04-01' ) group by order_id  order by quantity desc limit 1;
+
+-- Câu 34: Hiển thị tất cả đơn hàng có tổng số tiền bán hàng ít nhất trong khoảng từ ngày, đến ngày
+select orders.*,sum(quantity * (price - (price*discount/100))) as 'Tổng tiền' 
+from orders join orderdetails ON orders.id = order_id
+join products on products.id = product_id join categories on products.category_id=categories.id 
+where status = 'COMPLETED' and (date(created_date) between '2020-03-15' and '2020-04-01' ) group by order_id  order by quantity asc limit 1;
+
+
+-- Câu 35: Hiển thị trung bình cộng giá trị các đơn hàng trong khoảng từ ngày, đến ngày
+
+select avg(quantity * (price - (price*discount/100))) as 'Trung bình cộng' 
+from orders join orderdetails ON orders.id = order_id
+join products on products.id = product_id join categories on products.category_id=categories.id 
+where status = 'COMPLETED' and (date(created_date) between '2020-03-15' and '2020-04-01' ) ;
+
+
