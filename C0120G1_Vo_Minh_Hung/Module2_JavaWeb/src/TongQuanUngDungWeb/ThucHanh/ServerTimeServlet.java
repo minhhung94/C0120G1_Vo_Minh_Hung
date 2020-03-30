@@ -1,4 +1,4 @@
-package TongQuanUngDungWeb;
+package TongQuanUngDungWeb.ThucHanh;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

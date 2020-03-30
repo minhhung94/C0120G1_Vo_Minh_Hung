@@ -1,4 +1,4 @@
-package TongQuanUngDungWeb;
+package TongQuanUngDungWeb.ThucHanh;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,21 +8,19 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "simple_login",urlPatterns = "/login")
-public class simple_login extends HttpServlet {
+@WebServlet(name = "java-web-currency-converter", urlPatterns = "/convert")
+public class javawebcurrencyconverter extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
+        float rate = Float.parseFloat(request.getParameter("rate"));
+        float usd = Float.parseFloat(request.getParameter("usd"));
+
+        float vnd = rate * usd;
 
         PrintWriter writer = response.getWriter();
         writer.println("<html>");
-
-        if("admin".equals(username) && "admin".equals(password)) {
-            writer.println("<h1>Welcome "+username+" to website</h1>");
-        } else{
-            writer.println("<h1>Login Error</h1>");
-        }
-
+        writer.println("<h1>Rate: " + rate+ "</h1>");
+        writer.println("<h1>USD: " + usd+ "</h1>");
+        writer.println("<h1>VND: " + vnd+ "</h1>");
         writer.println("</html>");
     }
 

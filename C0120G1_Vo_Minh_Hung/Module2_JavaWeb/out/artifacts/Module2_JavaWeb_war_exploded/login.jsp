@@ -23,7 +23,7 @@
         </style>
     </head>
 <body>
-<form  method="post" action="/login">
+<form  method="get" action="/login">
     <div class="login">
         <h2>Login</h2>
         <input type="text" name="username" size="30"  placeholder="username" />
