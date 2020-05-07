@@ -1,0 +1,127 @@
+body{
+    margin:0;
+}
+.header{
+    background-color: rgb(236, 236, 236);
+    height: 100px;
+}
+.header-link{
+    background-color: rgb(206, 206, 206);
+    height: 35px;
+}
+.header-link a{
+    text-decoration: none;
+    padding: 8px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    display: block;
+    float: left;
+    margin-left: 20px;
+    color: black;
+}
+.header-link a:hover{
+    background-color: tomato;
+    border-radius: 4px;
+}
+.action {
+    border-radius: 3px;
+    background: darkorange;
+}
+.search{
+    background-color: tomato;
+    position: absolute;
+    height: 34px;
+    width: 38%;
+    top: 25px;
+    left:60%;
+    border-radius: 6px;
+}
+.search input{
+    display: block;
+    float: left;
+    margin:5px;
+    width: 64%;
+    border: 3px tomato;
+    padding: 4px;
+    border-radius: 4px;
+}
+#search-button{
+    width: 32%;
+    float: left;
+    display: block;
+    margin: 5px;
+    background-color: tomato;
+    color: white;
+    border: none;
+    padding: 3.5px;
+}
+.left-sidebar{
+    height: 79.76%;
+    width: 10%;
+    background-color: rgb(236, 236, 236);
+    float: left;
+}
+.main{
+    background-color: rgba(119, 228, 36, 0.836);
+    margin: 25px 55px;
+    height: 600px;
+    width: 80%;
+    float: left;
+}
+.top-comic{
+    background-color: rgb(245, 82, 82);
+    position: absolute;
+    width: 135px;
+    margin: 15px 0;
+    color: rgba(255, 255, 255, 0.863);
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.genre{
+    position: absolute;
+    top:32%;
+}
+.genre a{
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 7px 30px;
+    margin: 2px 0;
+    font-size: smaller;
+    color: black;
+}
+.genre a:hover{
+    background-color: rgb(245, 82, 82);
+    border-radius: 3px;
+}
+.item{
+    background-color: aqua;
+    height: 190px;
+    width: 170px;
+    margin: 0 15px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.item a {
+    text-decoration: none;
+}
+.item img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 5px;
+}
+.content li{
+    display: block;
+    float: left;
+}
+.truyen{
+    width: 19%;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.content {
+    margin-top: 10px;
+}

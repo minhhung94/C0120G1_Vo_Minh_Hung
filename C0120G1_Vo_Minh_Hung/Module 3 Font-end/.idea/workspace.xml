@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc6ca761-6c94-487c-aed7-8c15c174ab65" name="Default Changelist" comment="" />
+    <list default="true" id="fc6ca761-6c94-487c-aed7-8c15c174ab65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/B1 CSS/BaiTap/TruyenTranh/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B1 CSS/BaiTap/TruyenTranh/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/hieuUngMenu/menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/hieuUngMenu/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +21,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1bVr3qAGgtp0rDwkvAzQeNPDMbe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,18 +35,35 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/B1 CSS/BaiTap" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.TaoCoCucCoBan.html">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B1 CSS\BaiTap" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
     <configuration name="TaoBoCucCacFixed.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B1 CSS/ThucHanh/TaoBoCucCacFixed.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="TaoCoCucCoBan.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B1 CSS/ThucHanh/TaoCoCucCoBan.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B1 CSS/BaiTap/TruyenTranh/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B1 CSS/BaiTap/[BT]ComicPage/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="menu.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/test/hieuUngMenu/menu.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (1)" />
+        <item itemvalue="JavaScript Debug.menu.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.TaoCoCucCoBan.html" />
         <item itemvalue="JavaScript Debug.TaoBoCucCacFixed.html" />
       </list>
@@ -54,6 +81,8 @@
       <updated>1588727905382</updated>
       <workItem from="1588727906879" duration="5287000" />
       <workItem from="1588745970900" duration="8767000" />
+      <workItem from="1588774945793" duration="4708000" />
+      <workItem from="1588814535543" duration="898000" />
     </task>
     <servers />
   </component>
