@@ -1,0 +1,121 @@
+.container{
+    margin: 10px auto;
+    width: 60%;
+    height: 1000px;
+    background: #dae3f4;
+}
+.content_left{
+    width: 38%;
+    height: 1000px;
+    float: left;
+    background: #203864;
+}
+.content_right{
+    width: 60%;
+    height: 1000px;
+    float: left;
+}
+.anh{
+    margin: 20px 45px;
+    background-image:url("img/mhvo.jpg") ;
+    width: 60%;
+    height: 200px;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    border-radius: 5px 30px;
+    border: gainsboro solid 3px;
+}
+.thongtincn {
+    margin-left: 10px;
+    height: 250px;
+    color: white;
+}
+.tieude {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.tieude a{
+    font-family: "Arial";
+    font-size: 22px;
+    color: white;
+    margin: 0 auto;
+}
+.thongtincn_div{
+    width: 100%;
+    height: 30px;
+    color: white;
+}
+.a1{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight:bold;
+}
+.muctieu{
+    height: 300px;
+}
+.muctieu_div{
+    text-align: justify;
+    margin: 20px;
+    color: white;
+}
+.muctieu_div span {
+    line-height: 23px;
+}
+.nangluc {
+    height: 100px;
+}
+
+.content_main{
+    width: 94%;
+    height: 970px;
+    margin: 12px 20px;
+    border: 1px solid #15144b;
+}
+.noidung{
+    margin-left: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+.noidung img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.noidung a{
+    font-size: 20px;
+}
+.content_right_main {
+    clear: both;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    height: 250px;
+}
+.tieude1 {
+    margin-top: 20px;
+    margin-left: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.noidung2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    float: left;
+}
+.a2 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.div_a4{
+    margin-left: 92px;
+    margin-top: 10px;
+}
+.a3 {
+    font-size: 20px;
+}
+.a4 {
+    font-size: 20px;
+}

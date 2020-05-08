@@ -2,11 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc6ca761-6c94-487c-aed7-8c15c174ab65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/B1 CSS/BaiTap/TruyenTranh/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B1 CSS/BaiTap/TruyenTranh/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/hieuUngMenu/menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/hieuUngMenu/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B1 CSS/BaiTap/CV/cv.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B1 CSS/BaiTap/CV/cv.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B1 CSS/BaiTap/CV/img/dautich.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B1 CSS/BaiTap/CV/img/mhvo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/ThucHanh/TaoLayout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/css/css.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.min.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B1 CSS/BaiTap/TruyenTranh/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/B1 CSS/BaiTap/TruyenTranh/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B1 CSS/BaiTap/TruyenTranh/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/B1 CSS/BaiTap/TruyenTranh/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,25 +59,31 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/B1 CSS/BaiTap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/B1 CSS/BaiTap/CV/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B1 CSS\BaiTap\CV\img" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap" />
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B1 CSS\BaiTap" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\css" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B1 CSS\BaiTap\CV\img" />
+    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
-    <configuration name="TaoBoCucCacFixed.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B1 CSS/ThucHanh/TaoBoCucCacFixed.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.cv.html">
     <configuration name="TaoCoCucCoBan.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B1 CSS/ThucHanh/TaoCoCucCoBan.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B1 CSS/BaiTap/TruyenTranh/index.html" useBuiltInWebServerPort="true">
+    <configuration name="TaoLayout.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B2 Bootstrap/ThucHanh/TaoLayout.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B1 CSS/BaiTap/[BT]ComicPage/index.html" useBuiltInWebServerPort="true">
+    <configuration name="cv.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B1 CSS/BaiTap/CV/cv.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B1 CSS/BaiTap/TruyenTranh/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="menu.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/test/hieuUngMenu/menu.html" useBuiltInWebServerPort="true">
@@ -61,11 +91,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.cv.html" />
+        <item itemvalue="JavaScript Debug.TaoLayout.html" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
-        <item itemvalue="JavaScript Debug.menu.html" />
-        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.TaoCoCucCoBan.html" />
-        <item itemvalue="JavaScript Debug.TaoBoCucCacFixed.html" />
+        <item itemvalue="JavaScript Debug.menu.html" />
       </list>
     </recent_temporary>
   </component>
@@ -82,11 +112,79 @@
       <workItem from="1588727906879" duration="5287000" />
       <workItem from="1588745970900" duration="8767000" />
       <workItem from="1588774945793" duration="4708000" />
-      <workItem from="1588814535543" duration="898000" />
+      <workItem from="1588814535543" duration="8649000" />
+      <workItem from="1588832313881" duration="8827000" />
+      <workItem from="1588900032759" duration="1106000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1345" height="201" key="GridCell.Tab.0.bottom" timestamp="1588846362503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588846362503" />
+    <state width="1345" height="201" key="GridCell.Tab.0.center" timestamp="1588846362503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588846362503" />
+    <state width="1345" height="201" key="GridCell.Tab.0.left" timestamp="1588846362503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588846362503" />
+    <state width="1345" height="201" key="GridCell.Tab.0.right" timestamp="1588846362503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588846362503" />
+    <state width="1345" height="201" key="GridCell.Tab.1.bottom" timestamp="1588846362503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588846362503" />
+    <state width="1345" height="201" key="GridCell.Tab.1.center" timestamp="1588846362503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1588846362503" />
+    <state width="1345" height="201" key="GridCell.Tab.1.left" timestamp="1588846362503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1588846362503" />
+    <state width="1345" height="201" key="GridCell.Tab.1.right" timestamp="1588846362503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588846362503" />
+    <state width="1345" height="201" key="GridCell.Tab.2.bottom" timestamp="1588846362503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588846362503" />
+    <state width="1345" height="201" key="GridCell.Tab.2.center" timestamp="1588846362503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1588846362503" />
+    <state width="1345" height="201" key="GridCell.Tab.2.left" timestamp="1588846362503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1588846362503" />
+    <state width="1345" height="201" key="GridCell.Tab.2.right" timestamp="1588846362503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1588846362503" />
+    <state width="1345" height="201" key="GridCell.Tab.3.bottom" timestamp="1588846362504">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588846362504" />
+    <state width="1345" height="201" key="GridCell.Tab.3.center" timestamp="1588846362504">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1588846362504" />
+    <state width="1345" height="201" key="GridCell.Tab.3.left" timestamp="1588846362504">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1588846362504" />
+    <state width="1345" height="201" key="GridCell.Tab.3.right" timestamp="1588846362504">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="201" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1588846362504" />
   </component>
 </project>
