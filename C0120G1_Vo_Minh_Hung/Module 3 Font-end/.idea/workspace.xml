@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc6ca761-6c94-487c-aed7-8c15c174ab65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/LandingPage/LandingPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/LandingPage/img/1920_Panel1_Fullbleed_Surface_Lifestyle2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/LandingPage/img/RE1Mu3b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/LandingPage/img/Surface_Home_Hero_var-1_Image__20_V1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/LandingPage/img/Surface_Home_Hero_var-1_Image__20_V2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/TaoGalleryDonGian/TaoGallery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/TaoGalleryDonGian/images/img_fjords.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/TaoGalleryDonGian/images/img_forest.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/TaoGalleryDonGian/images/img_lights.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/TaoGalleryDonGian/images/img_mountains.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/TaoGalleryDonGian/taogallery.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/ThucHanh/images/computer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/ThucHanh/images/header-object.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/ThucHanh/images/shoppingcart.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/menudacap/menudacap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/menudacap/menudacap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Module 3 Font-end.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Module 3 Font-end.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B2 Bootstrap/ThucHanh/TaoLayout.html" beforeDir="false" afterPath="$PROJECT_DIR$/B2 Bootstrap/ThucHanh/TaoLayout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/B2 Bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/hieuUngMenu/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/hieuUngMenu/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/hieuUngMenu/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/LandingPage/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/text.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/TaoGalleryDonGian/TaoGallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/TaoGalleryDonGian/TaoGallery.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +92,8 @@
       <workItem from="1588814535543" duration="8649000" />
       <workItem from="1588832313881" duration="8827000" />
       <workItem from="1588900032759" duration="11524000" />
-      <workItem from="1588919243148" duration="2834000" />
+      <workItem from="1588919243148" duration="3565000" />
+      <workItem from="1588950469140" duration="583000" />
     </task>
     <servers />
   </component>
