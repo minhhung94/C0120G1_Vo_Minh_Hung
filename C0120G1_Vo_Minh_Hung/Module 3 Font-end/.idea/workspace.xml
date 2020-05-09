@@ -2,8 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc6ca761-6c94-487c-aed7-8c15c174ab65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/Jquery/Jquery.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/Jquery/Jquery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/Jquery/img/donate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/Jquery/img/jquery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/Jquery/img/logo-jquery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B3 Jquery/ThucHanh/SuDungJquery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhap/menu css/menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhap/menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhap/menu1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/TaoGalleryDonGian/TaoGallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/TaoGalleryDonGian/TaoGallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/LandingPage/LandingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/B2 Bootstrap/BaiTap/LandingPage/LandingPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -32,47 +61,48 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/B2 Bootstrap/BaiTap/Jquery/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\test" />
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\LandingPage\img" />
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\TaoGalleryDonGian\images" />
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\images" />
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B1 CSS\BaiTap\CV\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\Jquery" />
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\LandingPage" />
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\ThucHanh" />
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\css" />
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B1 CSS\BaiTap\CV\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\Jquery\img" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\test" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\LandingPage\img" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\TaoGalleryDonGian\images" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.LandingPage.html">
     <configuration name="LandingPage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B2 Bootstrap/BaiTap/LandingPage/LandingPage.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="TaoGallery.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B2 Bootstrap/BaiTap/TaoGalleryDonGian/TaoGallery.html" useBuiltInWebServerPort="true">
+    <configuration name="SuDungJquery.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B3 Jquery/ThucHanh/SuDungJquery.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="menu.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/nhap/menu css/menu.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="menu.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/nhap/menu.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="menu.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/test/hieuUngMenu/menu.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="menudacap.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/test/menudacap/menudacap.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="text.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/test/text.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.LandingPage.html" />
+        <item itemvalue="JavaScript Debug.SuDungJquery.html" />
+        <item itemvalue="JavaScript Debug.menu.html (2)" />
+        <item itemvalue="JavaScript Debug.menu.html (1)" />
         <item itemvalue="JavaScript Debug.menu.html" />
-        <item itemvalue="JavaScript Debug.TaoGallery.html" />
-        <item itemvalue="JavaScript Debug.text.html" />
-        <item itemvalue="JavaScript Debug.menudacap.html" />
       </list>
     </recent_temporary>
   </component>
@@ -93,7 +123,13 @@
       <workItem from="1588832313881" duration="8827000" />
       <workItem from="1588900032759" duration="11524000" />
       <workItem from="1588919243148" duration="3565000" />
-      <workItem from="1588950469140" duration="583000" />
+      <workItem from="1588950469140" duration="1003000" />
+      <workItem from="1588985676735" duration="1092000" />
+      <workItem from="1588988196395" duration="5050000" />
+      <workItem from="1589014372109" duration="341000" />
+      <workItem from="1589014856017" duration="1619000" />
+      <workItem from="1589018548443" duration="360000" />
+      <workItem from="1589028053704" duration="1625000" />
     </task>
     <servers />
   </component>
