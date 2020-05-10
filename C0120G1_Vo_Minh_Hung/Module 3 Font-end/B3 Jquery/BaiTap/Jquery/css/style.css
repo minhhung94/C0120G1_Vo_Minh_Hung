@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    font-size: 1em;
+}
+
+.ui-draggable, .ui-droppable {
+    background-position: top;
+}
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+}
+.header {
+    background:#b24926;
+}
+.main {
+    background:#b24926;
+}
+.droptarget {
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+#selectable .ui-seleting{
+    background: #FECA40;
+}
+
+#selectable .ui-selected {
+    background: #F39814;
+    color: white;
+}
+.row1 {
+     margin-top: 1em;
+     border: solid 2px;
+     border-radius: 1em;
+     width: 90%;
+     margin-left: 0.8em;
+     background: white;
+ }

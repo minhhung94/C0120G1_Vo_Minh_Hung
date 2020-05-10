@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="Jquery.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="main" >
+<div class="row text-center header " style="margin-bottom:0">
+    <div class="col-sm-3">
+        <img src="img/logo-jquery-ui.png" style="width: 80%; margin-top: 20px;margin-left: 60px;">
+    </div>
+    <div class="col-sm-4">
+
+    </div>
+    <div class="col-sm-5">
+        <img src="img/donate.png" style="width: 70%; padding-top:10px;">
+    </div>
+</div>
+<div style="margin:0 60px;">
+<nav class="navbar navbar-expand-sm navbar-dark" style="background:#a94625; border-radius: 12px 12px 0 0;border: solid 3px #a0482a;">
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Demos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">DownLoad</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">API Documentation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Plugins</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Browser Support</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div style="background:white; border-radius: 0 0 12px 12px;">
+    <div style="padding-top:20px;margin: 0 20px; ">
+        <div class="row ">
+            <div class="col-sm-4 ">
+                <div id="sidebar" class="widget-area" role="complementary">
+                    <aside class="widget">
+                        <h3 class="widget-title">Interactions</h3>
+                        <ul>
+                            <li><a href="https://jqueryui.com/draggable/">Draggable</a></li><li><a href="https://jqueryui.com/droppable/">Droppable</a></li><li><a href="https://jqueryui.com/resizable/">Resizable</a></li><li><a href="https://jqueryui.com/selectable/">Selectable</a></li><li><a href="https://jqueryui.com/sortable/">Sortable</a></li>		</ul>
+                    </aside>
+                    <aside class="widget">
+                        <h3 class="widget-title">Widgets</h3>
+                        <ul>
+                            <li><a href="https://jqueryui.com/accordion/">Accordion</a></li><li><a href="https://jqueryui.com/autocomplete/">Autocomplete</a></li><li><a href="https://jqueryui.com/button/">Button</a></li><li><a href="https://jqueryui.com/checkboxradio/">Checkboxradio</a></li><li><a href="https://jqueryui.com/controlgroup/">Controlgroup</a></li><li><a href="https://jqueryui.com/datepicker/">Datepicker</a></li><li><a href="https://jqueryui.com/dialog/">Dialog</a></li><li><a href="https://jqueryui.com/menu/">Menu</a></li><li><a href="https://jqueryui.com/progressbar/">Progressbar</a></li><li><a href="https://jqueryui.com/selectmenu/">Selectmenu</a></li><li><a href="https://jqueryui.com/slider/">Slider</a></li><li><a href="https://jqueryui.com/spinner/">Spinner</a></li><li><a href="https://jqueryui.com/tabs/">Tabs</a></li><li><a href="https://jqueryui.com/tooltip/">Tooltip</a></li>		</ul>
+                    </aside>
+                    <aside class="widget">
+                        <h3 class="widget-title">Effects</h3>
+                        <ul>
+                            <li><a href="https://jqueryui.com/addClass/">Add Class</a></li><li><a href="https://jqueryui.com/animate/">Color Animation</a></li><li><a href="https://jqueryui.com/easing/">Easing</a></li><li><a href="https://jqueryui.com/effect/">Effect</a></li><li><a href="https://jqueryui.com/hide/">Hide</a></li><li><a href="https://jqueryui.com/removeClass/">Remove Class</a></li><li><a href="https://jqueryui.com/show/">Show</a></li><li><a href="https://jqueryui.com/switchClass/">Switch Class</a></li><li><a href="https://jqueryui.com/toggle/">Toggle</a></li><li><a href="https://jqueryui.com/toggleClass/">Toggle Class</a></li>		</ul>
+                    </aside>
+                    <aside class="widget">
+                        <h3 class="widget-title">Utilities</h3>
+                        <ul>
+                            <li><a href="https://jqueryui.com/position/">Position</a></li><li><a href="https://jqueryui.com/widget/">Widget Factory</a></li>		</ul>
+                    </aside>
+                </div>
+            </div>
+            <div class="col-sm-8 " id="content ">
+
+                <div class="fun1">
+                    <p>Kéo và thả vào ô bên cạnh:</p>
+
+                    <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Kéo ở đây</p>
+                    </div>
+
+                    <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                    <p style="clear:both;"><strong>Note:</strong> Tìm kiếm điều thú vị khi chơi trò này.</p>
+
+                    <p id="demo"></p>
+                </div>
+                <div class="fun2">
+                    <div id="resizable" class="ui-widget-content" style="border: solid 1px">
+                        <h3 class="ui-widget-header">Resizable</h3>
+                    </div>
+                    <script>
+                        $( function() {
+                            $( "#resizable" ).resizable();
+                        } );
+                    </script>
+                </div>
+                <div class="fun3">
+                    <div class="row1">
+                        <p>Sử dụng chuột cho các mục riêng lẻ hoặc nhóm</p>
+                        <ul id="selectable" style="width: 50%;">
+                            <li class="ui-widget-content">Item 1</li>
+                            <li class="ui-widget-content">Item 2</li>
+                            <li class="ui-widget-content">Item 3</li>
+                            <li class="ui-widget-content">Item 4</li>
+                            <li class="ui-widget-content">Item 5</li>
+                            <li class="ui-widget-content">Item 6</li>
+                            <li class="ui-widget-content">Item 7</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fun4">
+                    <div class="row1">
+                        <p>Sắp xếp lại các yếu tố trong một danh sách hoặc lưới bằng chuột</p>
+                        <ol id="sortable" style="width: 50%;">
+                            <li class="ui-widget-content">Item 1</li>
+                            <li class="ui-widget-content">Item 2</li>
+                            <li class="ui-widget-content">Item 3</li>
+                            <li class="ui-widget-content">Item 4</li>
+                            <li class="ui-widget-content">Item 5</li>
+                            <li class="ui-widget-content">Item 6</li>
+                            <li class="ui-widget-content">Item 7</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="fun5">
+                    <div class="row1">
+                        <div id="accordion">
+                            <h3>Section 1</h3>
+                            <div>
+                                <p>
+                                    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                                </p>
+                            </div>
+                            <h3>Section 2</h3>
+                            <div>
+                                <p>
+                                    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna.
+                                </p>
+                            </div>
+                            <h3>Section 3</h3>
+                            <div>
+                                <p>
+                                    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam
+                                    nisi, eu iaculis leo purus venenatis dui.
+                                </p>
+                                <ul>
+                                    <li>List item 1</li>
+                                    <li>List item 2</li>
+                                    <li>List item 3</li>
+                                </ul>
+                            </div>
+                            <h3>Section 4</h3>
+                            <div>
+                                <p>
+                                    Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est.
+                                </p>
+                                <p>
+                                    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function dragStart(event) {
+                        event.dataTransfer.setData("Text", event.target.id);
+                    }
+
+                    function dragging(event) {
+                        document.getElementById("demo").innerHTML = "Buồn quá";
+                    }
+
+                    function allowDrop(event) {
+                        event.preventDefault();
+                    }
+
+                    function drop(event) {
+                        event.preventDefault();
+                        var data = event.dataTransfer.getData("Text");
+                        event.target.appendChild(document.getElementById(data));
+                        document.getElementById("demo").innerHTML = "Vui quá";
+                    }
+                </script>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+</div>
+<div class="text-center" style="padding-bottom:10px;padding-top: 40px; background: #252525;">
+    <div class="six columns offset-by-three row">
+        <h3><span>Books</span></h3>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-2" style="padding: 0 25px;">
+            <a href="#">
+                <span><img src="//jqueryui.com/jquery-wp-content/themes/jquery/content/books/jquery-ui-in-action.jpg" alt="jQuery UI in Action by TJ VanToll" width="138" height="171"></span>
+                <strong>jQuery UI in Action</strong><br>
+                <cite>TJ VanToll</cite>
+            </a>
+        </div>
+        <div class="col-sm-2" style="padding: 0 25px;">
+            <a href="#">
+                <img src="//jqueryui.com/jquery-wp-content/themes/jquery/content/books/jquery-ui-themes.jpg" alt="jQuery UI Themes by Adam Boduch" width="138" height="171">
+                <span class="book-title">jQuery UI Themes</span>
+                <cite>Adam Boduch</cite>
+            </a>
+        </div>
+        <div class="col-sm-2" style="padding: 0 25px;">
+            <a href="#">
+                <img src="//jqueryui.com/jquery-wp-content/themes/jquery/content/books/jquery-ui-cookbook.jpg" alt="jQuery UI Cookbook by Adam Boduch" width="138" height="171">
+                <span class="book-title">jQuery UI Cookbook</span>
+                <cite>Adam Boduch</cite>
+            </a>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#draggable" ).draggable();
+        } );
+        $(function () {
+            $("#selectable").selectable();
+            $("#sortable").sortable();
+
+            $("#sortable").disableSelection();
+            $("#accordion").accordion();
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</div>
+
+
+</body>
+</html>
