@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="Jquery.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
 <div class="main" >
@@ -56,7 +61,7 @@
                     <aside class="widget">
                         <h3 class="widget-title">Interactions</h3>
                         <ul>
-                            <li><a href="https://jqueryui.com/draggable/">Draggable</a></li><li><a href="https://jqueryui.com/droppable/">Droppable</a></li><li><a href="https://jqueryui.com/resizable/">Resizable</a></li><li><a href="https://jqueryui.com/selectable/">Selectable</a></li><li><a href="https://jqueryui.com/sortable/">Sortable</a></li>		</ul>
+                            <li><a href="https://jqueryui.com/draggable/">Draggable</a></li><li><a href="https://jqueryui.com/droppable/">Droppable</a></li><li><a href="#">Resizable</a></li><li><a href="https://jqueryui.com/selectable/">Selectable</a></li><li><a href="https://jqueryui.com/sortable/">Sortable</a></li>		</ul>
                     </aside>
                     <aside class="widget">
                         <h3 class="widget-title">Widgets</h3>
@@ -167,14 +172,11 @@
                     </script>
                 </div>
                 <div class="fun2">
-                    <div id="resizable" class="ui-widget-content" style="border: solid 1px">
-                        <h3 class="ui-widget-header">Resizable</h3>
+                    <div class="row1" style="height: 350px; padding-top: 20px;padding-left: 20px">
+                        <div id="resizable" class="ui-widget-content">
+                            <p class="ui-widget-header">Resizable</p>
+                        </div>
                     </div>
-                    <script>
-                        $( function() {
-                            $( "#resizable" ).resizable();
-                        } );
-                    </script>
                 </div>
                 <div class="fun3">
                     <div class="row1">
@@ -259,42 +261,75 @@
                 </div>
                 <div class="fun8">
                     <div class="row1" style="height: 300px">
+                        <h3 style="padding-left: 20px">Dialog</h3>
                         <div id="dialog" title="Basic dialog">
                             <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
                         </div>
                     </div>
                 </div>
                 <div class="fun9">
-                    <div class="row1" style="height: 100px; padding-top: 20px;">
-                        <div id="slider"></div>
-                    </div>
-                </div>
-                <div>
                     <div class="row1" style="height: 200px;padding-top: 10px">
+                        <h3 style="padding-left: 20px">Progressbar</h3>
                         <div id="progressbar"></div>
                     </div>
                 </div>
-                <script>
-                    function dragStart(event) {
-                        event.dataTransfer.setData("Text", event.target.id);
-                    }
+                <div class="fun10">
+                    <div class="row1" style="height: 100px; padding-top: 20px;">
+                        <h3 style="padding-left: 20px">Slider</h3>
+                        <div id="slider"></div>
+                    </div>
+                </div>
+                <div class="fun11">
+                    <div class="row1" style="height: 250px;padding-top: 20px;padding-left: 10px">
+                        <p>
+                            <label for="spinner">Select a value:</label>
+                            <input id="spinner" name="value">
+                        </p>
 
-                    function dragging(event) {
-                        document.getElementById("demo").innerHTML = "Buồn quá";
-                    }
+                        <p>
+                            <button id="disable">Toggle disable/enable</button>
+                            <button id="destroy">Toggle widget</button>
+                        </p>
 
-                    function allowDrop(event) {
-                        event.preventDefault();
-                    }
+                        <p>
+                            <button id="getvalue">Get value</button>
+                            <button id="setvalue">Set value to 5</button>
+                        </p>
+                    </div>
+                </div>
+                <div class="fun12">
+                    <div class="row1" style="height: 400px;padding-top: 20px;padding-left: 10px">
+                        <div id="tabs">
+                            <ul>
+                                <li><a href="#tabs-1">Nunc tincidunt</a></li>
+                                <li><a href="#tabs-2">Proin dolor</a></li>
+                                <li><a href="#tabs-3">Aenean lacinia</a></li>
+                            </ul>
+                            <div id="tabs-1">
+                                <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+                            </div>
+                            <div id="tabs-2">
+                                <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+                            </div>
+                            <div id="tabs-3">
+                                <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                                <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fun13">
+                    <div class="row1" style="height: 400px;padding-top: 20px;padding-left: 10px">
+                        <div class="toggler">
+                            <div id="effect" class="ui-corner-all">
+                                Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
+                            </div>
+                        </div>
 
-                    function drop(event) {
-                        event.preventDefault();
-                        var data = event.dataTransfer.getData("Text");
-                        event.target.appendChild(document.getElementById(data));
-                        document.getElementById("demo").innerHTML = "Vui quá";
-                    }
-                </script>
+                        <button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
 
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -330,9 +365,63 @@
         </div>
         <div class="col-sm-3"></div>
     </div>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script>
+        $( function() {
+            $( "#button" ).on( "click", function() {
+                $( "#effect" ).addClass( "newClass", 1000, callback );
+            });
+
+            function callback() {
+                setTimeout(function() {
+                    $( "#effect" ).removeClass( "newClass" );
+                }, 1500 );
+            }
+        } );
+        $( function() {
+            var spinner = $( "#spinner" ).spinner();
+
+            $( "#disable" ).on( "click", function() {
+                if ( spinner.spinner( "option", "disabled" ) ) {
+                    spinner.spinner( "enable" );
+                } else {
+                    spinner.spinner( "disable" );
+                }
+            });
+            $( "#destroy" ).on( "click", function() {
+                if ( spinner.spinner( "instance" ) ) {
+                    spinner.spinner( "destroy" );
+                } else {
+                    spinner.spinner();
+                }
+            });
+            $( "#getvalue" ).on( "click", function() {
+                alert( spinner.spinner( "value" ) );
+            });
+            $( "#setvalue" ).on( "click", function() {
+                spinner.spinner( "value", 5 );
+            });
+
+            $( "button" ).button();
+        } );
+        function dragStart(event) {
+            event.dataTransfer.setData("Text", event.target.id);
+        }
+
+        function dragging(event) {
+            document.getElementById("demo").innerHTML = "Buồn quá";
+        }
+
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("Text");
+            event.target.appendChild(document.getElementById(data));
+            document.getElementById("demo").innerHTML = "Vui quá";
+        }
         $( function() {
             $( "#draggable" ).draggable();
             $( "#dialog" ).dialog();
@@ -340,6 +429,8 @@
             $( "#progressbar" ).progressbar({
                 value: 37
             });
+            $( "#resizable" ).resizable();
+            $( "#tabs" ).tabs();
         } );
         $(function () {
             $("#selectable").selectable();
@@ -380,11 +471,7 @@
             $( "#datepicker" ).datepicker({ minDate: -20, maxDate: "+1M +15D" });
         })
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </div>
 
 
