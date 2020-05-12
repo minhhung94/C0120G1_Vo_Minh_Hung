@@ -2,13 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc6ca761-6c94-487c-aed7-8c15c174ab65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/Jquery/img/clipart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhap/mouse/clipart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhap/mouse/clipart510816.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhap/mouse/mouse.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhap/test/html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/image/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/image/logon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/music.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/nghe_nhac.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/BaiTap/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/BaiTap/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/ThucHanh/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/ThucHanh/.idea/ThucHanh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/ThucHanh/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/ThucHanh/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/ThucHanh/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/ThucHanh/array/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/ThucHanh/bienvakieudulieu/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/ThucHanh/caulenhdieukien/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/ThucHanh/function/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/ThucHanh/object/object.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/ThucHanh/promise/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B4 TypeScript/ThucHanh/promise/promise.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B3 Jquery/BaiTap/Jquery/Jquery.css" beforeDir="false" afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/Jquery/Jquery.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/B3 Jquery/BaiTap/Jquery/Jquery.html" beforeDir="false" afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/Jquery/Jquery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/B3 Jquery/BaiTap/Jquery/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/Jquery/css/style.css" afterDir="false" />
     </list>
@@ -21,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="TypeScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -39,10 +55,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/B3 Jquery/BaiTap/Jquery/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\MusicPlay" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\MusicPlay\image" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\js" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\Jquery\img" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\nhap\mouse" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\LandingPage\img" />
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\Jquery" />
@@ -50,15 +74,8 @@
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\LandingPage" />
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\ThucHanh" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\Jquery\img" />
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\nhap\mouse" />
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\LandingPage\img" />
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\Jquery" />
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\Jquery\img" />
-    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.mouse.html">
+  <component name="RunManager" selected="JavaScript Debug.Jquery.html">
     <configuration name="Jquery.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B3 Jquery/BaiTap/Jquery/Jquery.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -76,9 +93,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.Jquery.html" />
         <item itemvalue="JavaScript Debug.mouse.html" />
         <item itemvalue="JavaScript Debug.LandingPage.html" />
-        <item itemvalue="JavaScript Debug.Jquery.html" />
         <item itemvalue="JavaScript Debug.SuDungJquery.html" />
         <item itemvalue="JavaScript Debug.menu.html (2)" />
       </list>
@@ -111,12 +128,26 @@
       <workItem from="1589078127962" duration="604000" />
       <workItem from="1589117988698" duration="2668000" />
       <workItem from="1589120761806" duration="179000" />
-      <workItem from="1589159853946" duration="11460000" />
+      <workItem from="1589159853946" duration="11846000" />
+      <workItem from="1589177971398" duration="2479000" />
+      <workItem from="1589188584745" duration="2878000" />
+      <workItem from="1589208961732" duration="1274000" />
+      <workItem from="1589245802263" duration="2172000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/B4 TypeScript/ThucHanh/caulenhdieukien/index.js" />
+        <option value="$PROJECT_DIR$/B4 TypeScript/ThucHanh/array/index.js" />
+        <option value="$PROJECT_DIR$/B4 TypeScript/ThucHanh/function/index.js" />
+        <option value="$PROJECT_DIR$/B4 TypeScript/ThucHanh/object/object.js" />
+        <option value="$PROJECT_DIR$/B4 TypeScript/ThucHanh/promise/promise.js" />
+        <option value="$PROJECT_DIR$/B4 TypeScript/BaiTap/index.js" />
+      </list>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="449" y="154" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588903608984">
@@ -127,6 +158,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1589171223288" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1589183478331">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589183478331" />
     <state width="1345" height="201" key="GridCell.Tab.0.bottom" timestamp="1588912841076">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

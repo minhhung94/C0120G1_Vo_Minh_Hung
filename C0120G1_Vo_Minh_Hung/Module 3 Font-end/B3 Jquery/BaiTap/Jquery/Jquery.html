@@ -61,17 +61,17 @@
                     <aside class="widget">
                         <h3 class="widget-title">Interactions</h3>
                         <ul>
-                            <li><a href="https://jqueryui.com/draggable/">Draggable</a></li><li><a href="https://jqueryui.com/droppable/">Droppable</a></li><li><a href="#">Resizable</a></li><li><a href="https://jqueryui.com/selectable/">Selectable</a></li><li><a href="https://jqueryui.com/sortable/">Sortable</a></li>		</ul>
+                            <li><a href="#fun0">Draggable</a></li><li><a href="https://jqueryui.com/droppable/">Droppable</a></li><li><a href="#">Resizable</a></li><li><a href="https://jqueryui.com/selectable/">Selectable</a></li><li><a href="https://jqueryui.com/sortable/">Sortable</a></li>		</ul>
                     </aside>
                     <aside class="widget">
                         <h3 class="widget-title">Widgets</h3>
                         <ul>
-                            <li><a href="https://jqueryui.com/accordion/">Accordion</a></li><li><a href="https://jqueryui.com/autocomplete/">Autocomplete</a></li><li><a href="https://jqueryui.com/button/">Button</a></li><li><a href="https://jqueryui.com/checkboxradio/">Checkboxradio</a></li><li><a href="https://jqueryui.com/controlgroup/">Controlgroup</a></li><li><a href="https://jqueryui.com/datepicker/">Datepicker</a></li><li><a href="https://jqueryui.com/dialog/">Dialog</a></li><li><a href="https://jqueryui.com/menu/">Menu</a></li><li><a href="https://jqueryui.com/progressbar/">Progressbar</a></li><li><a href="https://jqueryui.com/selectmenu/">Selectmenu</a></li><li><a href="https://jqueryui.com/slider/">Slider</a></li><li><a href="https://jqueryui.com/spinner/">Spinner</a></li><li><a href="https://jqueryui.com/tabs/">Tabs</a></li><li><a href="https://jqueryui.com/tooltip/">Tooltip</a></li>		</ul>
+                            <li><a href="https://jqueryui.com/accordion/">Accordion</a></li><li><a href="https://jqueryui.com/autocomplete/">Autocomplete</a></li><li><a href="https://jqueryui.com/button/">Button</a></li><li><a href="https://jqueryui.com/checkboxradio/">Checkboxradio</a></li><li><a href="https://jqueryui.com/controlgroup/">Controlgroup</a></li><li><a href="https://jqueryui.com/datepicker/">Datepicker</a></li><li><a href="#fun8">Dialog</a></li><li><a href="https://jqueryui.com/menu/">Menu</a></li><li><a href="https://jqueryui.com/progressbar/">Progressbar</a></li><li><a href="https://jqueryui.com/selectmenu/">Selectmenu</a></li><li><a href="https://jqueryui.com/slider/">Slider</a></li><li><a href="https://jqueryui.com/spinner/">Spinner</a></li><li><a href="https://jqueryui.com/tabs/">Tabs</a></li><li><a href="https://jqueryui.com/tooltip/">Tooltip</a></li>		</ul>
                     </aside>
                     <aside class="widget">
                         <h3 class="widget-title">Effects</h3>
                         <ul>
-                            <li><a href="https://jqueryui.com/addClass/">Add Class</a></li><li><a href="https://jqueryui.com/animate/">Color Animation</a></li><li><a href="https://jqueryui.com/easing/">Easing</a></li><li><a href="https://jqueryui.com/effect/">Effect</a></li><li><a href="https://jqueryui.com/hide/">Hide</a></li><li><a href="https://jqueryui.com/removeClass/">Remove Class</a></li><li><a href="https://jqueryui.com/show/">Show</a></li><li><a href="https://jqueryui.com/switchClass/">Switch Class</a></li><li><a href="https://jqueryui.com/toggle/">Toggle</a></li><li><a href="https://jqueryui.com/toggleClass/">Toggle Class</a></li>		</ul>
+                            <li><a href="#fun13">Add Class</a></li><li><a href="https://jqueryui.com/animate/">Color Animation</a></li><li><a href="https://jqueryui.com/easing/">Easing</a></li><li><a href="https://jqueryui.com/effect/">Effect</a></li><li><a href="https://jqueryui.com/hide/">Hide</a></li><li><a href="#fun14">Remove Class</a></li><li><a href="https://jqueryui.com/show/">Show</a></li><li><a href="https://jqueryui.com/switchClass/">Switch Class</a></li><li><a href="https://jqueryui.com/toggle/">Toggle</a></li><li><a href="https://jqueryui.com/toggleClass/">Toggle Class</a></li>		</ul>
                     </aside>
                     <aside class="widget">
                         <h3 class="widget-title">Utilities</h3>
@@ -82,7 +82,7 @@
             </div>
             <div class="col-sm-8 " id="content ">
 
-                <div class="fun0">
+                <div id="fun0">
                     <p>Kéo và thả vào ô bên cạnh:</p>
 
                     <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -96,80 +96,15 @@
                     <p id="demo"></p>
                 </div>
                 <div class="fun1" style="clear: both;">
-                    <p>Drag the p element back and forth between the two rectangles:</p>
+                   <div class="row1" style="height: 300px">
+                       <div id="draggable" class="ui-widget-content">
+                           <p>Drag me to my target</p>
+                       </div>
 
-                    <div class="droptarget">
-                        <p draggable="true" id="dragtarget">Drag me!</p>
-                    </div>
-
-                    <div class="droptarget"></div>
-
-                    <p style="clear:both;"><strong>Note:</strong> drag events are not supported in Internet Explorer 8 and earlier versions or Safari 5.1 and earlier versions.</p>
-
-                    <p id="demo"></p>
-
-                    <script>
-                        /* Events fired on the drag target */
-
-                        document.addEventListener("dragstart", function(event) {
-                            // The dataTransfer.setData() method sets the data type and the value of the dragged data
-                            event.dataTransfer.setData("Text", event.target.id);
-
-                            // Output some text when starting to drag the p element
-                            document.getElementById("demo").innerHTML = "Started to drag the p element.";
-
-                            // Change the opacity of the draggable element
-                            event.target.style.opacity = "0.4";
-                        });
-
-                        // While dragging the p element, change the color of the output text
-                        document.addEventListener("drag", function(event) {
-                            document.getElementById("demo").style.color = "red";
-                        });
-
-                        // Output some text when finished dragging the p element and reset the opacity
-                        document.addEventListener("dragend", function(event) {
-                            document.getElementById("demo").innerHTML = "Finished dragging the p element.";
-                            event.target.style.opacity = "1";
-                        });
-
-                        /* Events fired on the drop target */
-
-                        // When the draggable p element enters the droptarget, change the DIVS's border style
-                        document.addEventListener("dragenter", function(event) {
-                            if ( event.target.className == "droptarget" ) {
-                                event.target.style.border = "3px dotted red";
-                            }
-                        });
-
-                        // By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element
-                        document.addEventListener("dragover", function(event) {
-                            event.preventDefault();
-                        });
-
-                        // When the draggable p element leaves the droptarget, reset the DIVS's border style
-                        document.addEventListener("dragleave", function(event) {
-                            if ( event.target.className == "droptarget" ) {
-                                event.target.style.border = "";
-                            }
-                        });
-
-                        /* On drop - Prevent the browser default handling of the data (default is open as link on drop)
-                           Reset the color of the output text and DIV's border color
-                           Get the dragged data with the dataTransfer.getData() method
-                           The dragged data is the id of the dragged element ("drag1")
-                           Append the dragged element into the drop element
-                        */
-                        document.addEventListener("drop", function(event) {
-                            event.preventDefault();
-                            if ( event.target.className == "droptarget" ) {
-                                document.getElementById("demo").style.color = "";
-                                event.target.style.border = "";
-                                var data = event.dataTransfer.getData("Text");
-                                event.target.appendChild(document.getElementById(data));
-                            }
-                        });
-                    </script>
+                       <div id="droppable" class="ui-widget-header">
+                           <p>Drop here</p>
+                       </div>
+                   </div>
                 </div>
                 <div class="fun2">
                     <div class="row1" style="height: 350px; padding-top: 20px;padding-left: 20px">
@@ -245,7 +180,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="fun6">
+                <div id="fun6">
                     <div class="row1" style="height: 250px">
                         <div class="ui-widget">
                             <label for="tags">Tags:</label>
@@ -253,33 +188,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="fun7">
+                <div id="fun7">
                     <div class="row1" style="height: 350px;">
                         <h2>Date Validation Using jQuery Datepicker</h2>
                         <p>Date: <input type="text" id="datepicker"></p>
                     </div>
                 </div>
-                <div class="fun8">
-                    <div class="row1" style="height: 300px">
+                <div id="fun8" >
+                    <div class="row1" style="height: 300px;width: 100%;">
                         <h3 style="padding-left: 20px">Dialog</h3>
                         <div id="dialog" title="Basic dialog">
                             <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
                         </div>
                     </div>
                 </div>
-                <div class="fun9">
+                <div id="fun9">
                     <div class="row1" style="height: 200px;padding-top: 10px">
                         <h3 style="padding-left: 20px">Progressbar</h3>
                         <div id="progressbar"></div>
                     </div>
                 </div>
-                <div class="fun10">
+                <div id="fun10">
                     <div class="row1" style="height: 100px; padding-top: 20px;">
                         <h3 style="padding-left: 20px">Slider</h3>
                         <div id="slider"></div>
                     </div>
                 </div>
-                <div class="fun11">
+                <div id="fun11">
                     <div class="row1" style="height: 250px;padding-top: 20px;padding-left: 10px">
                         <p>
                             <label for="spinner">Select a value:</label>
@@ -297,7 +232,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="fun12">
+                <div id="fun12">
                     <div class="row1" style="height: 400px;padding-top: 20px;padding-left: 10px">
                         <div id="tabs">
                             <ul>
@@ -318,8 +253,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="fun13">
+                <div id="fun13">
                     <div class="row1" style="height: 400px;padding-top: 20px;padding-left: 10px">
+                        <p>Add Classs</p>
                         <div class="toggler">
                             <div id="effect" class="ui-corner-all">
                                 Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
@@ -327,6 +263,19 @@
                         </div>
 
                         <button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
+
+                    </div>
+                </div>
+                <div id="fun14" style="height: 300px">
+                    <div class="row1">
+                        <p>Remove class</p>
+                        <div class="toggler">
+                            <div id="effect1" class="newClass ui-corner-all">
+                                Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
+                            </div>
+                        </div>
+
+                        <button id="button1" class="ui-state-default ui-corner-all">Run Effect</button>
 
                     </div>
                 </div>
@@ -367,6 +316,17 @@
     </div>
 
     <script>
+        $( function() {
+            $( "#button1" ).on( "click", function() {
+                $( "#effect1" ).removeClass( "newClass", 1000, callback );
+            });
+
+            function callback() {
+                setTimeout(function() {
+                    $( "#effect1" ).addClass( "newClass" );
+                }, 1500 );
+            }
+        } );
         $( function() {
             $( "#button" ).on( "click", function() {
                 $( "#effect" ).addClass( "newClass", 1000, callback );
@@ -424,6 +384,14 @@
         }
         $( function() {
             $( "#draggable" ).draggable();
+            $( "#droppable" ).droppable({
+                drop: function( event, ui ) {
+                    $( this )
+                        .addClass( "ui-state-highlight" )
+                        .find( "p" )
+                        .html( "Dropped!" );
+                }
+            });
             $( "#dialog" ).dialog();
             $( "#slider" ).slider();
             $( "#progressbar" ).progressbar({

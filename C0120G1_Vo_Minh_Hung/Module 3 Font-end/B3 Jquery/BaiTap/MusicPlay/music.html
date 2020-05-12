@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="Jquery.css">
+    <link rel="stylesheet" href="nghe_nhac.css">
+    <style>
+        .sidebar li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row header">
+        <div class="col-sm-2">
+            <img id="logo" src="image/logo.png">
+        </div>
+        <div class="col-sm-8">
+            <div class="input-group md-form form-sm form-1 pl-0">
+                <div class="input-group-prepend">
+                <span class="input-group-text purple lighten-3" id="basic-text1">
+                    <i class="fas fa-search text-white" aria-hidden="true"></i></span>
+                </div>
+                <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
+            </div>
+
+        </div>
+        <div class="col-sm-2">
+            <img id="login" src="image/logon.png">
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <ul class="sidebar">
+                <li><a href="#">Trang chu</a> </li>
+                <li><a href="#">Bai hat </a></li>
+                <li><a href="#">Nghe Sy </a></li>
+                <li><a href="#">Platlist </a></li>
+                <li><a href="#">Mv</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-8 context">
+            <div class="left">
+                <div id="song1" style="display: none">
+                    <div class="img1">
+                    </div>
+                    <p>Muốn cùng anh nói chuyện yêu đương</p>
+                    <audio controls autoplay loop>
+                        <source src="file/love1.mp3">
+                    </audio>
+                </div>
+                <div id="song2" style="display: none">
+                    <div class="img2">
+                    </div>
+                    <p style="text-align: center;font-size: 30px">Sóng gió</p>
+                    <audio controls autoplay loop>
+                        <source src="file/love2.mp3">
+                    </audio>
+                </div>
+                <div id="song3" style="display: none">
+                    <div class="img3">
+                    </div>
+                    <p style="text-align: center;font-size: 30px">Đau để trưởng thành</p>
+                    <audio controls autoplay loop>
+                        <source src="file/love3.mp3">
+                    </audio>
+                </div>
+                <div id="song4" style="display: none">
+                    <div class="img4">
+                    </div>
+                    <p style="text-align: center;font-size: 30px">God Father</p>
+                    <audio controls autoplay loop>
+                        <source src="file/love4.mp3">
+                    </audio>
+                </div>
+                <div id="song5" style="display: block">
+                    <div class="img5">
+                    </div>
+                    <p style="text-align: center;font-size: 30px">Độ ta không độ nàng</p>
+                    <audio controls autoplay loop>
+                        <source src="file/love5.mp3">
+                    </audio>
+                </div>
+
+
+            </div>
+            <div class="right">
+                <div class="box1">
+                    <p class="title1">PlayList/Album</p>
+                    <ol id="selectable">
+                        <li class="ui-widget-content"><a id="s1" onclick="click1()">Muốn cùng em nói chuyện yêu đương</a></li>
+                        <li class="ui-widget-content"><a id="s2" onclick="click2()">Sóng gió</a></li>
+                        <li class="ui-widget-content"><a id="s3" onclick="click3()">Đau để trưởng thành</a></li>
+                        <li class="ui-widget-content"><a id="s4" onclick="click4()">God Father</a></li>
+                        <li class="ui-widget-content"><a id="s5" onclick="click5()">Độ ta không độ nàng</a></li>
+                    </ol>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function click1() {
+        document.getElementById("song1").style.display="block";
+        document.getElementById("song2").style.display="none";
+        document.getElementById("song3").style.display="none";
+        document.getElementById("song4").style.display="none";
+        document.getElementById("song5").style.display="none";
+    }
+    function click2() {
+        document.getElementById("song1").style.display="none";
+        document.getElementById("song2").style.display="block";
+        document.getElementById("song3").style.display="none";
+        document.getElementById("song4").style.display="none";
+        document.getElementById("song5").style.display="none";
+    }
+    function click3() {
+        document.getElementById("song1").style.display="none";
+        document.getElementById("song2").style.display="none";
+        document.getElementById("song3").style.display="block";
+        document.getElementById("song4").style.display="none";
+        document.getElementById("song5").style.display="none";
+    }
+    function click4() {
+        document.getElementById("song1").style.display="none";
+        document.getElementById("song2").style.display="none";
+        document.getElementById("song3").style.display="none";
+        document.getElementById("song4").style.display="block";
+        document.getElementById("song5").style.display="none";
+    }
+    function click5() {
+        document.getElementById("song1").style.display="none";
+        document.getElementById("song2").style.display="none";
+        document.getElementById("song3").style.display="none";
+        document.getElementById("song4").style.display="none";
+        document.getElementById("song5").style.display="block";
+    }
+</script>
+</body>
+</html>
