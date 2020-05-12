@@ -8,9 +8,18 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="Jquery.css">
     <link rel="stylesheet" href="nghe_nhac.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <style>
         .sidebar li{
             list-style: none;
+        }
+        #selectable li{
+            height: 30px;
+            margin: 3px;
+        }
+        #selectable li:hover{
+            background: orangered;
         }
     </style>
 </head>
@@ -36,8 +45,8 @@
 
     </div>
     <div class="row">
-        <div class="col-sm-4">
-            <ul class="sidebar">
+        <div class="col-sm-2">
+            <ul class="sidebar" style="padding-left: 0px;padding-top: 30px">
                 <li><a href="#">Trang chu</a> </li>
                 <li><a href="#">Bai hat </a></li>
                 <li><a href="#">Nghe Sy </a></li>
@@ -45,60 +54,50 @@
                 <li><a href="#">Mv</a></li>
             </ul>
         </div>
-        <div class="col-sm-8 context">
+        <div class="col-sm-10 context">
             <div class="left">
                 <div id="song1" style="display: none">
                     <div class="img1">
                     </div>
-                    <p>Muốn cùng anh nói chuyện yêu đương</p>
+                    <p>Tình sầu thiên thu</p>
                     <audio controls autoplay loop>
-                        <source src="file/love1.mp3">
+                        <source src="file/TinhSauThienThuMuonLoi.mp3">
                     </audio>
                 </div>
                 <div id="song2" style="display: none">
                     <div class="img2">
                     </div>
-                    <p style="text-align: center;font-size: 30px">Sóng gió</p>
+                    <p style="text-align: center;font-size: 30px">Vẫn nhớ</p>
                     <audio controls autoplay loop>
-                        <source src="file/love2.mp3">
+                        <source src="file/VanNhoCover.mp3">
                     </audio>
                 </div>
                 <div id="song3" style="display: none">
                     <div class="img3">
                     </div>
-                    <p style="text-align: center;font-size: 30px">Đau để trưởng thành</p>
+                    <p style="text-align: center;font-size: 30px">Yêu từ đâu mà ra</p>
                     <audio controls autoplay loop>
-                        <source src="file/love3.mp3">
+                        <source src="file/YeuTuDauMaRaCover.mp3">
                     </audio>
                 </div>
                 <div id="song4" style="display: none">
                     <div class="img4">
                     </div>
-                    <p style="text-align: center;font-size: 30px">God Father</p>
+                    <p style="text-align: center;font-size: 30px">Cứ ngỡ</p>
                     <audio controls autoplay loop>
-                        <source src="file/love4.mp3">
+                        <source src="file/CuNgo.mp3">
                     </audio>
                 </div>
-                <div id="song5" style="display: block">
-                    <div class="img5">
-                    </div>
-                    <p style="text-align: center;font-size: 30px">Độ ta không độ nàng</p>
-                    <audio controls autoplay loop>
-                        <source src="file/love5.mp3">
-                    </audio>
-                </div>
-
 
             </div>
             <div class="right">
                 <div class="box1">
                     <p class="title1">PlayList/Album</p>
                     <ol id="selectable">
-                        <li class="ui-widget-content"><a id="s1" onclick="click1()">Muốn cùng em nói chuyện yêu đương</a></li>
-                        <li class="ui-widget-content"><a id="s2" onclick="click2()">Sóng gió</a></li>
-                        <li class="ui-widget-content"><a id="s3" onclick="click3()">Đau để trưởng thành</a></li>
-                        <li class="ui-widget-content"><a id="s4" onclick="click4()">God Father</a></li>
-                        <li class="ui-widget-content"><a id="s5" onclick="click5()">Độ ta không độ nàng</a></li>
+                        <li class="ui-widget-content"><a id="s1" onclick="click1()">Tình sầu thiên thu</a></li>
+                        <li class="ui-widget-content"><a id="s2" onclick="click2()">Vẫn nhớ</a></li>
+                        <li class="ui-widget-content"><a id="s3" onclick="click3()">Yêu từ đâu mà ra</a></li>
+                        <li class="ui-widget-content"><a id="s4" onclick="click4()">Cứ ngỡ</a></li>
                     </ol>
                 </div>
 
@@ -109,6 +108,9 @@
 </div>
 
 <script>
+    // $(function () {
+    //     $("#selectable").selectable();
+    // });
     function click1() {
         document.getElementById("song1").style.display="block";
         document.getElementById("song2").style.display="none";
