@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc6ca761-6c94-487c-aed7-8c15c174ab65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B4 TypeScript/BaiTap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/B4 TypeScript/BaiTap/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B4 TypeScript/BaiTap/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/B4 TypeScript/BaiTap/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +110,7 @@
       <workItem from="1589188584745" duration="2878000" />
       <workItem from="1589208961732" duration="1274000" />
       <workItem from="1589245802263" duration="4315000" />
-      <workItem from="1589331702293" duration="260000" />
+      <workItem from="1589331702293" duration="615000" />
     </task>
     <servers />
   </component>
