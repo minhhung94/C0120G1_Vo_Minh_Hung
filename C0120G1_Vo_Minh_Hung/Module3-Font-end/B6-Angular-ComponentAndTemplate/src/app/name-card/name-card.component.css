@@ -8,14 +8,11 @@
 
 .name-card__content-left {
   max-width: 35%;
+  margin-right: 20px;
 }
 
 .name-card__avatar {
   max-width: 100%;
   display: block;
-}
-.name-card__content-left img {
-  width: 150px;
-  height: 150px;
-  margin-right: 10px;
+
 }

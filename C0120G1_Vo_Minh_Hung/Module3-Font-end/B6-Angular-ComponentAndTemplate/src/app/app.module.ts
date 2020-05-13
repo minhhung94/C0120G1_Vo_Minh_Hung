@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NameCardComponent } from './name-card/name-card.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { RatingBarComponent } from './rating-bar/rating-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NameCardComponent
+    NameCardComponent,
+    ProgressBarComponent,
+    RatingBarComponent
   ],
   imports: [
     BrowserModule
