@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc6ca761-6c94-487c-aed7-8c15c174ab65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/file/CuNgo.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/file/TinhSauThienThuMuonLoi.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/file/VanNhoCover.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/file/YeuTuDauMaRaCover.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/music.html" beforeDir="false" afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/music.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/nghe_nhac.css" beforeDir="false" afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/nghe_nhac.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B4 TypeScript/BaiTap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/B4 TypeScript/BaiTap/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +33,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/file" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
@@ -58,7 +53,7 @@
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\ThucHanh" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Jquery.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="Jquery.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B3 Jquery/BaiTap/Jquery/Jquery.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -68,7 +63,7 @@
     <configuration name="SuDungJquery.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B3 Jquery/ThucHanh/SuDungJquery.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="menu.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/nhap/menu.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/B4 TypeScript/BaiTap/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="mouse.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module 3 Font-end/nhap/mouse/mouse.html" useBuiltInWebServerPort="true">
@@ -76,11 +71,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.Jquery.html" />
         <item itemvalue="JavaScript Debug.mouse.html" />
         <item itemvalue="JavaScript Debug.LandingPage.html" />
         <item itemvalue="JavaScript Debug.SuDungJquery.html" />
-        <item itemvalue="JavaScript Debug.menu.html (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -116,6 +111,7 @@
       <workItem from="1589188584745" duration="2878000" />
       <workItem from="1589208961732" duration="1274000" />
       <workItem from="1589245802263" duration="4315000" />
+      <workItem from="1589331702293" duration="260000" />
     </task>
     <servers />
   </component>
