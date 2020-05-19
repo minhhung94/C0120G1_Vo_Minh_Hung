@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc6ca761-6c94-487c-aed7-8c15c174ab65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/Codegym-C0120G1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2/src/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/file/YeuLaiTuDau.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/music.html" beforeDir="false" afterPath="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/music.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B5-Angular" beforeDir="false" afterPath="$PROJECT_DIR$/B5-Angular" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B5-Angular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/B5-Angular/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B5-Angular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/B5-Angular/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B6-Angular-ComponentAndTemplate/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/B6-Angular-ComponentAndTemplate/src/app/app.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,24 +41,24 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/B3 Jquery/BaiTap/MusicPlay/file" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\MusicPlay\file" />
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\MusicPlay" />
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\MusicPlay\image" />
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\js" />
-      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\Jquery\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\LandingPage\img" />
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\Jquery" />
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\Jquery" />
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\BaiTap\LandingPage" />
       <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B2 Bootstrap\ThucHanh" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Codegym-C0120G1\C0120G1_Vo_Minh_Hung\Module3-Font-end\B3 Jquery\BaiTap\MusicPlay\file" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\MusicPlay\file" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\MusicPlay" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\B3 Jquery\BaiTap\MusicPlay\image" />
+      <recent name="D:\Codegym\C0120G1_Vo_Minh_Hung\Module 3 Font-end\js" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -112,6 +121,8 @@
       <workItem from="1589245802263" duration="4315000" />
       <workItem from="1589331702293" duration="2012000" />
       <workItem from="1589336428995" duration="657000" />
+      <workItem from="1589877572359" duration="270000" />
+      <workItem from="1589880853968" duration="1980000" />
     </task>
     <servers />
   </component>
@@ -129,10 +140,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="449" y="154" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588903608984">
+    <state x="449" y="154" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589881741703">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="449" y="154" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1588903608984" />
+    <state x="449" y="154" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1589881741703" />
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589171223288">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

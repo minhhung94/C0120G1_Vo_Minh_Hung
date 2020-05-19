@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-8">
+      <h2 class="text-center" style="color: white">Login</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3">
+        <div class="form-group row">
+          <label class="col">
+            Email
+            <input type="email" class="form-control" formControlName="email">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">
+          Invalid email!
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Password
+            <input type="password" class="form-control" formControlName="password">
+          </label>
+        </div>
+
+        <div class="alert alert-danger" role="alert" *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+          Invalid password!
+        </div>
+        <div class="form-group" style="text-align: center">
+          <button class="btn btn-info" type="submit" [disabled]="loginForm.invalid">Submit</button>
+        </div>
+      </form>
+    </div>
+  <div class="col-md-4">
+    <pre>
+    {{ loginForm.value | json}}
+    </pre>
+  </div>
+</div>
+
+

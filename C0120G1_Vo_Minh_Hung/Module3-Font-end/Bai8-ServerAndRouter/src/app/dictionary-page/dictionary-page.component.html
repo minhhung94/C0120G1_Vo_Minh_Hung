@@ -1,0 +1,26 @@
+<div style="height: 800px; padding-top: 20px">
+  <h2 style="padding-left: 20px;color: white">
+    Dictionary page
+  </h2>
+
+  <div>
+    <!--  <button (click)="authService.login()">Login</button>-->
+    <!--  <button (click)="authService.logout()">Logout</button>-->
+  </div>
+  <div class="row" style="background-color: #252525">
+    <div class="col-md-8">
+      <ul>
+        <li *ngFor="let word of listWord">
+          <a [routerLink]="['/dictionary', word.key]">{{ word.key }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </div>
+  <div style="background-color: #252525; color: white; padding-left: 20px">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

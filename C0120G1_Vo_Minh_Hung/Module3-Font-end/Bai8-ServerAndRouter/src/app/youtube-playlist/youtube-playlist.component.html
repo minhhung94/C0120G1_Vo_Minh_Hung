@@ -1,0 +1,10 @@
+
+<div class="container-fluid" style="background-color: #252525;height: 800px; color: white">
+  <h2>Youtube playlist</h2>
+  <ol>
+    <li *ngFor="let item of youtubeService.playlist">
+      <a [routerLink]="['/youtube', item.id]">{{item.song}}</a>
+    </li>
+  </ol>
+  <router-outlet></router-outlet>
+</div>

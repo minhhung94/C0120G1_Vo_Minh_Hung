@@ -56,39 +56,14 @@
         </div>
         <div class="col-sm-10 context">
             <div class="left">
-                <div id="song1" style="display: none">
+                <div id="song1">
                     <div class="img1">
                     </div>
-                    <p>Tình sầu thiên thu</p>
-                    <audio controls autoplay loop>
+                    <p id="showtext"></p>
+                    <audio id="showaudio" controls autoplay loop>
                         <source src="file/TinhSauThienThuMuonLoi.mp3">
                     </audio>
                 </div>
-                <div id="song2" style="display: none">
-                    <div class="img2">
-                    </div>
-                    <p style="text-align: center;font-size: 30px">Vẫn nhớ</p>
-                    <audio controls autoplay loop>
-                        <source src="file/VanNhoCover.mp3">
-                    </audio>
-                </div>
-                <div id="song3" style="display: none">
-                    <div class="img3">
-                    </div>
-                    <p style="text-align: center;font-size: 30px">Yêu từ đâu mà ra</p>
-                    <audio controls autoplay loop>
-                        <source src="file/YeuTuDauMaRaCover.mp3">
-                    </audio>
-                </div>
-                <div id="song4" style="display: none">
-                    <div class="img4">
-                    </div>
-                    <p style="text-align: center;font-size: 30px">Cứ ngỡ</p>
-                    <audio controls autoplay loop>
-                        <source src="file/CuNgo.mp3">
-                    </audio>
-                </div>
-
             </div>
             <div class="right">
                 <div class="box1">
@@ -98,9 +73,9 @@
                         <li class="ui-widget-content"><a id="s2" onclick="click2()">Vẫn nhớ</a></li>
                         <li class="ui-widget-content"><a id="s3" onclick="click3()">Yêu từ đâu mà ra</a></li>
                         <li class="ui-widget-content"><a id="s4" onclick="click4()">Cứ ngỡ</a></li>
+                        <li class="ui-widget-content"><a id="s5" onclick="click5()">Yêu lại từ đầu</a></li>
                     </ol>
                 </div>
-
             </div>
 
         </div>
@@ -112,39 +87,24 @@
     //     $("#selectable").selectable();
     // });
     function click1() {
-        document.getElementById("song1").style.display="block";
-        document.getElementById("song2").style.display="none";
-        document.getElementById("song3").style.display="none";
-        document.getElementById("song4").style.display="none";
-        document.getElementById("song5").style.display="none";
+        document.getElementById("showtext").innerText="Tình sầu thiên thu";
+        document.getElementById("showaudio").src="file/TinhSauThienThuMuonLoi.mp3";
     }
     function click2() {
-        document.getElementById("song1").style.display="none";
-        document.getElementById("song2").style.display="block";
-        document.getElementById("song3").style.display="none";
-        document.getElementById("song4").style.display="none";
-        document.getElementById("song5").style.display="none";
+        document.getElementById("showtext").innerText="Vẫn nhớ";
+        document.getElementById("showaudio").src="file/VanNhoCover.mp3";
     }
     function click3() {
-        document.getElementById("song1").style.display="none";
-        document.getElementById("song2").style.display="none";
-        document.getElementById("song3").style.display="block";
-        document.getElementById("song4").style.display="none";
-        document.getElementById("song5").style.display="none";
+        document.getElementById("showtext").innerText="Yêu từ đâu mà ra";
+        document.getElementById("showaudio").src="file/YeuTuDauMaRaCover.mp3";
     }
     function click4() {
-        document.getElementById("song1").style.display="none";
-        document.getElementById("song2").style.display="none";
-        document.getElementById("song3").style.display="none";
-        document.getElementById("song4").style.display="block";
-        document.getElementById("song5").style.display="none";
+        document.getElementById("showtext").innerText="Cứ ngỡ";
+        document.getElementById("showaudio").src="file/CuNgo.mp3";
     }
     function click5() {
-        document.getElementById("song1").style.display="none";
-        document.getElementById("song2").style.display="none";
-        document.getElementById("song3").style.display="none";
-        document.getElementById("song4").style.display="none";
-        document.getElementById("song5").style.display="block";
+        document.getElementById("showtext").innerText="Yêu lại từ đầu";
+        document.getElementById("showaudio").src="file/YeuLaiTuDau.mp3";
     }
 </script>
 </body>
