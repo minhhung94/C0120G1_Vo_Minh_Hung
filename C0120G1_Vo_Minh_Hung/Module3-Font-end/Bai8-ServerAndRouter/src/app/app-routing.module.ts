@@ -7,6 +7,7 @@ import {YoutubePlayerComponent} from './youtube-player/youtube-player.component'
 import {YoutubePlaylistComponent} from './youtube-playlist/youtube-playlist.component';
 import {DictionaryPageComponent} from './dictionary-page/dictionary-page.component';
 import {DictionaryDetailComponent} from './dictionary-detail/dictionary-detail.component';
+import {AuthGuard} from './auth.guard';
 
 
 const routes: Routes = [
@@ -18,7 +19,7 @@ const routes: Routes = [
       {
         path: ':key',
         component: DictionaryDetailComponent,
-        // canActivate: [AuthGuard]
+        canActivate: [AuthGuard]
       }
     ]
   },
