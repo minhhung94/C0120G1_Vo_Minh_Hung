@@ -1,0 +1,56 @@
+{
+  "customers": [
+    {
+      "fullName": "Nguyen Anh Duc",
+      "code": "KH-0001",
+      "birthday": "1996-12-12",
+      "idCard": 132123123,
+      "email": "anhduc@gmail.com",
+      "typeCustomer": "member",
+      "phone": "0901231232",
+      "address": "Hue",
+      "id": 1
+    },
+    {
+      "fullName": "Nguyen Duc Thong",
+      "code": "KH-0002",
+      "birthday": "1998-10-10",
+      "idCard": 321123123,
+      "email": "thongnguyen@gmail.com",
+      "typeCustomer": "silver",
+      "phone": "0902311232",
+      "address": "Da Nang 1",
+      "id": 2
+    }
+  ],
+  "employees": [
+    {
+      "code": "NV-0001",
+      "fullName": "Tran Ngoc Tan",
+      "position": "Nhan Vien",
+      "degree": "Dai Hoc",
+      "part": "Nhan Su",
+      "birthday": "1996-10-10",
+      "idCard": 123123123,
+      "salary": "5000000",
+      "email": "tantran@gmail.com",
+      "phone": "0901231232",
+      "address": "Da Nang",
+      "id": 1
+    },
+    {
+      "code": "NV-0002",
+      "fullName": "Pham Thai Cuong",
+      "position": "Nhan Su",
+      "degree": "Dai Hoc",
+      "part": "Kinh Doanh",
+      "birthday": "1995-11-11",
+      "idCard": 123123123,
+      "salary": "5000000",
+      "email": "cuongpham@gmail.com",
+      "phone": "0901231232",
+      "address": "Nha Trang",
+      "id": 2
+    }
+  ]
+}

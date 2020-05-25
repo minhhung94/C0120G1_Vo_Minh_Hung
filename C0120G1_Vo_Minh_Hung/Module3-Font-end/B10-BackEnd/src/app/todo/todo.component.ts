@@ -55,8 +55,8 @@ export class TodoComponent implements OnInit {
 
 }
 
-/* const observer = {
-  next: (data) => {},
-  error: (error) => {},
-  complete: () => {}
-} */
+//  const observer = {
+//   next: (data) => {},
+//   error: (error) => {},
+//   complete: () => {}
+// }

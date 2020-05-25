@@ -1,0 +1,134 @@
+<div><h2 class="text-center" style="color: black">ADD EMPLOYEE</h2></div>
+<div class="row" style="text-align: center">
+  <div>
+    <form [formGroup]="formAddNewEmployee" class="col-md-6 offset-md-3">
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Mã khách hàng
+          <input type="text" class="form-control" formControlName="code">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('code').invalid && formAddNewEmployee.get('code').touched">
+        <span *ngIf="formAddNewEmployee.get('code').hasError('required')"> Mã khách hàng is required!</span>
+        <span *ngIf="formAddNewEmployee.get('code').hasError('pattern')">Mã khách hàng phải là KH-XXXX</span>
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Full Name
+          <input type="text" class="form-control" formControlName="fullName">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('fullName').invalid && formAddNewEmployee.get('fullName').touched">
+        Full Name is required!
+      </div>
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Trình độ
+          <select formControlName="degree" class="form-control">
+            <option value="">Chọn</option>
+            <option value="Cao Dang">Cao Đẳng</option>
+            <option value="Dai Hoc">Đại Học</option>
+            <option value="Thac Si">Thạc Sĩ</option>
+            <option value="Tien Si">Tiến Sĩ</option>
+          </select>
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('degree').invalid && formAddNewEmployee.get('degree').touched">
+        Degree is required!
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Bộ Phận
+          <select formControlName="part" class="form-control">
+            <option value="">Chọn</option>
+            <option value="Nhan Su">Nhân Sự</option>
+            <option value="Kinh Doanh">Kinh Doanh</option>
+            <option value="Ke Toan">Kế Toán</option>
+          </select>
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('part').invalid && formAddNewEmployee.get('part').touched">
+        Part is required!
+      </div>
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Chức vụ
+          <select formControlName="position" class="form-control" >
+            <option value="">Chọn</option>
+            <option value="Nhan Vien">Nhân Viên</option>
+            <option value="Quan Ly">Quản Lý</option>
+            <option value="Truong Phong">Trưởng Phòng</option>
+          </select>
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('position').invalid && formAddNewEmployee.get('position').touched">
+        Position is required!
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Ngày Sinh
+          <input type="date" class="form-control" formControlName="birthday">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('birthday').invalid && formAddNewEmployee.get('birthday').touched">
+        Birth Day is required!
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Số CMND
+          <input type="number" class="form-control" formControlName="idCard">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('idCard').invalid && formAddNewEmployee.get('idCard').touched">
+        <span *ngIf="formAddNewEmployee.get('idCard').hasError('required')">Số CMND is required!</span>
+        <span *ngIf="formAddNewEmployee.get('idCard').hasError('pattern')">Số CMND phải là 9 số</span>
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Email
+          <input type="email" class="form-control" formControlName="email">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('email').invalid && formAddNewEmployee.get('email').touched">
+        Invalid email!
+      </div>
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Address
+          <input type="text" class="form-control" formControlName="address">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('address').invalid && formAddNewEmployee.get('address').touched">
+        Address is required!
+      </div>
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Phone
+          <input type="tel" class="form-control" formControlName="phone" placeholder="090/091-XXXXXX">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('phone').invalid && formAddNewEmployee.get('phone').touched">
+        <span *ngIf="formAddNewEmployee.get('phone').hasError('required')">Phone is required</span>
+        <span *ngIf="formAddNewEmployee.get('phone').hasError('pattern')">Phone must start with (+84) followed by 9 or 10 digits.</span>
+      </div>
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Lương
+          <input type="text" class="form-control" formControlName="salary">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('salary').invalid && formAddNewEmployee.get('salary').touched">
+        Lương is required!
+      </div>
+      <div class="form-group">
+        <button class="btn btn-info" type="submit" [disabled]="formAddNewEmployee.invalid" (click)="addNewEmployee()">Thêm mới</button>
+      </div>
+    </form>
+  </div>
+</div>
+

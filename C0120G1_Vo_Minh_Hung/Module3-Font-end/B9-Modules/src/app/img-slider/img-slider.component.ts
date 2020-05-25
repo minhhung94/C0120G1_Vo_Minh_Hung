@@ -21,7 +21,7 @@ export class ImgSliderComponent implements OnInit, AfterContentInit {
     this.component = this.slides.first;
   }
 
-  previos() {
+  previous() {
     if (this.activeIndex > 0) {
       this.activeIndex--;
     }
