@@ -16,6 +16,7 @@ export class ContractListComponent implements OnInit, OnDestroy {
   public totalRec: number;
   public page = 1;
   public searchText;
+  public totalMoneyOfAllService = 0;
 
   constructor(
     public contractService: ContractService,
@@ -26,11 +27,10 @@ export class ContractListComponent implements OnInit, OnDestroy {
     this.subscription = this.contractService.getAllContracts().subscribe((data: Contract[]) => {
       this.contracts = data;
       this.totalRec = this.contracts.length;
-    });
-  }
-  onDeleteContract(id: number) {
-    this.subscription = this.contractService.deleteContract(id).subscribe((data: Contract) => {
-      this.updateDataAfterDelete(id);
+      // tslint:disable-next-line:prefer-for-of
+      for (let i = 0; i < this.contracts.length; i++) {
+        this.totalMoneyOfAllService =  (this.totalMoneyOfAllService) * 1 + (this.contracts[i].total) * 1;
+      }
     });
   }
 

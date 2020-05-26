@@ -1,1 +1,86 @@
-<p>contract-edit works!</p>
+<div><h2 class="text-center" style="color: black">ADD CUSTOMER</h2></div>
+<div class="row" style="text-align: center">
+  <div>
+    <form [formGroup]="formEditContract" class="col-md-6 offset-md-3">
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Mã Nhân Viên
+          <select type="text" formControlName="codeEmployee" style="height: 35px; width: 100%;" >
+            <option  *ngFor="let employee of employees" [value]="employee.code">{{employee.code}}</option>
+          </select>
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formEditContract.get('codeEmployee').invalid && formEditContract.get('codeEmployee').touched">
+        <span *ngIf="formEditContract.get('code').hasError('required')"> Tên nhân viên không được để trống!</span>
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Mã Khách Hàng
+          <select type="text"  formControlName="codeCustomer" style="height: 35px; width: 100%;">
+            <option  *ngFor="let customer of customers" [value]="customer.code">{{customer.code}}</option>
+          </select>
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formEditContract.get('codeCustomer').invalid && formEditContract.get('codeCustomer').touched">
+        Mã khách hàng không được để trống!
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Mã dịch vụ
+          <select type="text" formControlName="codeService" style="height: 35px; width: 100%;">
+            <option  *ngFor="let service of services" [value]="service.code">{{service.code}}</option>
+          </select>
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formEditContract.get('codeService').invalid && formEditContract.get('codeService').touched">
+        Mã dịch vụ không được để trống!
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Ngày bắt đầu
+          <input type="date" class="form-control" formControlName="startDate">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formEditContract.get('startDate').invalid && formEditContract.get('startDate').touched">
+        Ngày bắt đầu không được để trống!
+      </div>
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Ngày kết thúc
+          <input type="date" class="form-control" formControlName="endDate">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formEditContract.get('endDate').invalid && formEditContract.get('endDate').touched">
+        Ngày kết thúc không được để trống!
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Tiền cọc
+          <input type="number" class="form-control" formControlName="deposit">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formEditContract.get('deposit').invalid && formEditContract.get('deposit').touched">
+        Tiền cọc không được để trống!
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Tổng tiền
+          <input type="number" class="form-control" formControlName="total">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formEditContract.get('total').invalid && formEditContract.get('total').touched">
+        Tổng tiền không được để trống!
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-info" type="submit" [disabled]="formEditContract.invalid" (click)="editContract()">Lưu chỉnh sửa</button>
+      </div>
+    </form>
+  </div>
+</div>
+

@@ -4,13 +4,13 @@
     <form [formGroup]="formAddNewEmployee" class="col-md-6 offset-md-3">
       <div class="form-group row">
         <label class="col" style="width: 100%">
-          Mã khách hàng
+          Mã Nhân Viên
           <input type="text" class="form-control" formControlName="code">
         </label>
       </div>
       <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('code').invalid && formAddNewEmployee.get('code').touched">
-        <span *ngIf="formAddNewEmployee.get('code').hasError('required')"> Mã khách hàng is required!</span>
-        <span *ngIf="formAddNewEmployee.get('code').hasError('pattern')">Mã khách hàng phải là KH-XXXX</span>
+        <span *ngIf="formAddNewEmployee.get('code').hasError('required')"> Mã Nhân Viên is required!</span>
+        <span *ngIf="formAddNewEmployee.get('code').hasError('pattern')">Mã Nhân Viên phải là NV-XXXX</span>
       </div>
 
       <div class="form-group row">
@@ -85,7 +85,7 @@
       </div>
       <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('idCard').invalid && formAddNewEmployee.get('idCard').touched">
         <span *ngIf="formAddNewEmployee.get('idCard').hasError('required')">Số CMND is required!</span>
-        <span *ngIf="formAddNewEmployee.get('idCard').hasError('pattern')">Số CMND phải là 9 số</span>
+        <span *ngIf="formAddNewEmployee.get('idCard').hasError('pattern')">Số CMND phải là 9 hoặc 12 số</span>
       </div>
 
       <div class="form-group row">
@@ -109,7 +109,7 @@
       <div class="form-group row">
         <label class="col" style="width: 100%">
           Phone
-          <input type="tel" class="form-control" formControlName="phone" placeholder="090/091-XXXXXX">
+          <input type="tel" class="form-control" formControlName="phone" placeholder="090|091|84+90|84+91-XXXXXXX">
         </label>
       </div>
       <div class="alert alert-danger" role="alert" *ngIf="formAddNewEmployee.get('phone').invalid && formAddNewEmployee.get('phone').touched">

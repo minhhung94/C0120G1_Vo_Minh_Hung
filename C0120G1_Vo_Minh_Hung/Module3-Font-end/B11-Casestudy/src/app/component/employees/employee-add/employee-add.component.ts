@@ -24,7 +24,7 @@ export class EmployeeAddComponent implements OnInit {
       degree: ['', [Validators.required]],
       part: ['', [Validators.required]],
       birthday: ['', [Validators.required]],
-      idCard: ['', [Validators.required, Validators.pattern('^[0-9]{9}$')]],
+      idCard: ['', [Validators.required, Validators.pattern(/^\d{9}(\d{3})?$/)]],
       salary: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.pattern('^(090|091|([\(]84[\)][\+]90)|([\(]84[\)][\+]91))[0-9]{7}$')]],

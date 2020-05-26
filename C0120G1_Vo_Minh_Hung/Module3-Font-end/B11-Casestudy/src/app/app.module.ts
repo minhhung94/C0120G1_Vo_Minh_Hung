@@ -30,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import { ContractDeleteComponent } from './component/contract/contract-delete/contract-delete.component';
+import { ContractDetailDeleteComponent } from './component/contract-detail/contract-detail-delete/contract-detail-delete.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { ContractDeleteComponent } from './component/contract/contract-delete/co
     ContractDetailEditComponent,
     ContractDetailListComponent,
     CustomerDeleteComponent,
-    ContractDeleteComponent
+    ContractDeleteComponent,
+    ContractDetailDeleteComponent
   ],
   imports: [
     BrowserModule,

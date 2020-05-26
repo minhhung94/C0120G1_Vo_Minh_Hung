@@ -1,1 +1,46 @@
-<p>contract-detail-edit works!</p>
+<div><h2 class="text-center" style="color: black">ADD CONTRACT</h2></div>
+<div class="row" style="text-align: center">
+  <div>
+    <form [formGroup]="formEditContractDetail" class="col-md-6 offset-md-3">
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Id Hợp Đồng
+          <select type="text" formControlName="idContract" style="height: 35px; width: 100%;" >
+            <option  *ngFor="let contract of contract" [value]="contract.id">{{contract.id}}</option>
+          </select>
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formEditContractDetail.get('idContract').invalid && formEditContractDetail.get('idContract').touched">
+        <span *ngIf="formEditContractDetail.get('idContract').hasError('required')"> Id Hợp Đồng không được để trống!</span>
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Dịch vụ đi kèm
+          <select formControlName="accompany" class="form-control">
+            <option value="">Chọn</option>
+            <option value="Card">Card</option>
+            <option value="Karaoke">Karaoke</option>
+            <option value="Drink">Drink</option>
+          </select>
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formEditContractDetail.get('accompany').invalid && formEditContractDetail.get('accompany').touched">
+        Dịch vụ đi kèm không được để trống!
+      </div>
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Số lượng
+          <input type="number" class="form-control" formControlName="quantity">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formEditContractDetail.get('quantity').invalid && formEditContractDetail.get('quantity').touched">
+        Số lượng không được để trống!
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-info" type="submit" [disabled]="formEditContractDetail.invalid" (click)="editContractDetail()">Lưu chỉnh sửa</button>
+      </div>
+    </form>
+  </div>
+</div>

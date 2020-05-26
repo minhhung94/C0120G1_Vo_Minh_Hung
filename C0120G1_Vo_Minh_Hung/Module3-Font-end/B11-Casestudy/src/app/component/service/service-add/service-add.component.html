@@ -10,7 +10,7 @@
       </div>
       <div class="alert alert-danger" role="alert" *ngIf="formAddNewService.get('code').invalid && formAddNewService.get('code').touched">
         <span *ngIf="formAddNewService.get('code').hasError('required')"> Mã dịch vụ không được để trống!</span>
-        <span *ngIf="formAddNewService.get('code').hasError('pattern')">Mã khách hàng phải là SV-XXXX</span>
+        <span *ngIf="formAddNewService.get('code').hasError('pattern')">Mã dịch vụ phải là DV-XXXX</span>
       </div>
 
       <div class="form-group row">

@@ -21,6 +21,17 @@
       "phone": "0901231232",
       "address": "Đà Nẵng",
       "id": 2
+    },
+    {
+      "fullName": "Tống Quang Tiến",
+      "code": "KH-0004",
+      "birthday": "1996-10-10",
+      "idCard": 123123123,
+      "email": "tien@gmail.com",
+      "typeCustomer": "member",
+      "phone": "0901231234",
+      "address": "Đà nẵng",
+      "id": 3
     }
   ],
   "employees": [
@@ -51,23 +62,25 @@
       "phone": "0901231232",
       "address": "Nha Trang",
       "id": 2
+    },
+    {
+      "code": "NV-0004",
+      "fullName": "Nguyễn Đình Hoà",
+      "position": "Nhan Vien",
+      "degree": "Dai Hoc",
+      "part": "Kinh Doanh",
+      "birthday": "1994-11-11",
+      "idCard": 123123123,
+      "salary": "7000000",
+      "email": "dinhhoa@gmail.com",
+      "phone": "0901231232",
+      "address": "Đà Nẵng",
+      "id": 3
     }
   ],
   "services": [
     {
-      "code": "SV-0002",
-      "areaUsed": "120",
-      "maximumPeople": 2,
-      "typeRent": "Day",
-      "typeService": "House",
-      "roomStandard": "Standard",
-      "numberOfFloors": 2,
-      "areaPool": 20,
-      "amount": 500000,
-      "id": 2
-    },
-    {
-      "code": "SV-0001",
+      "code": "DV-0001",
       "areaUsed": "200",
       "maximumPeople": 6,
       "typeRent": "Day",
@@ -79,7 +92,7 @@
       "id": 3
     },
     {
-      "code": "SV-0003",
+      "code": "DV-0003",
       "areaUsed": "200",
       "maximumPeople": 4,
       "typeRent": "Day",
@@ -91,7 +104,7 @@
       "id": 4
     },
     {
-      "code": "SV-0005",
+      "code": "DV-0005",
       "areaUsed": "120",
       "maximumPeople": 2,
       "typeRent": "Day",
@@ -103,7 +116,7 @@
       "id": 5
     },
     {
-      "code": "SV-0005",
+      "code": "DV-0006",
       "areaUsed": "300",
       "maximumPeople": 4,
       "typeRent": "Day",
@@ -115,5 +128,56 @@
       "id": 6
     }
   ],
-  "contracts": []
+  "contracts": [
+    {
+      "codeEmployee": "NV-0001",
+      "codeCustomer": "KH-0001",
+      "codeService": "DV-0002",
+      "startDate": "2020-05-21",
+      "endDate": "2020-05-26",
+      "deposit": 100000,
+      "total": 1000000,
+      "id": 1
+    },
+    {
+      "codeEmployee": "NV-0002",
+      "codeCustomer": "KH-0003",
+      "codeService": "DV-0001",
+      "startDate": "2020-05-22",
+      "endDate": "2020-05-27",
+      "deposit": 100000,
+      "total": 2000000,
+      "id": 2
+    },
+    {
+      "codeEmployee": "NV-0004",
+      "codeCustomer": "KH-0004",
+      "codeService": "DV-0005",
+      "startDate": "2020-05-12",
+      "endDate": "2020-05-28",
+      "deposit": 500000,
+      "total": 12000000,
+      "id": 3
+    }
+  ],
+  "contractDetail": [
+    {
+      "idContract": "1",
+      "accompany": "Card",
+      "quantity": 2,
+      "id": 1
+    },
+    {
+      "idContract": "2",
+      "accompany": "Karaoke",
+      "quantity": 4,
+      "id": 2
+    },
+    {
+      "idContract": "3",
+      "accompany": "Card",
+      "quantity": 4,
+      "id": 3
+    }
+  ]
 }
