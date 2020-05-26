@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" style=" position: relative;">
 <div class="row" >
   <div class="header">
     <img  src="./assets/images/logo.png" height="80px" align="left"/>
@@ -26,8 +26,9 @@
       <a class="list-group-item list-group-item-action" [routerLink]="['contract-detail-list']" routerLinkActive="router-link-active" >Quản lý HĐ chi tiết</a>
     </div>
   </div>
-  <div class="col-md-10 p-5 ">
-    <router-outlet></router-outlet></div>
+  <div class="col-md-10 p-5 d-fex justify-content-center">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 <div class="footer">
   <div class="footer_copy">

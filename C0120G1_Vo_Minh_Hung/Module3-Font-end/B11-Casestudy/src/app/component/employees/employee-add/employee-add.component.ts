@@ -32,7 +32,7 @@ export class EmployeeAddComponent implements OnInit {
     });
   }
   addNewEmployee() {
-    this.employeeService.addNewwEmployee(this.formAddNewEmployee.value).subscribe(data => {
+    this.employeeService.addNewEmployee(this.formAddNewEmployee.value).subscribe(data => {
       this.router.navigateByUrl('employee-list');
     });
 

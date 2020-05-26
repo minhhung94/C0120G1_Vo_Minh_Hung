@@ -8,6 +8,7 @@ import {CustomerService} from '../../../services/customer.service';
   styleUrls: ['./customer-delete.component.css']
 })
 export class CustomerDeleteComponent implements OnInit {
+
   public customerOfFullName;
   public customerOfId;
 
@@ -20,10 +21,13 @@ export class CustomerDeleteComponent implements OnInit {
   ngOnInit(): void {
     this.customerOfFullName = this.data.data1.fullName;
     this.customerOfId = this.data.data1.id;
+
   }
+
   deleteCustomer() {
     this.customerService.deleteCustomer(this.customerOfId).subscribe(data => {
       this.dialogRef.close();
     });
   }
+
 }

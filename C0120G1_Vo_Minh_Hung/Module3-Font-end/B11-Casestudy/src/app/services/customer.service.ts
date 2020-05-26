@@ -14,7 +14,7 @@ export class CustomerService {
     return this.http.get(this.API);
   }
 
-  addNewwCustomer(customer): Observable<any> {
+  addNewCustomer(customer): Observable<any> {
     return this.http.post(this.API, customer);
   }
 

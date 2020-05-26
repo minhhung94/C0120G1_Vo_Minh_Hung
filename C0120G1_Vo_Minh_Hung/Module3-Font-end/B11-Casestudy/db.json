@@ -12,14 +12,14 @@
       "id": 1
     },
     {
-      "fullName": "Nguyen Duc Thong",
-      "code": "KH-0002",
-      "birthday": "1998-10-10",
-      "idCard": 321123123,
+      "fullName": "Nguyễn Đức Thông",
+      "code": "KH-0003",
+      "birthday": "1996-10-10",
+      "idCard": 123123123,
       "email": "thongnguyen@gmail.com",
       "typeCustomer": "silver",
-      "phone": "0902311232",
-      "address": "Da Nang 1",
+      "phone": "0901231232",
+      "address": "Đà Nẵng",
       "id": 2
     }
   ],
@@ -52,5 +52,68 @@
       "address": "Nha Trang",
       "id": 2
     }
-  ]
+  ],
+  "services": [
+    {
+      "code": "SV-0002",
+      "areaUsed": "120",
+      "maximumPeople": 2,
+      "typeRent": "Day",
+      "typeService": "House",
+      "roomStandard": "Standard",
+      "numberOfFloors": 2,
+      "areaPool": 20,
+      "amount": 500000,
+      "id": 2
+    },
+    {
+      "code": "SV-0001",
+      "areaUsed": "200",
+      "maximumPeople": 6,
+      "typeRent": "Day",
+      "typeService": "Villa",
+      "roomStandard": "Superior",
+      "numberOfFloors": 3,
+      "areaPool": 120,
+      "amount": 900000,
+      "id": 3
+    },
+    {
+      "code": "SV-0003",
+      "areaUsed": "200",
+      "maximumPeople": 4,
+      "typeRent": "Day",
+      "typeService": "House",
+      "roomStandard": "Deluxe",
+      "numberOfFloors": 2,
+      "areaPool": 24,
+      "amount": 700000,
+      "id": 4
+    },
+    {
+      "code": "SV-0005",
+      "areaUsed": "120",
+      "maximumPeople": 2,
+      "typeRent": "Day",
+      "typeService": "Room",
+      "roomStandard": "Standard",
+      "numberOfFloors": 1,
+      "areaPool": 0,
+      "amount": 500000,
+      "id": 5
+    },
+    {
+      "code": "SV-0005",
+      "areaUsed": "300",
+      "maximumPeople": 4,
+      "typeRent": "Day",
+      "typeService": "Villa",
+      "roomStandard": "Suite",
+      "numberOfFloors": 3,
+      "areaPool": 60,
+      "amount": 1200000,
+      "id": 6
+    }
+  ],
+  "contracts": []
 }

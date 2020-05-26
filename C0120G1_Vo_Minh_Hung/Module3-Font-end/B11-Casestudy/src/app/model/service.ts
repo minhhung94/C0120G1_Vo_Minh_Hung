@@ -1,9 +1,12 @@
 export class Service {
      id: number;
-     name: string;
+     code: string;
      areaUsed: number;
      amount: number;
      maximumPeople: number;
      typeRent: string;
      typeService: string;
+     roomStandard: string;
+     numberOfFloors: string;
+     areaPool: string;
 }

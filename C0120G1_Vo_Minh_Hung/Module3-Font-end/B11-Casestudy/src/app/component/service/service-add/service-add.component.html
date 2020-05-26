@@ -1,0 +1,112 @@
+<div><h2 class="text-center" style="color: black">ADD SERVICE</h2></div>
+<div class="row" style="text-align: center">
+  <div>
+    <form [formGroup]="formAddNewService" class="col-md-6 offset-md-3">
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Mã dịch vụ
+          <input type="text" class="form-control" formControlName="code">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewService.get('code').invalid && formAddNewService.get('code').touched">
+        <span *ngIf="formAddNewService.get('code').hasError('required')"> Mã dịch vụ không được để trống!</span>
+        <span *ngIf="formAddNewService.get('code').hasError('pattern')">Mã khách hàng phải là SV-XXXX</span>
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Diện tích sử dụng
+          <input type="text" class="form-control" formControlName="areaUsed">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewService.get('areaUsed').invalid && formAddNewService.get('areaUsed').touched">
+        Diện tích sử dụng không được để trống!
+      </div>
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Số người đi kèm
+          <input type="number" class="form-control" formControlName="maximumPeople">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewService.get('maximumPeople').invalid && formAddNewService.get('maximumPeople').touched">
+        Số người đi kèm không được để trống!
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Kiểu thuê
+          <select formControlName="typeRent" class="form-control">
+            <option value="">Chọn</option>
+            <option value="Day">Theo Ngày</option>
+            <option value="Month">Theo Tháng</option>
+            <option value="Year">Theo Năm</option>
+          </select>
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewService.get('typeRent').invalid && formAddNewService.get('typeRent').touched">
+        <span *ngIf="formAddNewService.get('typeRent').hasError('required')">Kiểu thuê không được để trống!</span>
+      </div>
+
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+         Loại dịch vụ
+          <select formControlName="typeService" class="form-control">
+            <option value="">Chọn</option>
+            <option value="Villa">Villa</option>
+            <option value="House">House</option>
+            <option value="Room">Room</option>
+          </select>
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewService.get('typeService').invalid && formAddNewService.get('typeService').touched">
+        Loại dịch vụ không được để trống!
+      </div>
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Tiêu chuẩn phòng
+          <select formControlName="roomStandard" class="form-control">
+            <option value="">Chọn</option>
+            <option value="Standard">Standard</option>
+            <option value="Superior">Superior</option>
+            <option value="Deluxe">Deluxe</option>
+            <option value="Suite">Suite</option>
+          </select>
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewService.get('roomStandard').invalid && formAddNewService.get('roomStandard').touched">
+        Tiêu chuẩn phòng không được để trống!
+      </div>
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Số tầng
+          <input type="number" class="form-control" formControlName="numberOfFloors">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewService.get('numberOfFloors').invalid && formAddNewService.get('numberOfFloors').touched">
+        Số tầng không được để trống!
+      </div>
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Diện tích hồ bơi
+          <input type="number" class="form-control" formControlName="areaPool">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewService.get('areaPool').invalid && formAddNewService.get('areaPool').touched">
+        Diện tích hồ bơi không được để trống!
+      </div>
+      <div class="form-group row">
+        <label class="col" style="width: 100%">
+          Giá
+          <input type="number" class="form-control" formControlName="amount">
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="formAddNewService.get('amount').invalid && formAddNewService.get('amount').touched">
+        Giá không được để trống!
+      </div>
+      <div class="form-group">
+        <button class="btn btn-info" type="submit" [disabled]="formAddNewService.invalid" (click)="addNewService()">Thêm mới</button>
+      </div>
+    </form>
+  </div>
+</div>
+

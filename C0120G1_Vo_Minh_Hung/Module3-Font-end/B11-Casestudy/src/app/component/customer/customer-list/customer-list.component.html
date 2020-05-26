@@ -7,7 +7,9 @@
         </div>
         <div class="col-sm-6">
           <a [routerLink]="['/customer-add']" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Customer</span></a>
-          <a href="#" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
+          <div class="search-hero">
+            <input class="form-control mt-2" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Start searching for a customer by id or name or email">
+          </div>
         </div>
       </div>
     </div>
@@ -33,7 +35,11 @@
       </thead>
       <tbody>
 
-      <tr *ngFor="let customer of customers">
+<!--      <tr *ngFor="let customer of customers" >-->
+  <tr *ngFor="let customer of customers | filter:searchText | paginate:{id:'listing_pagination',
+                                                                            itemsPerPage:4,
+                                                                            currentPage:page,
+                                                                            totalItems:totalRec}">
         <td>
 							<span class="custom-checkbox">
 								<input type="checkbox" ng:id="${customer.id}" name="options[]" value="1">
@@ -51,12 +57,15 @@
           <!--                    nút edit và delete-->
           <td>
             <button [routerLink]="['/customer-edit/'+customer.id]" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit" style="color: green">&#xE254;</i></button>
-            <button (click)=onDeleteCustomer(customer.id) class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete" style="color: red">&#xE872;</i></button>
+            <button (click)=openDialog(customer.id) class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete" style="color: red">&#xE872;</i></button>
           </td>
         </tr>
 
       </tbody>
     </table>
+    <div>
+      <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+    </div>
 <!--    <pagination-controls (pageChange)="p = $event"></pagination-controls>-->
   </div>
 </div>

@@ -11,12 +11,15 @@ import {EmployeeService} from '../../../services/employee.service';
 export class EmployeeListComponent implements OnInit, OnDestroy {
   public subscription: Subscription;
   public employees: Employee[];
-
+  public totalRec: number;
+  public page = 1;
+  public searchText;
   constructor(public employeeService: EmployeeService) { }
 
   ngOnInit(): void {
     this.subscription = this.employeeService.getAllEmployees().subscribe((data: Employee[]) => {
       this.employees = data;
+      this.totalRec = this.employees.length;
     });
   }
 

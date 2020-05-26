@@ -2,6 +2,8 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CustomerService} from '../../../services/customer.service';
 import {Customer} from '../../../model/customer';
 import {Subscription} from 'rxjs';
+import {MatDialog} from '@angular/material/dialog';
+import {CustomerDeleteComponent} from '../customer-delete/customer-delete.component';
 
 
 @Component({
@@ -12,12 +14,19 @@ import {Subscription} from 'rxjs';
 export class CustomerListComponent implements OnInit, OnDestroy {
   public subscription: Subscription;
   public customers: Customer[];
+  public totalRec: number;
+  public page = 1;
+  public searchText;
 
-  constructor(public customerService: CustomerService) { }
+  constructor(
+    public customerService: CustomerService,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
     this.subscription = this.customerService.getAllCustomers().subscribe((data: Customer[]) => {
       this.customers = data;
+      this.totalRec = this.customers.length;
     });
   }
 
@@ -41,5 +50,20 @@ export class CustomerListComponent implements OnInit, OnDestroy {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }
+  }
+  openDialog(customerId): void {
+    this.customerService.getCustomerById(customerId).subscribe(dataOfCustomer => {
+      const dialogRef = this.dialog.open(CustomerDeleteComponent, {
+        width: '500px',
+        height: '200px',
+        data: {data1: dataOfCustomer},
+        disableClose: true,
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        this.ngOnInit();
+      });
+    });
   }
 }

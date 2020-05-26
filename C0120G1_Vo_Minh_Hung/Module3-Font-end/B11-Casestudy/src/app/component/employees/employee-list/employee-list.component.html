@@ -7,7 +7,9 @@
         </div>
         <div class="col-sm-6">
           <a [routerLink]="['/employee-add']" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
-          <a href="#" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
+          <div class="search-hero">
+            <input class="form-control mt-2" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Start searching for a customer by id or name or email">
+          </div>
         </div>
       </div>
     </div>
@@ -15,7 +17,7 @@
       <thead>
       <tr>
         <th>
-							<span class="empoyee-checkbox">
+							<span class="custom-checkbox">
 								<input type="checkbox" id="selectAll">
 								<label for="selectAll"></label>
 							</span>
@@ -35,7 +37,11 @@
       </thead>
       <tbody>
 
-      <tr *ngFor="let employee of employees">
+<!--      <tr *ngFor="let employee of employees">-->
+      <tr *ngFor="let employee of employees | filter:searchText | paginate:{id:'listing_pagination',
+                                                                            itemsPerPage:4,
+                                                                            currentPage:page,
+                                                                            totalItems:totalRec}">
         <td>
 							<span class="custom-checkbox">
 								<input type="checkbox" ng:id="${employee.id}" name="options[]" value="1">
@@ -61,6 +67,9 @@
 
       </tbody>
     </table>
+    <div>
+      <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+    </div>
     <!--    <pagination-controls (pageChange)="p = $event"></pagination-controls>-->
   </div>
 </div>
