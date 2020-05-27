@@ -18,10 +18,21 @@
 </head>
 <body>
 <div class="container">
-    <div id="resizable" class="ui-widget-content">
-        <h3 class="ui-widget-header">Resizable</h3>
-    </div>
-
+<!--    <div id="resizable" class="ui-widget-content">-->
+<!--        <h3 class="ui-widget-header">Resizable</h3>-->
+<!--    </div>-->
+<script>
+    let x = 0;
+    async function r5() {
+        x += 1;
+        console.log(x);
+        return 5;
+    }
+    (async () => {
+        x += await r5();
+        console.log(x);
+    })();
+</script>
 </div>
 </body>
 </html>

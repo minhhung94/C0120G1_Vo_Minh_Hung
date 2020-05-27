@@ -20,7 +20,7 @@ export class ServiceEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.formEditService = this.formBuilder.group({
-      code: ['', [Validators.required, Validators.pattern('^(SV)-[a-zA-Z0-9]{4}$')]],
+      code: ['', [Validators.required, Validators.pattern('^(SV)-[0-9]{4}$')]],
       areaUsed: ['', [Validators.required]],
       maximumPeople: ['', [Validators.required]],
       typeRent: ['', [Validators.required]],

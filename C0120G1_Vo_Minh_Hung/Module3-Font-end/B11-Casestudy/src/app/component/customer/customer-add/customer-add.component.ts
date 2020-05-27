@@ -19,7 +19,7 @@ export class CustomerAddComponent implements OnInit {
   ngOnInit(): void {
     this.formAddNewCustomer = this.formBuilder.group({
       fullName: ['', [Validators.required]],
-      code: ['', [Validators.required, Validators.pattern('^(KH)-[a-zA-Z0-9]{4}$')]],
+      code: ['', [Validators.required, Validators.pattern('^(KH)-[0-9]{4}$')]],
       birthday: ['', [Validators.required]],
       idCard: ['', [Validators.required, Validators.pattern('^[0-9]{9}$')]],
       email: ['', [Validators.required, Validators.email]],

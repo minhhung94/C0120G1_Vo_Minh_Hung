@@ -31,6 +31,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import { ContractDeleteComponent } from './component/contract/contract-delete/contract-delete.component';
 import { ContractDetailDeleteComponent } from './component/contract-detail/contract-detail-delete/contract-detail-delete.component';
+import { EmployeeDeleteComponent } from './component/employees/employee-delete/employee-delete.component';
+import { ServiceDeleteComponent } from './component/service/service-delete/service-delete.component';
 
 
 @NgModule({
@@ -54,7 +56,9 @@ import { ContractDetailDeleteComponent } from './component/contract-detail/contr
     ContractDetailListComponent,
     CustomerDeleteComponent,
     ContractDeleteComponent,
-    ContractDetailDeleteComponent
+    ContractDetailDeleteComponent,
+    EmployeeDeleteComponent,
+    ServiceDeleteComponent
   ],
   imports: [
     BrowserModule,

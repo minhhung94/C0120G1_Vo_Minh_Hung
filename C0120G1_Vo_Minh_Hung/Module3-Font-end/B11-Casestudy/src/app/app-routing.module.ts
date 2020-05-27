@@ -15,9 +15,11 @@ import {ServiceEditComponent} from './component/service/service-edit/service-edi
 import {ContractDetailListComponent} from './component/contract-detail/contract-detail-list/contract-detail-list.component';
 import {ContractDetailAddComponent} from './component/contract-detail/contract-detail-add/contract-detail-add.component';
 import {ContractDetailEditComponent} from './component/contract-detail/contract-detail-edit/contract-detail-edit.component';
+import {HomeComponent} from './component/home/home.component';
 
 
 const routes: Routes = [
+  {path: '', component: HomeComponent},
   {path: 'employee-list', component: EmployeeListComponent},
   {path: 'employee-add', component: EmployeeAddComponent},
   {path: 'employee-edit/:id', component: EmployeeEditComponent},

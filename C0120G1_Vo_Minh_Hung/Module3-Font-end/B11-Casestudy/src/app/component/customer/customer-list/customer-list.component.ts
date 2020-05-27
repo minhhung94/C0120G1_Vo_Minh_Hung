@@ -30,11 +30,11 @@ export class CustomerListComponent implements OnInit, OnDestroy {
     });
   }
 
-  onDeleteCustomer(id: number) {
-    this.subscription = this.customerService.deleteCustomer(id).subscribe((data: Customer) => {
-      this.updateDataAfterDelete(id);
-    });
-  }
+  // onDeleteCustomer(id: number) {
+  //   this.subscription = this.customerService.deleteCustomer(id).subscribe((data: Customer) => {
+  //     this.updateDataAfterDelete(id);
+  //   });
+  // }
 
   updateDataAfterDelete(id: number) {
     for (let i = 0; i < this.customers.length; i++) {

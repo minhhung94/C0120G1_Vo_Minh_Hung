@@ -32,6 +32,17 @@
       "phone": "0901231234",
       "address": "Đà nẵng",
       "id": 3
+    },
+    {
+      "fullName": "Nguyễn Anh Tài",
+      "code": "KH-0005",
+      "birthday": "1996-07-26",
+      "idCard": 123123123,
+      "email": "tai@gmail",
+      "typeCustomer": "gold",
+      "phone": "0911234567",
+      "address": "Đà Nẵng",
+      "id": 4
     }
   ],
   "employees": [
@@ -76,6 +87,20 @@
       "phone": "0901231232",
       "address": "Đà Nẵng",
       "id": 3
+    },
+    {
+      "code": "NV-0005",
+      "fullName": "Nguyễn Thi Bé",
+      "position": "Nhan Vien",
+      "degree": "Cao Dang",
+      "part": "Nhan Su",
+      "birthday": "1995-10-10",
+      "idCard": 123123123,
+      "salary": "5000000",
+      "email": "be@gmail",
+      "phone": "0911231234",
+      "address": "Da Nang",
+      "id": 4
     }
   ],
   "services": [
@@ -126,29 +151,21 @@
       "areaPool": 60,
       "amount": 1200000,
       "id": 6
+    },
+    {
+      "code": "DV-0007",
+      "areaUsed": "240",
+      "maximumPeople": 4,
+      "typeRent": "Day",
+      "typeService": "Villa",
+      "roomStandard": "Superior",
+      "numberOfFloors": 4,
+      "areaPool": 40,
+      "amount": 1100000,
+      "id": 7
     }
   ],
   "contracts": [
-    {
-      "codeEmployee": "NV-0001",
-      "codeCustomer": "KH-0001",
-      "codeService": "DV-0002",
-      "startDate": "2020-05-21",
-      "endDate": "2020-05-26",
-      "deposit": 100000,
-      "total": 1000000,
-      "id": 1
-    },
-    {
-      "codeEmployee": "NV-0002",
-      "codeCustomer": "KH-0003",
-      "codeService": "DV-0001",
-      "startDate": "2020-05-22",
-      "endDate": "2020-05-27",
-      "deposit": 100000,
-      "total": 2000000,
-      "id": 2
-    },
     {
       "codeEmployee": "NV-0004",
       "codeCustomer": "KH-0004",
@@ -156,7 +173,7 @@
       "startDate": "2020-05-12",
       "endDate": "2020-05-28",
       "deposit": 500000,
-      "total": 12000000,
+      "total": 11000000,
       "id": 3
     }
   ],
@@ -178,6 +195,18 @@
       "accompany": "Card",
       "quantity": 4,
       "id": 3
+    },
+    {
+      "idContract": "4",
+      "accompany": "Drink",
+      "quantity": 5,
+      "id": 4
+    },
+    {
+      "idContract": "2",
+      "accompany": "Karaoke",
+      "quantity": 2,
+      "id": 5
     }
   ]
 }

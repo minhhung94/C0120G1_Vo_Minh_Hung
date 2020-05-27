@@ -2,6 +2,8 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {Employee} from '../../../model/employee';
 import {EmployeeService} from '../../../services/employee.service';
+import {EmployeeDeleteComponent} from '../employee-delete/employee-delete.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-employee-list',
@@ -14,7 +16,11 @@ export class EmployeeListComponent implements OnInit, OnDestroy {
   public totalRec: number;
   public page = 1;
   public searchText;
-  constructor(public employeeService: EmployeeService) { }
+
+  constructor(
+    public employeeService: EmployeeService,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
     this.subscription = this.employeeService.getAllEmployees().subscribe((data: Employee[]) => {
@@ -28,11 +34,11 @@ export class EmployeeListComponent implements OnInit, OnDestroy {
       this.subscription.unsubscribe();
     }
   }
-  onDeleteEmployee(id: number) {
-    this.subscription = this.employeeService.deleteEmployee(id).subscribe((data: Employee) => {
-      this.updateDataAfterDelete(id);
-    });
-  }
+  // onDeleteEmployee(id: number) {
+  //   this.subscription = this.employeeService.deleteEmployee(id).subscribe((data: Employee) => {
+  //     this.updateDataAfterDelete(id);
+  //   });
+  // }
 
   updateDataAfterDelete(id: number) {
     for (let i = 0; i < this.employees.length; i++) {
@@ -42,5 +48,20 @@ export class EmployeeListComponent implements OnInit, OnDestroy {
         break;
       }
     }
+  }
+  openDialog(employeeId): void {
+    this.employeeService.getEmployeeById(employeeId).subscribe(dataOfEmployee => {
+      const dialogRef = this.dialog.open(EmployeeDeleteComponent, {
+        width: '500px',
+        data: {data1: dataOfEmployee},
+        disableClose: true,
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        this.ngOnInit();
+
+      });
+    });
   }
 }

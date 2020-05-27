@@ -8,7 +8,6 @@ import {ContractService} from '../../../services/contract.service';
   styleUrls: ['./contract-delete.component.css']
 })
 export class ContractDeleteComponent implements OnInit {
-  public contractOfFullName;
   public contractOfId;
   constructor(
     public dialogRef: MatDialogRef<ContractDeleteComponent>,
@@ -17,7 +16,6 @@ export class ContractDeleteComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.contractOfFullName = this.data.data1.fullName;
     this.contractOfId = this.data.data1.id;
   }
   deleteContract() {

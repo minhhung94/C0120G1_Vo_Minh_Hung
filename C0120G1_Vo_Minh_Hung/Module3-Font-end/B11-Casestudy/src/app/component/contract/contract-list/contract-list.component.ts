@@ -28,21 +28,29 @@ export class ContractListComponent implements OnInit, OnDestroy {
       this.contracts = data;
       this.totalRec = this.contracts.length;
       // tslint:disable-next-line:prefer-for-of
+      // for (let i = 0; i < this.contracts.length; i++) {
+      //   this.totalMoneyOfAllService =  (this.totalMoneyOfAllService) * 1 + (this.contracts[i].total) * 1;
+      // }
+      let sum = 0;
+      // tslint:disable-next-line:prefer-for-of
       for (let i = 0; i < this.contracts.length; i++) {
-        this.totalMoneyOfAllService =  (this.totalMoneyOfAllService) * 1 + (this.contracts[i].total) * 1;
+        sum += this.contracts[i].total;
       }
+      this.totalMoneyOfAllService = sum;
+      this.totalRec = this.contracts.length;
+
     });
   }
 
-  updateDataAfterDelete(id: number) {
-    for (let i = 0; i < this.contracts.length; i++) {
-      // tslint:disable-next-line:triple-equals
-      if (this.contracts[i].id == id) {
-        this.contracts.splice(i, 1);
-        break;
-      }
-    }
-  }
+  // updateDataAfterDelete(id: number) {
+  //   for (let i = 0; i < this.contracts.length; i++) {
+  //     // tslint:disable-next-line:triple-equals
+  //     if (this.contracts[i].id == id) {
+  //       this.contracts.splice(i, 1);
+  //       break;
+  //     }
+  //   }
+  // }
 
   ngOnDestroy(): void {
     if (this.subscription) {

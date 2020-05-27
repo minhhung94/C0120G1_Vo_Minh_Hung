@@ -18,7 +18,7 @@ export class EmployeeAddComponent implements OnInit {
 
   ngOnInit(): void {
     this.formAddNewEmployee = this.formBuilder.group({
-      code: ['', [Validators.required, Validators.pattern('^(NV)-[a-zA-Z0-9]{4}$')]],
+      code: ['', [Validators.required, Validators.pattern('^(NV)-[0-9]{4}$')]],
       fullName: ['', [Validators.required]],
       position: ['', [Validators.required]],
       degree: ['', [Validators.required]],

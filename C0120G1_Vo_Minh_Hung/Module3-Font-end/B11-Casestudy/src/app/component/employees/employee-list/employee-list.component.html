@@ -1,4 +1,4 @@
-<div class="" style="margin: 0px 20px;">
+<div class="" style="margin: 0px;">
   <div class="table-wrapper">
     <div class="table-title">
       <div class="row">
@@ -8,7 +8,7 @@
         <div class="col-sm-6">
           <a [routerLink]="['/employee-add']" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
           <div class="search-hero">
-            <input class="form-control mt-2" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Start searching for a customer by id or name or email">
+            <input class="form-control mt-2" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Nhập từ khoá tìm kiếm">
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@
         <!--                    nút edit và delete-->
         <td>
           <button [routerLink]="['/employee-edit/'+employee.id]" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit" style="color: green">&#xE254;</i></button>
-          <button (click)=onDeleteEmployee(employee.id) class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete" style="color: red">&#xE872;</i></button>
+          <button (click)=openDialog(employee.id) class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete" style="color: red">&#xE872;</i></button>
         </td>
       </tr>
 

@@ -18,7 +18,7 @@ export class ServiceAddComponent implements OnInit {
 
   ngOnInit(): void {
     this.formAddNewService = this.formBuilder.group({
-      code: ['', [Validators.required, Validators.pattern('^(DV)-[a-zA-Z0-9]{4}$')]],
+      code: ['', [Validators.required, Validators.pattern('^(DV)-[0-9]{4}$')]],
       areaUsed: ['', [Validators.required]],
       maximumPeople: ['', [Validators.required, Validators.min(1)]],
       typeRent: ['', [Validators.required]],
