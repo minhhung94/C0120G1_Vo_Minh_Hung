@@ -4,212 +4,81 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-        .dropdown-submenu {
-            position: relative;
-        }
-
-        .dropdown-submenu .dropdown-menu {
-            top: 0;
-            left: 100%;
-            margin-top: -1px;
-        }
-    </style>
-
+<!--    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"-->
+<!--            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">-->
+<!--    </script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"-->
+<!--            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">-->
+<!--    </script>-->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"-->
+<!--            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">-->
+<!--    </script>-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/social.frontend.css">
+    <link rel="stylesheet" href="css/social.core.css">
+    <link rel="stylesheet" href="css/settings.css">
 </head>
 <body>
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <img src="img/1.png"  >
-    <h3 href="">Surface</h3>
-    <div class="navbar-body">
+<nav id="navbar" role="navigation" class="social-navbar navbar navbar-default">
+    <a href="/"><img src="./images/logo.jpg" class="logo"></a>
+    <a href="/"><img src="./images/logo_mobile.png" class="logo_mobile"></a>
+    <div class="lang">
+        <a href="/vn/trang-chu/" class=" active">vn</a>
+        <a href="/en/trang-chu/" class=" ">en</a>
+    </div>
+    <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <li><a href="#"><strong>Surface</strong></a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Computers <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li class="dropdown-submenu">
-                        <a href="#" class="test" data-toggle="dropdown">
-                            NEW Surface Pro X
-                            <span class="caret" aria-hidden="true"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Tech specs</a></li>
-                            <li><a href="#">For business</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                        <a href="#" class="test" data-toggle="dropdown">
-                            NEW Surface Pro 7
-                            <span class="caret" aria-hidden="true"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Tech specs</a></li>
-                            <li><a href="#">For business</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                        <a href="#" class="test" data-toggle="dropdown">
-                            NEW Surface Laptop 3
-                            <span class="caret" aria-hidden="true"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Tech specs</a></li>
-                            <li><a href="#">For business</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                        <a href="#" class="test" data-toggle="dropdown">
-                            Surface book 2
-                            <span class="caret" aria-hidden="true"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Tech specs</a></li>
-                            <li><a href="#">For business</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                        <a href="#" class="test" data-toggle="dropdown">
-                            Surface Go
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Tech specs</a></li>
-                            <li><a href="#">For business</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                        <a href="#" class="test" data-toggle="dropdown">
-                            Surface studio 2
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Tech specs</a></li>
-                            <li><a href="#">For business</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Surface Duo</a></li>
-                    <li><a href="#">Surface Neo</a></li>
-                    <li><a href="#">Surface Hub 2S</a></li>
-                    <li><a href="#">Compare devices</a></li>
-                    <li><a href="#">Help me choose</a></li>
-                </ul>
+            <li>
+                <a href="/vn/trang-chu/" class=" active">
+                    <span class="i-menu1" style="background-image: url('./images/menu1.png')"></span><br>
+                    Trang chủ            </a>
             </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Accessories <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li class="dropdown-submenu">
-                        <a href="#" class="test" data-toggle="dropdown">
-                            NEW Surface Pro X
-
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Tech specs</a></li>
-                            <li><a href="#">For business</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                        <a href="#" class="test" data-toggle="dropdown">
-                            NEW Surface Pro 7
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Tech specs</a></li>
-                            <li><a href="#">For business</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown-submenu">
-                        <a href="#" class="test" data-toggle="dropdown">
-                            NEW Surface Laptop 3
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Tech specs</a></li>
-                            <li><a href="#">For business</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                        <a href="#" class="test" data-toggle="dropdown">
-                            Surface book 2
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Tech specs</a></li>
-                            <li><a href="#">For business</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                        <a href="#" class="test" data-toggle="dropdown">
-                            Surface Go
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Tech specs</a></li>
-                            <li><a href="#">For business</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                        <a href="#" class="test" data-toggle="dropdown">
-                            Surface studio 2
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Tech specs</a></li>
-                            <li><a href="#">For business</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Surface Duo</a></li>
-                    <li><a href="#">Surface Neo</a></li>
-                    <li><a href="#">Surface Hub 2S</a></li>
-                    <li><a href="#">Compare devices</a></li>
-                    <li><a href="#">Help me choose</a></li>
-                </ul>
+            <li>
+                <a href="/vn/gioi-thieu/" class=" ">
+                    <span class="i-menu2" style="background-image: url('./images/menu2.png')"></span><br>
+                    Giới thiệu            </a>
             </li>
-            <li><a href="#">For business</a></li>
+            <li>
+                <a href="/vn/du-an/" class=" ">
+                    <span class="i-menu3" style="background-image: url('./images/menu3.png')"></span><br>
+                    Dự án            </a>
+            </li>
+            <li>
+                <a href="/vn/linh-vuc/" class=" ">
+                    <span class="i-menu4" style="background-image: url('./images/menu4.png')"></span><br>
+                    Lĩnh vực            </a>
+            </li>
+            <li>
+                <a href="/vn/tin-tuc/" class=" ">
+                    <span class="i-menu5" style="background-image: url('./images/menu5.png')"></span><br>
+                    Tin tức            </a>
+            </li>
+            <li>
+                <a href="/vn/tuyen-dung/" class=" ">
+                    <span class="i-menu6" style="background-image: url('./images/menu6.png')"></span><br>
+                    Tuyển dụng            </a>
+            </li>
+            <li>
+                <a href="/vn/lien-he/" class=" ">
+                    <span class="i-menu7"></span><br>
+                    Liên hệ            </a>
+            </li>
         </ul>
     </div>
-</div>
-<!--    <ul class="nav navbar-nav navbar-right">-->
-<!--        <li><a href="#">English</a></li>-->
-<!--        <li><a href="#">Tiếng Việt</a></li>-->
-<!--        <i class="fab fa-searchengin"></i>-->
-<!--    </ul>-->
-<!--</div>-->
-<!--<div>-->
-<!--    <p class="title1">Sinh như Hạ Hoa</p>-->
-<!--    <p class="title2">...tử như Diệp Thu</p>-->
-<!--    <img src="img/2.png" style="width: 1300px" height="500">-->
-<!--</div>-->
-<i class="fab fa-searchengin"></i>
-<script>
-    $(document).ready(function(){
-        $('.dropdown-submenu a.test').on("click", function(e){
-            $(this).next('ul').toggle();
-            e.stopPropagation();
-            e.preventDefault();
-        });
-    });
-</script>
+</nav>
 </body>
 </html>

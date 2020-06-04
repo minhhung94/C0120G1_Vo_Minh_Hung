@@ -1,0 +1,39 @@
+<div class="container-fluid" style=" position: relative;">
+  <div class="row" >
+    <div class="header">
+      <img  src="./assets/images/logo.png" height="80px" align="left"/>
+      <br>
+      <h1 style="color: red">Furama Danang </h1>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a class="list-group-item list-group-item-action active" href="/">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Gallary</a></li>
+        <li><a href="#">Recruitment</a></li>
+        <li style="float:right"><a href="#">Register</a></li>
+        <li style="float:right"><a href="#">Login</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 px-0 mx-0" style="padding: 0; height: 500px">
+      <div class="list-group border border-primary rounded h-100">
+        <a class="list-group-item list-group-item-action" [routerLink]="['equipment-list']" routerLinkActive="router-link-active" >Quản lý trang thiết bị</a>
+        <a class="list-group-item list-group-item-action" [routerLink]="['service-list']" routerLinkActive="router-link-active" >Quản lý dịch vụ</a>
+        <a class="list-group-item list-group-item-action" [routerLink]="['customer-list']" routerLinkActive="router-link-active" >Quản lý khách hàng</a>
+        <a class="list-group-item list-group-item-action" [routerLink]="['contract-list']" routerLinkActive="router-link-active" >Quản lý hợp đồng</a>
+        <a class="list-group-item list-group-item-action" [routerLink]="['contract-detail-list']" routerLinkActive="router-link-active" >Quản lý HĐ chi tiết</a>
+      </div>
+    </div>
+    <div class="col-md-10 p-5 d-fex justify-content-center">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer_copy">
+      <p>© 2020 furama. All rights reserved | Design by <a href="#">Minh Hùng</a></p>
+    </div>
+  </div>
+
+</div>
