@@ -28,6 +28,19 @@ public class Category {
     public Category() {
     }
 
+    public Category(Integer id, String name) {
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", nameCategory='" + nameCategory + '\'' +
+                ", goods=" + goods +
+                ", deleteFlag=" + deleteFlag +
+                '}';
+    }
+
     public Integer getId() {
         return id;
     }

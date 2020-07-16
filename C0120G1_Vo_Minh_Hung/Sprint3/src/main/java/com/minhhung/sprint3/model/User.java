@@ -22,18 +22,30 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @ManyToOne
-    @JoinColumn(name = "id_role")
-    private Role role;
-
     @JsonBackReference(value = "user")
     @OneToMany(mappedBy  = "user", cascade = CascadeType.ALL)
     private Set<Bills> bills;
+
+    @JsonBackReference(value = "user")
+    @OneToMany(mappedBy  = "user", cascade = CascadeType.ALL)
+    private Set<UserRole> roleUsers;
 
     @Column(name = "delete_flag")
     private Integer deleteFlag;
 
     public User() {
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", bills=" + bills +
+                ", deleteFlag=" + deleteFlag +
+                '}';
     }
 
     public Integer getId() {
@@ -68,14 +80,6 @@ public class User {
         this.password = password;
     }
 
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
     public Set<Bills> getBills() {
         return bills;
     }
@@ -90,5 +94,13 @@ public class User {
 
     public void setDeleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
+    }
+
+    public Set<UserRole> getRoleUsers() {
+        return roleUsers;
+    }
+
+    public void setRoleUsers(Set<UserRole> roleUsers) {
+        this.roleUsers = roleUsers;
     }
 }

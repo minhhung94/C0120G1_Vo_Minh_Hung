@@ -21,8 +21,8 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public Page<Category> findAllByDeleteFlagIsNull(Pageable pageable) {
-        return categoryRepository.findAllByDeleteFlagIsNull(pageable);
+    public Page<Category> findAllByDeleteFlagIsNullAndNameCategory(String nameCategory, Pageable pageable) {
+        return categoryRepository.findAllByDeleteFlagIsNullAndNameCategoryContaining(nameCategory, pageable);
     }
 
     @Override

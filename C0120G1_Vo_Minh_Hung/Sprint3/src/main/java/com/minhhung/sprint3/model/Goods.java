@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name= "goods")
@@ -16,7 +16,7 @@ public class Goods {
 
     @Column(name = "name_good")
     @NotEmpty(message = "Tên hàng hoá không được để trống")
-    private String nameCategory;
+    private String nameGood;
 
     @ManyToOne
     @JoinColumn(name = "id_category")
@@ -45,9 +45,25 @@ public class Goods {
 
     @JsonBackReference(value = "goods")
     @OneToMany(mappedBy  = "goods", cascade = CascadeType.ALL)
-    private Set<Bills> bills;
+    private List<Bills> bills;
 
     public Goods() {
+    }
+
+    @Override
+    public String toString() {
+        return "Goods{" +
+                "id=" + id +
+                ", nameGood='" + nameGood + '\'' +
+                ", category=" + category +
+                ", quantity=" + quantity +
+                ", price=" + price +
+                ", trademark='" + trademark + '\'' +
+                ", saleOff=" + saleOff +
+                ", images='" + images + '\'' +
+                ", deleteFlag=" + deleteFlag +
+                ", bills=" + bills +
+                '}';
     }
 
     public Integer getId() {
@@ -58,12 +74,12 @@ public class Goods {
         this.id = id;
     }
 
-    public String getNameCategory() {
-        return nameCategory;
+    public String getNameGood() {
+        return nameGood;
     }
 
-    public void setNameCategory(String nameCategory) {
-        this.nameCategory = nameCategory;
+    public void setNameGood(String nameGood) {
+        this.nameGood = nameGood;
     }
 
     public Category getCategory() {
@@ -122,11 +138,11 @@ public class Goods {
         this.deleteFlag = deleteFlag;
     }
 
-    public Set<Bills> getBills() {
+    public List<Bills> getBills() {
         return bills;
     }
 
-    public void setBills(Set<Bills> bills) {
+    public void setBills(List<Bills> bills) {
         this.bills = bills;
     }
 }

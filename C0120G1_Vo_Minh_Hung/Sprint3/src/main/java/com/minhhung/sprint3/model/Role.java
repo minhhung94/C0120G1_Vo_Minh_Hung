@@ -3,6 +3,7 @@ package com.minhhung.sprint3.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -18,9 +19,18 @@ public class Role {
 
     @JsonBackReference(value = "role")
     @OneToMany(mappedBy  = "role", cascade = CascadeType.ALL)
-    private Set<User> User;
+    private Set<UserRole> roleUsers;
 
     public Role() {
+    }
+
+    @Override
+    public String toString() {
+        return "Role{" +
+                "id=" + id +
+                ", nameRole='" + nameRole + '\'' +
+                ", roleUsers=" + roleUsers +
+                '}';
     }
 
     public Integer getId() {
@@ -39,11 +49,11 @@ public class Role {
         this.nameRole = nameRole;
     }
 
-    public Set<com.minhhung.sprint3.model.User> getUser() {
-        return User;
+    public Set<UserRole> getRoleUsers() {
+        return roleUsers;
     }
 
-    public void setUser(Set<com.minhhung.sprint3.model.User> user) {
-        User = user;
+    public void setRoleUsers(Set<UserRole> roleUsers) {
+        this.roleUsers = roleUsers;
     }
 }

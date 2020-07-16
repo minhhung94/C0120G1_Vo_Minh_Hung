@@ -34,6 +34,19 @@ public class Bills {
     public Bills() {
     }
 
+    @Override
+    public String toString() {
+        return "Bills{" +
+                "id=" + id +
+                ", createDate=" + createDate +
+                ", billType=" + billType +
+                ", quantity=" + quantity +
+                ", goods=" + goods +
+                ", user=" + user +
+                ", deleteFlag=" + deleteFlag +
+                '}';
+    }
+
     public Integer getId() {
         return id;
     }

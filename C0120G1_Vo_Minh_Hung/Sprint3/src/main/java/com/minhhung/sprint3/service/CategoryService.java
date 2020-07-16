@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface CategoryService {
     List<Category> findAllByDeleteFlagIsNull();
-    Page<Category> findAllByDeleteFlagIsNull(Pageable pageable);
+    Page<Category> findAllByDeleteFlagIsNullAndNameCategory(String nameCategory, Pageable pageable);
     Category findAllByDeleteFlagIsNullAndIdIs(Integer id);
 
     void save(Category category);

@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Basic Ajax Demo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.pack.js"></script>
+    <script>
+
+        $.ajax({
+            url: '/bills',
+            type: 'GET',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(result){
+                console.log(result);
+                result.forEach(bill => {
+                    //Xử lý phần thêm các phần tử vào bảng ở đây
+                    $('#main_list').append("<tr>"
+                        + "<th scope=\"row\">" + bill.id + "</th>"
+                        + "<td>" + bill.createDate + "</td>"
+                        + "<td>" + bill.billType + "</td>"
+                        + "<td>" + bill.quantity + "</td>"
+                        + "<td>" + bill.goods.id + "</td>"
+                        + "<td>" + bill.user.id + "</td>"
+                        + "</tr>")
+                });
+            },
+            fail: function(error) {
+            }
+        });
+
+    </script>
 </head>
 <body>
+
+<div class="container">
+    <table class="table table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">CreateDate</th>
+            <th scope="col">BillType</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">GoodId</th>
+            <th scope="col">UserId</th>
+        </tr>
+        </thead>
+        <tbody id="main_list">
+        </tbody>
+    </table>
+</div>
 
 </body>
 </html>

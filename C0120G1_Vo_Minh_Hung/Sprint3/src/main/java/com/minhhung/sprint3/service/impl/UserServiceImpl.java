@@ -1,5 +1,6 @@
 package com.minhhung.sprint3.service.impl;
 
+import com.minhhung.sprint3.model.Role;
 import com.minhhung.sprint3.model.User;
 import com.minhhung.sprint3.repository.UserRepository;
 import com.minhhung.sprint3.service.UserService;
@@ -15,9 +16,10 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
+
     @Override
-    public Page<User> findAllByDeleteFlagIsNull(Pageable pageable) {
-        return userRepository.findAllByDeleteFlagIsNull(pageable);
+    public Page<User> findAllByDeleteFlagIsNullAndFullNameContainingAndUserNameContaining(String fullName, String userName, Pageable pageable) {
+        return userRepository.findAllByDeleteFlagIsNullAndFullNameContainingAndUserNameContaining(fullName, userName, pageable);
     }
 
     @Override

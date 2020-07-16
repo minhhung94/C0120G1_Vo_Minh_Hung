@@ -14,11 +14,11 @@ public class Cart {
         this.goods = good;
     }
 
-    public List<Goods> getProducts() {
+    public List<Goods> getgoods() {
         return goods;
     }
 
-    public void setProducts(List<Goods> good) {
+    public void setgoods(List<Goods> good) {
         this.goods = good;
     }
 

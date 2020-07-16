@@ -1,5 +1,6 @@
 package com.minhhung.sprint3.service.impl;
 
+import com.minhhung.sprint3.model.Category;
 import com.minhhung.sprint3.model.Goods;
 import com.minhhung.sprint3.repository.GoodsRepository;
 import com.minhhung.sprint3.service.GoodsService;
@@ -28,6 +29,16 @@ public class GoodsServiceImpl implements GoodsService {
     @Override
     public List<Goods> findAllByDeleteFlagIsNull() {
         return goodsRepository.findAllByDeleteFlagIsNull();
+    }
+
+    @Override
+    public Page<Goods> findByDeleteFlagIsNullAndTrademark(String trademark, Pageable pageable) {
+        return goodsRepository.findByDeleteFlagIsNullAndTrademark(trademark, pageable);
+    }
+
+    @Override
+    public Page<Goods> findByDeleteFlagIsNullAndCategoryAndSaleOffAndPriceAndTrademark(Category category, Integer saleOff, Integer price, String trademark, Pageable pageable) {
+        return goodsRepository.findByDeleteFlagIsNullAndCategoryAndSaleOffAndPriceAndTrademark(category, saleOff, price, trademark, pageable);
     }
 
     @Override
