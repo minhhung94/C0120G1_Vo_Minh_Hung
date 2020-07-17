@@ -1,6 +1,6 @@
 package com.minhhung.sprint3.service.impl;
 
-import com.minhhung.sprint3.model.Category;
+import com.minhhung.sprint3.entity.Category;
 import com.minhhung.sprint3.repository.CategoryRepository;
 import com.minhhung.sprint3.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;

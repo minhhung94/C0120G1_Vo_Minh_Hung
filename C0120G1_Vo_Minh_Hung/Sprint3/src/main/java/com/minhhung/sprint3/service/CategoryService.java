@@ -1,6 +1,6 @@
 package com.minhhung.sprint3.service;
 
-import com.minhhung.sprint3.model.Category;
+import com.minhhung.sprint3.entity.Category;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

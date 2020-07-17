@@ -1,7 +1,7 @@
 package com.minhhung.sprint3.service.impl;
 
-import com.minhhung.sprint3.model.Category;
-import com.minhhung.sprint3.model.Goods;
+import com.minhhung.sprint3.entity.Category;
+import com.minhhung.sprint3.entity.Goods;
 import com.minhhung.sprint3.repository.GoodsRepository;
 import com.minhhung.sprint3.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Override
     public Page<Goods> findAllByDeleteFlagIsNull(Pageable pageable) {
-        return goodsRepository.findAllByDeleteFlagIsNull(pageable);
+        return goodsRepository.findAll(pageable);
     }
 
     @Override
@@ -32,13 +32,28 @@ public class GoodsServiceImpl implements GoodsService {
     }
 
     @Override
-    public Page<Goods> findByDeleteFlagIsNullAndTrademark(String trademark, Pageable pageable) {
-        return goodsRepository.findByDeleteFlagIsNullAndTrademark(trademark, pageable);
+    public List<Goods> searchAll(String nameCategory, Integer price, String trademark, Integer saleOff) {
+        return goodsRepository.searchAll(nameCategory, price, trademark, saleOff);
     }
 
     @Override
-    public Page<Goods> findByDeleteFlagIsNullAndCategoryAndSaleOffAndPriceAndTrademark(Category category, Integer saleOff, Integer price, String trademark, Pageable pageable) {
-        return goodsRepository.findByDeleteFlagIsNullAndCategoryAndSaleOffAndPriceAndTrademark(category, saleOff, price, trademark, pageable);
+    public List<Goods> searchAllNameCategoryAndPriceAndTrademark(String nameCategory, Integer price, String trademark) {
+        return goodsRepository.searchAllNameCategoryAndPriceAndTrademark(nameCategory, price, trademark);
+    }
+
+    @Override
+    public List<Goods> searchAllNameCategoryAndTrademarkAndSaleOff(String nameCategory, String trademark, Integer saleOff) {
+        return goodsRepository.searchAllNameCategoryAndTrademarkAndSaleOff(nameCategory, trademark, saleOff);
+    }
+
+    @Override
+    public List<Goods> searchAllNameCategoryAndTrademark(String nameCategory, String trademark) {
+        return goodsRepository.searchAllNameCategoryAndTrademark(nameCategory, trademark);
+    }
+
+    @Override
+    public Page<Goods> findByDeleteFlagIsNullAndCategory_IdAndSaleOffAndPriceAndTrademark(Integer category_id, Integer saleOff, Integer price, String trademark, Pageable pageable) {
+        return goodsRepository.findByDeleteFlagIsNullAndCategory_IdAndSaleOffAndPriceAndTrademark(category_id, saleOff, price, trademark, pageable);
     }
 
     @Override

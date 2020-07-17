@@ -1,16 +1,10 @@
 package com.minhhung.sprint3.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.minhhung.sprint3.model.Category;
+import com.minhhung.sprint3.entity.Category;
 import com.minhhung.sprint3.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 

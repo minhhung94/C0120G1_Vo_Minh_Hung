@@ -1,7 +1,6 @@
 package com.minhhung.sprint3.service.impl;
 
-import com.minhhung.sprint3.model.Role;
-import com.minhhung.sprint3.model.User;
+import com.minhhung.sprint3.entity.User;
 import com.minhhung.sprint3.repository.UserRepository;
 import com.minhhung.sprint3.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

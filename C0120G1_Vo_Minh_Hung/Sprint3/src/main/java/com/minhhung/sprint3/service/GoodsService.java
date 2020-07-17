@@ -1,7 +1,7 @@
 package com.minhhung.sprint3.service;
 
-import com.minhhung.sprint3.model.Category;
-import com.minhhung.sprint3.model.Goods;
+import com.minhhung.sprint3.entity.Category;
+import com.minhhung.sprint3.entity.Goods;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -12,8 +12,13 @@ public interface GoodsService {
 
     Goods findAllByDeleteFlagIsNullAndIdIs(Integer id);
     List<Goods> findAllByDeleteFlagIsNull();
-    Page<Goods> findByDeleteFlagIsNullAndTrademark(String trademark, Pageable pageable);
-    Page<Goods> findByDeleteFlagIsNullAndCategoryAndSaleOffAndPriceAndTrademark(Category category, Integer saleOff, Integer price, String trademark, Pageable pageable);
+
+    List<Goods> searchAll(String nameCategory,Integer price,String trademark, Integer saleOff);
+    List<Goods> searchAllNameCategoryAndPriceAndTrademark(String nameCategory,Integer price,String trademark);
+    List<Goods> searchAllNameCategoryAndTrademarkAndSaleOff(String nameCategory,String trademark, Integer saleOff);
+    List<Goods> searchAllNameCategoryAndTrademark(String nameCategory,String trademark);
+
+    Page<Goods> findByDeleteFlagIsNullAndCategory_IdAndSaleOffAndPriceAndTrademark(Integer category_id, Integer saleOff, Integer price, String trademark, Pageable pageable);
 
     void save(Goods goods);
 

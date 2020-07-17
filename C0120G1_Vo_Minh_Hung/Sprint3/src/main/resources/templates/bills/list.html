@@ -1,54 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Basic Ajax Demo</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.pack.js"></script>
+    <style th:replace="home :: style"></style>
+    <style>
+        .container {
+            float: right;
+            width: 70em;
+            margin-top: 75px;
+        }
+
+        .nav-left {
+            float: left;
+        }
+    </style>
     <script>
-
-        $.ajax({
-            url: '/bills',
-            type: 'GET',
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function(result){
-                console.log(result);
-                result.forEach(bill => {
-                    //Xử lý phần thêm các phần tử vào bảng ở đây
-                    $('#main_list').append("<tr>"
-                        + "<th scope=\"row\">" + bill.id + "</th>"
-                        + "<td>" + bill.createDate + "</td>"
-                        + "<td>" + bill.billType + "</td>"
-                        + "<td>" + bill.quantity + "</td>"
-                        + "<td>" + bill.goods.id + "</td>"
-                        + "<td>" + bill.user.id + "</td>"
-                        + "</tr>")
+        $(document).ready(function() {
+            $('#search').click(function(e) {
+                let type=$('#search_type').val();
+                let quantity=$('#search_quantity').val();
+                let nameUser=$('#search_nameUser').val();
+                let nameGood=$('#search_nameGood').val();
+                console.log(type + " " + quantity + " " + nameUser + " " + nameGood);
+                let htmlE;
+                let temp;
+                if(quantity === "" && type === "") {
+                   temp = '/searchBillName?nameGood='+nameGood+'&nameUser='+nameUser
+                } else if(type === "" || type == null){
+                   temp = '/searchBillQuantity?quantity=' + quantity  +'&nameGood='+nameGood+'&nameUser='+nameUser
+                } else if (quantity === "" || quantity == null){
+                   temp = '/searchBillType?billsType=' + type +'&nameGood='+nameGood+'&nameUser='+nameUser
+                } else {
+                    temp = '/searchBills?billsType=' + type +'&quantity=' + quantity+'&nameGood='+nameGood+'&nameUser='+nameUser
+                }
+                $.ajax({
+                    url: temp,
+                    type: 'GET',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        console.log(result);
+                        result.forEach(bill => {
+                            //Xử lý phần thêm các phần tử vào bảng ở đây
+                            htmlE+=("<tr>"
+                                + "<th scope=\"row\">" + bill.id + "</th>"
+                                + "<td>" + bill.createDate + "</td>"
+                                + "<td>" + bill.billType + "</td>"
+                                + "<td>" + bill.quantity + "</td>"
+                                + "<td>" + bill.goods.nameGood + "</td>"
+                                + "<td>" + bill.user.fullName + "</td>"
+                                + "<td>" + "<button  class='btn btn-warning' >Edit</button>"+ "</td>"
+                                + "<td>" + "<button class='btn btn-danger'>Delete</button>" + "</td>"
+                                + "</tr>")
+                        });
+                        $('#main_list').html(htmlE);
+                    },
+                    fail: function (error) {
+                    }
                 });
-            },
-            fail: function(error) {
-            }
-        });
 
+            });
+        });
     </script>
 </head>
 <body>
+<div class="header" th:replace="home :: menu"></div>
+<div class="nav-left" th:replace="home :: nav-left"></div>
 
 <div class="container">
+    <button><a href="/createBill">Create Bill</a></button>
+    <div class="col-md-8">
+        <div class="input-group">
+            <input type="text" id="search_type" class="form-control" placeholder="Search type">
+            <input type="text" id="search_quantity" class="form-control" placeholder="Search quantity">
+            <input type="text" id="search_nameUser" class="form-control" placeholder="Search name user">
+            <input type="text" id="search_nameGood" class="form-control" placeholder="Search name good">
+            <span class="input-group-btn">
+          <button id="search" class="btn btn-default" type="submit">Search</button>
+        </span>
+        </div>
+        <br><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+
     <table class="table table">
         <thead class="thead-dark">
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">CreateDate</th>
+            <th scope="col">Create Date</th>
             <th scope="col">BillType</th>
             <th scope="col">Quantity</th>
-            <th scope="col">GoodId</th>
-            <th scope="col">UserId</th>
+            <th scope="col">Good Name</th>
+            <th scope="col">Full Name</th>
+            <th scope="col" colspan="2"></th>
         </tr>
         </thead>
         <tbody id="main_list">
         </tbody>
     </table>
 </div>
-
 </body>
 </html>

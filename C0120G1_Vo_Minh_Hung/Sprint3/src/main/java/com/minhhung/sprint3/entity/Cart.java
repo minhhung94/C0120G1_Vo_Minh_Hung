@@ -1,4 +1,4 @@
-package com.minhhung.sprint3.model;
+package com.minhhung.sprint3.entity;
 
 import java.util.ArrayList;
 import java.util.List;

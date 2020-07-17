@@ -1,6 +1,6 @@
 package com.minhhung.sprint3.service.impl;
 
-import com.minhhung.sprint3.model.Role;
+import com.minhhung.sprint3.entity.Role;
 import com.minhhung.sprint3.repository.RoleRepository;
 import com.minhhung.sprint3.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;

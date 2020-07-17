@@ -1,9 +1,8 @@
-package com.minhhung.sprint3.model;
+package com.minhhung.sprint3.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @Entity

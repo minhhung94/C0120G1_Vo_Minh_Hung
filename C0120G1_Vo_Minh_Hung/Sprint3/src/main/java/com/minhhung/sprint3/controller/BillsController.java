@@ -1,14 +1,11 @@
 package com.minhhung.sprint3.controller;
 
-import com.minhhung.sprint3.model.Bills;
-import com.minhhung.sprint3.model.Goods;
-import com.minhhung.sprint3.model.User;
+import com.minhhung.sprint3.entity.Bills;
 import com.minhhung.sprint3.service.BillsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -16,8 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
-@RequestMapping("/bills")
+@RequestMapping("")
 public class BillsController {
     @Autowired
     private BillsService billsService;
@@ -34,11 +30,51 @@ public class BillsController {
 //        return bills;
 //    }
 
-    @GetMapping("")
+    @GetMapping("/bills")
     public List<Bills> getAllBills() {
         return billsService.findAllByDeleteFlagIsNull();
     }
 
+    @GetMapping("/listBills")
+    public ModelAndView listBills() {
+        return new ModelAndView("bills/list");
+    }
+
+    @GetMapping(value = "/searchBills", params = {"billsType", "quantity", "nameGood", "nameUser"})
+    public List<Bills> getListBills(   @RequestParam("billsType") int billsType,
+                                          @RequestParam(value = "quantity") int quantity,
+                                          @RequestParam(value = "nameGood",defaultValue = "") String nameGood,
+                                          @RequestParam(value = "nameUser",defaultValue = "") String nameUser) {
+        List<Bills> bills;
+        bills = billsService.findAllByDeleteFlagIsNullAndBillTypeAndQuantityAndNameGoodContainingAndFullNameContaining(billsType, quantity, nameGood, nameUser);
+        return bills;
+    }
+
+    @GetMapping(value = "/searchBillQuantity", params = { "quantity", "nameGood", "nameUser"})
+    public List<Bills> getListBill(       @RequestParam(value = "quantity") int quantity,
+                                          @RequestParam(value = "nameGood",defaultValue = "") String nameGood,
+                                          @RequestParam(value = "nameUser",defaultValue = "") String nameUser) {
+        List<Bills> bills;
+        bills = billsService.searchBills(quantity, nameGood, nameUser);
+        return bills;
+    }
+
+    @GetMapping(value = "/searchBillType", params = { "billsType", "nameGood", "nameUser"})
+    public List<Bills> getListBillType(       @RequestParam(value = "billsType") int billsType,
+                                          @RequestParam(value = "nameGood",defaultValue = "") String nameGood,
+                                          @RequestParam(value = "nameUser",defaultValue = "") String nameUser) {
+        List<Bills> bills;
+        bills = billsService.searchBillType(billsType, nameGood, nameUser);
+        return bills;
+    }
+
+    @GetMapping(value = "/searchBillName", params = { "nameGood", "nameUser"})
+    public List<Bills> getListBillName(@RequestParam(value = "nameGood",defaultValue = "") String nameGood,
+                                       @RequestParam(value = "nameUser",defaultValue = "") String nameUser) {
+        List<Bills> bills;
+        bills = billsService.searchBillsNameGoodAndFullName(nameGood, nameUser);
+        return bills;
+    }
 //    @RequestMapping(value = { "/list", "" }, method = RequestMethod.GET)
 //    public ModelAndView home() {
 //        ModelAndView model = new ModelAndView();
