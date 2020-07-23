@@ -13,12 +13,38 @@
             width: 70em;
             margin-top: 75px;
         }
-
         .nav-left {
             float: left;
         }
     </style>
     <script>
+        let htmlE;
+        $.ajax({
+            url: '/bills',
+            type: 'GET',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                console.log(result);
+                result.forEach(bill => {
+                    //Xử lý phần thêm các phần tử vào bảng ở đây
+                    htmlE+="<tr>"
+                        + "<th scope=\"row\">" + bill.id + "</th>"
+                        + "<td>" + bill.createDate + "</td>"
+                        + "<td>" + bill.billType + "</td>"
+                        + "<td>" + bill.quantity + "</td>"
+                        + "<td>" + bill.goods.nameGood + "</td>"
+                        + "<td>" + bill.user.fullName + "</td>"
+                        + "<td>" + "<button  class='btn btn-warning' >Edit</button>"+ "</td>"
+                        + "<td>" + "<button class='btn btn-danger'>Delete</button>" + "</td>"
+                        + "</tr>"
+                });
+                $('#main_list').html(htmlE);
+            },
+            fail: function (error) {
+            }
+        });
+
         $(document).ready(function() {
             $('#search').click(function(e) {
                 let type=$('#search_type').val();
@@ -26,8 +52,8 @@
                 let nameUser=$('#search_nameUser').val();
                 let nameGood=$('#search_nameGood').val();
                 console.log(type + " " + quantity + " " + nameUser + " " + nameGood);
-                let htmlE;
                 let temp;
+                htmlE="";
                 if(quantity === "" && type === "") {
                    temp = '/searchBillName?nameGood='+nameGood+'&nameUser='+nameUser
                 } else if(type === "" || type == null){
@@ -46,7 +72,7 @@
                         console.log(result);
                         result.forEach(bill => {
                             //Xử lý phần thêm các phần tử vào bảng ở đây
-                            htmlE+=("<tr>"
+                            htmlE+="<tr>"
                                 + "<th scope=\"row\">" + bill.id + "</th>"
                                 + "<td>" + bill.createDate + "</td>"
                                 + "<td>" + bill.billType + "</td>"
@@ -55,14 +81,13 @@
                                 + "<td>" + bill.user.fullName + "</td>"
                                 + "<td>" + "<button  class='btn btn-warning' >Edit</button>"+ "</td>"
                                 + "<td>" + "<button class='btn btn-danger'>Delete</button>" + "</td>"
-                                + "</tr>")
+                                + "</tr>"
                         });
                         $('#main_list').html(htmlE);
                     },
                     fail: function (error) {
                     }
                 });
-
             });
         });
     </script>
@@ -83,8 +108,8 @@
           <button id="search" class="btn btn-default" type="submit">Search</button>
         </span>
         </div>
-        <br><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
+        <br>
+    </div>
 
     <table class="table table">
         <thead class="thead-dark">

@@ -14,13 +14,13 @@ public interface GoodsRepository extends JpaRepository<Goods,Integer> {
 
     List<Goods> findAllByDeleteFlagIsNull();
 
-    @Query(value = "SELECT g FROM Goods g where g.category.nameCategory like %?1% and g.price=?2 and g.trademark like %?3% and g.saleOff=?4 and g.deleteFlag is null" )
+    @Query(value = "SELECT g FROM Goods g where g.category.nameCategory like %?1% and g.price=?2 and g.trademark like %?3% and g.saleOff=?4 and g.deleteFlag is null order by g.id" )
     List<Goods> searchAll(String nameCategory,Integer price,String trademark, Integer saleOff);
-    @Query(value = "SELECT g FROM Goods g where g.category.nameCategory like %?1% and g.price=?2 and g.trademark like %?3% and g.deleteFlag is null" )
+    @Query(value = "SELECT g FROM Goods g where g.category.nameCategory like %?1% and g.price=?2 and g.trademark like %?3% and g.deleteFlag is null order by g.id" )
     List<Goods> searchAllNameCategoryAndPriceAndTrademark(String nameCategory,Integer price,String trademark);
-    @Query(value = "SELECT g FROM Goods g where g.category.nameCategory like %?1% and g.trademark like %?2% and g.saleOff=?3 and g.deleteFlag is null" )
+    @Query(value = "SELECT g FROM Goods g where g.category.nameCategory like %?1% and g.trademark like %?2% and g.saleOff=?3 and g.deleteFlag is null order by g.id" )
     List<Goods> searchAllNameCategoryAndTrademarkAndSaleOff(String nameCategory,String trademark, Integer saleOff);
-    @Query(value = "SELECT g FROM Goods g where g.category.nameCategory like %?1% and g.trademark like %?2% and g.deleteFlag is null" )
+    @Query(value = "SELECT g FROM Goods g where g.category.nameCategory like %?1% and g.trademark like %?2% and g.deleteFlag is null order by g.id" )
     List<Goods> searchAllNameCategoryAndTrademark(String nameCategory,String trademark);
 
     Page<Goods> findByDeleteFlagIsNullAndCategory_IdAndSaleOffAndPriceAndTrademark(Integer category_id, Integer saleOff, Integer price, String trademark, Pageable pageable);

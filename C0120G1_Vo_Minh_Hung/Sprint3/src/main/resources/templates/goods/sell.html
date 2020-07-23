@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.pack.js"></script>
+    <style th:replace="home :: style"></style>
+    <style>
+        .container {
+            float: right;
+            width: 70em;
+            margin-top: 75px;
+        }
+
+        .nav-left {
+            float: left;
+        }
+        .imgSell{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        let htmlE;
+        $.ajax({
+            url: '/goods',
+            type: 'GET',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                console.log(result);
+                result.forEach(good => {
+                    //Xử lý phần thêm các phần tử vào bảng ở đây
+                    htmlE+="<tr>"
+                        + "<th scope='row'>" + good.id + "</th>"
+                        + "<td>" + good.nameGood + "</td>"
+                        + "<td>" + good.quantity + "</td>"
+                        + "<td>" + good.price + "</td>"
+                        + "<td>" + good.trademark+ "</td>"
+                        + "<td>" + good.saleOff + "</td>"
+                        + "<td>" +"<img class='imgSell' src='" +good.images + "'/>" + "</td>"
+                        + "<td>" + "<button  class='btn btn-warning' onclick='addCart("+good.id+")'>Thêm vào giỏ</button>" + "</td>"
+                        + "</tr>"
+                });
+                $('#main_list').html(htmlE);
+            },
+            fail: function (error) {
+            }
+        });
+        function addCart(id) {
+            formDate= id;
+        }
+        var formDate;
+        $.ajax({
+            url: '/docart',
+            type: 'POST',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(formDate),
+            dataType: "json",
+            fail: function (error) {
+            }
+        });
+
+    </script>
+</head>
+<body>
+<div class="header" th:replace="home :: menu"></div>
+<div class="nav-left" th:replace="home :: nav-left"></div>
+<form action="#" th:action="@{/docart}" method="post">
+    <div class="container">
+    <table class="table table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">NameGood</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Trademark</th>
+            <th scope="col">SaleOff</th>
+            <th scope="col">Image</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody id="main_list">
+        </tbody>
+    </table>
+</div>
+</form>
+</body>
+</html>

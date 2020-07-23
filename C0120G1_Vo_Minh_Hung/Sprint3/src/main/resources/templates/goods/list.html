@@ -40,8 +40,40 @@
         }
     </style>
     <script>
+        loadf();
+        function loadf() {
+            let category="";
+            let trademark="";
+            let htmlE;
+            $.ajax({
+                url: '/searchGoodsString?nameCategory='+category+'&trademark='+trademark,
+                type: 'GET',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    console.log(result);
+                    result.forEach(good => {
+                        //Xử lý phần thêm các phần tử vào bảng ở đây
+                        htmlE+="<tr>"
+                            + "<th scope=\"row\">" + good.id + "</th>"
+                            + "<td>" + good.nameGood + "</td>"
+                            + "<td>" + good.category.nameCategory + "</td>"
+                            + "<td>" + good.quantity + "</td>"
+                            + "<td>" + good.price + "</td>"
+                            + "<td>" + good.trademark+ "</td>"
+                            + "<td>" + good.saleOff + "</td>"
+                            + "<td>" + "<button  class='btn btn-warning'>Edit</button>"+ "</td>"
+                            + "<td>" + "<button class='btn btn-danger'>Delete</button>" + "</td>"
+                            + "</tr>"
+                    });
+                    $('#main_list').html(htmlE);
+                },
+                fail: function (error) {
+                }
+            });
+        };
         $(document).ready(function() {
-            $('#search').click(function(e) {
+            $('#search').click(function (e) {
                 let category=$('#search_category').val();
                 let price=$('#search_price').val();
                 let trademark=$('#search_trademark').val();
@@ -52,9 +84,9 @@
                 if(price === "" && sale === "") {
                     temp = '/searchGoodsString?nameCategory='+category+'&trademark='+trademark
                 } else if(price === "" || price == null){
-                    temp = '/searchGoodsPrice?nameCategory=' + category  +'&trademark='+trademark+'&saleOff='+sale
+                    temp = '/searchGoodsSale?nameCategory=' + category  +'&trademark='+trademark+'&saleOff='+sale
                 } else if (sale === "" || sale == null){
-                    temp = '/searchGoodsSale?nameCategory=' + category +'&price=' + price+'&trademark='+trademark
+                    temp = '/searchGoodsPrice?nameCategory=' + category +'&price=' + price+'&trademark='+trademark
                 } else {
                     temp = '/searchGoods?nameCategory=' + category +'&price=' + price+'&trademark='+trademark+'&saleOff='+sale
                 }
@@ -65,17 +97,17 @@
                     dataType: "json",
                     success: function (result) {
                         console.log(result);
-                        result.forEach(bill => {
+                        result.forEach(good => {
                             //Xử lý phần thêm các phần tử vào bảng ở đây
                             htmlE+="<tr>"
-                                + "<th scope=\"row\">" + bill.id + "</th>"
-                                + "<td>" + bill.nameGood + "</td>"
-                                + "<td>" + bill.category.nameCategory + "</td>"
-                                + "<td>" + bill.quantity + "</td>"
-                                + "<td>" + bill.price + "</td>"
-                                + "<td>" + bill.trademark+ "</td>"
-                                + "<td>" + bill.saleOff + "</td>"
-                                + "<td>" + "<button  class='btn btn-warning' >Edit</button>"+ "</td>"
+                                + "<th scope=\"row\">" + good.id + "</th>"
+                                + "<td>" + good.nameGood + "</td>"
+                                + "<td>" + good.category.nameCategory + "</td>"
+                                + "<td>" + good.quantity + "</td>"
+                                + "<td>" + good.price + "</td>"
+                                + "<td>" + good.trademark+ "</td>"
+                                + "<td>" + good.saleOff + "</td>"
+                                + "<td>" + "<button  class='btn btn-warning'>Edit</button>"+ "</td>"
                                 + "<td>" + "<button class='btn btn-danger'>Delete</button>" + "</td>"
                                 + "</tr>"
                         });
@@ -88,6 +120,8 @@
             });
         });
     </script>
+
+
 </head>
 <body>
 <div class="header" th:replace="home :: menu"></div>
@@ -118,6 +152,7 @@
             <th scope="col">Price</th>
             <th scope="col">Trademark</th>
             <th scope="col">SaleOff</th>
+            <th scope="col" colspan="2"></th>
         </tr>
         </thead>
         <tbody id="main_list">

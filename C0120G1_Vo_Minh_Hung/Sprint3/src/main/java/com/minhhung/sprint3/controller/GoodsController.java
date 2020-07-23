@@ -4,9 +4,13 @@ import com.minhhung.sprint3.entity.Bills;
 import com.minhhung.sprint3.entity.Goods;
 import com.minhhung.sprint3.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 //@SessionAttributes("cart")
@@ -24,6 +28,11 @@ public class GoodsController {
     @GetMapping("/listGoods")
     public ModelAndView listGoods() {
         return new ModelAndView("goods/list");
+    }
+
+    @GetMapping("/sell")
+    public ModelAndView sells() {
+        return new ModelAndView("goods/sell");
     }
 
     @GetMapping(value = "/searchGoods", params = {"nameCategory", "price", "trademark", "saleOff"})
