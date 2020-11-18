@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+    <script>
+        function changeTotal(price, quantity,id) {
+            document.getElementById(id).innerText = price * quantity;
+        }
+        function tongtien() {
+            let x= document.getElementsByName("pay");
+            let sum=0;
+            for(let i=0;i<x.length;i++){
+                sum+=parseInt(x[i].innerText);
+            }
+            document.getElementById("pays").value =  sum;
+        }
+    </script>
+</head>
+<body>
+<h1>Cart</h1>
+
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+        <td>Amount</td>
+        <td>Huỷ mua SP</td>
+    </tr>
+    <th:block th:each="c : ${cart.products}">
+    <tr>
+        <td th:text="${c.name}"></td>
+        <td th:text="${c.price}">VND</td>
+        <td><input placeholder="1" type="text" name="quantity" th:onkeyup="'changeTotal('+ ${c.price}+',this.value,'+${c.id}+')'" >VND</td>
+        <td th:id="${c.id}"  th:text="${c.price}*1" th:name="pay" ></td>
+        <td><a th:href="@{/cart-remove/__${c.id}__ }">Hủy mua</a></td>
+    </tr>
+    </th:block>
+    <tr>
+        <td colspan="2"><a href="/products">Mua Tiếp</a></td>
+        <td><a href="/pay">Thanh Toán</a></td>
+        <td><a href="javascript:tongtien();" >Tổng tiền</a><input id="pays"></td>
+    </tr>
+</table>
+</body>
+</html>
