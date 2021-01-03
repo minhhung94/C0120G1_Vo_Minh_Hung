@@ -14,7 +14,7 @@ public class Gia_tri_khong_trung_lap {
             }
         }
         for (int i=1 ; i<a.length;i++) {
-            if (a[i] == b[i]) {
+            if (b[i] == 1) {
                 System.out.println(a[i] + " ");
             }
         }

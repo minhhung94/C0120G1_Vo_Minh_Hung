@@ -1,6 +1,6 @@
 package nhap.Test;
 
-public class nhap1 {
+public class DaoNguocChuoi {
     public static void main(String[] args) {
         String str = "toidihoc";
         String[] str1 =str.split("");
