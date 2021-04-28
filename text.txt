@@ -1,0 +1,154 @@
+git log --graph --all --oneline --decorate
+
+1. 2 repo
+ - remote repo: my repo - root repo
+
+ - local  repo
+
+ -> rooot -> my repo : fork
+
+
+ 2. my repo -> local repo
+ clone -> dong thoi remote origin -> default name
+
+ -> tao them remote -> root repo
+ git remote add name_remote link_git
+
+
+ local 4 branch (b1, b2, b3, b4)
+ my repo -> push 2 branch (b1, b2)
+ root repo -> b1  c2, c3, d3
+ -> master brach
+
+ --- commit
+ git commit -m "mess" -> 1. dua code vao .git repo. 2. tao 1 commit moi
+
+ git commit --amend -> 1. dua code vao .git repo. 2. khong tao them commit moi
+ && cho phep chinh sua noi dung comment cua commit
+
+
+ git commit -a -m "mess" = git  add . && git commit -m "message"
+
+ --- 1 pull request (1 branch) - chi co 1 commit
+
+lo lam dung nhiu hon 1 lan git commit
+-> doi ban cung tien
+git log --oneline, sau do chay git commit [-m/ --amend]
+
+---show user
+design view page, design controller - add logic check
+c1 - c2 - c3
+c1 -> c2 -> error
+back c1 -> c2 -> ok
+c1 - c2 -> c3 -> error
+back c1 - c2 -> c3 -> ok
+
+finish function
+nhiu hon 1 commits
+
+(*) gop n commit -> 1 commit
+1. git rebase -i HEAD~n (n = 1)
+
+2. git reset HEAD^m (m = 0)
+&& git add . && git commit lai
+
+ex: c1 - c2 - c3 - c4
+muc tieu: 1 commit
+2. git reset HEAD^3 && git add & git commit --amend
+
+c1 - c2 - c3 - c4~HEAD
+final commit
+git reset HEAD^3
+
+
+1. git rebase -i HEAD~4
+-> xayr ra conflict code
+
+c1 - c2 - c3 - c4~HEAD
+C34
+c34 - c2 => c342
+C342 - c1 => final commit (chir 1 commit cuoi)
+
+
+
+
+--- tao branch
+git branch name -> taoj branch
+
+git checkout -b name =git branch name && git checkout newbranch
+
+--- .gitignore
+-> chua file ko can github  manage
+
+lo push len github: git rm --cached path_name_file
+git rm --cached -r path_folder_name
+
+
+
+---- git checkout branch
+luon git status truoc khi run git checkout branch
+
+
+gia su: A branch: 1 file changed & 1new file (chuaw tracking)
+-> di chuyen B brach
+-> be code 1 file changed & 1new file -> B
+phat som (chua commit) -> checkout ve A branch
+
+da commit -> reset commit -> check out ve A branch
+
+
+gia su: A branch: t.txt file changed & 1new file (chuaw tracking)
+-> di chuyen B branch (tai B co t.txt) -> bao loi conflict code
+&& KHONG CHO di chuye sang B branch
+-> thuc hien add && commit tai A truoc khi di chueyn snang B branch
+
+
+cach khac: add stash -> pop stash get ra lai.
+
+
+----- GIT FOLLOW
+tao branch
+-> add & commit
+
+(*) dam bao chi 1 commit
+-> git log --oneline
+  -> nhieu hon 1 commit
+   -> rebase / reset
+
+-> rebase voi nhanh master (newest)
+    newest
+      -> lay code nhanh master tren github (chung - root repo) ve local
+          -> Cach 1: checkout ve master
+              git pull root_remote mater
+              checkout current branch -> git rebase master
+
+          -> Cach 2: dung tai current branch
+              xoa master brach
+              fetch master tu root_repo ve:
+                git fetch remote_root_repo master:master
+              rebase -> git rebase master
+
+      -> git rebase master (-> tao ra 1 branch no-branch....)
+        -> xay ra conflict code
+            -> fix  conflict
+
+            fix nhieu lan
+            master: C1 - c2
+            current: C1 - c2  - c3 -c4
+  -> ok final
+
+  -> push code len github
+=====
+c1 -> c2
+c1 - c2 -> c12
+C3
+c1 ->c2
+  c12
+    C3
+      C123
+C1 -> c2 -> c3
+
+
+
+
+
